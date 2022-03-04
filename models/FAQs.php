@@ -1,7 +1,7 @@
 <?php  
 
 class FAQs {
-    var $connection;
+    private $connection;
 
     public function __construct($connection)
     {
@@ -59,7 +59,5 @@ class FAQs {
 
         return $result;
     }
-
-
 
 }

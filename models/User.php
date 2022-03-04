@@ -1,7 +1,7 @@
 <?php    
 
 class User {
-    var $connection;
+    private $connection;
 
     function __construct($connection){
         $this->connection = $connection;

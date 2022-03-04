@@ -1,7 +1,7 @@
 <?php  
 
 class Message {
-    var $connection; 
+    private $connection; 
 
     public function __construct($connection)
     {
