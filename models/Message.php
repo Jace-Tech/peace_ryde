@@ -21,15 +21,28 @@ class Message {
 
     public function message_user($reciever, $from, $message)
     {
-        $query = "INSERT INTO `messages` (`message_id`, `user_id`, `sender_id`, `message`) VALUES (:message_id, :user, :sender, :message)";
+        $query = "INSERT INTO `messages` (`message_id`, `user_id`, `sender_id`, `message`, `is_read`) VALUES (:message_id, :user, :sender, :message, :is_read)";
         $result = $this->connection->prepare($query);
         $result->execute([
             'message_id' => $this->generate_message_id(),
             'user' => $reciever,
             'sender' => $from,
-            'message' => $message
+            'message' => $message,
+            'is_read' => false
         ]);
         
+        return $result;
+    }
+
+    public function mark_read($message_id)
+    {
+        $query = "UPDATE `messages` SET `is_read` = :is_read WHERE `message_id` = :message_id";
+        $result = $this->connection->prepare($query);
+        $result->execute([
+            'is_read' => true,
+            'message_id' => $message_id
+        ]);
+
         return $result;
     }
 
