@@ -19,58 +19,140 @@ class Message {
         return $message_id;
     }
 
-    public function message_user($reciever, $from, $message)
+    public function send_message($reciever, $from, $message)
     {
-        $query = "INSERT INTO `messages` (`message_id`, `user_id`, `sender_id`, `message`, `is_read`) VALUES (:message_id, :user, :sender, :message, :is_read)";
-        $result = $this->connection->prepare($query);
-        $result->execute([
-            'message_id' => $this->generate_message_id(),
-            'user' => $reciever,
-            'sender' => $from,
-            'message' => $message,
-            'is_read' => false
-        ]);
-        
-        return $result;
+        // try{
+            $query = "INSERT INTO `messages` (`message_id`, `user_id`, `sender_id`, `message`, `is_read`) 
+                VALUES (:message_id, :user, :sender, :message, :is_read)";
+            $result = $this->connection->prepare($query);
+            $result->execute([
+                'message_id' => $this->generate_message_id(),
+                'user' => $reciever,
+                'sender' => $from,
+                'message' => $message,
+                'is_read' => 0
+            ]);
+            
+            return $result;
+        // }
+
+        // catch(PDOException $e){
+        //     return $e;
+        // }
+    }
+
+    public function get_unread_messages($sender, $user)
+    {
+        try{
+
+            $query = "SELECT * FROM `messages` WHERE `user_id` = :user AND`sender_id` = :sender AND `is_read` = :is_read";
+            $result = $this->connection->prepare($query);
+            $result->execute([
+                'user' => $user,
+                'sender' => $sender,
+                'is_read' => 0
+            ]);
+
+            return $result->fetchAll();
+        }
+
+        catch(PDOException $e) {
+            return false;
+        }
     }
 
     public function mark_read($message_id)
     {
-        $query = "UPDATE `messages` SET `is_read` = :is_read WHERE `message_id` = :message_id";
-        $result = $this->connection->prepare($query);
-        $result->execute([
-            'is_read' => true,
-            'message_id' => $message_id
-        ]);
+        try{
+            $query = "UPDATE `messages` SET `is_read` = :is_read WHERE `message_id` = :message_id";
+            $result = $this->connection->prepare($query);
+            $result->execute([
+                'is_read' => true,
+                'message_id' => $message_id
+            ]);
+    
+            return $result;
+        }
 
-        return $result;
+        catch(PDOException $e) {
+            return false;
+        }
     }
 
     public function get_user_messages($user_id)
     {
-        $query = "SELECT * FROM `messages` WHERE `user_id` = ?";
-        $result = $this->connection->prepare($query);
-        $result->execute([$user_id]);
+        try {
+            $query = "SELECT * FROM `messages` WHERE `user_id` = ?";
+            $result = $this->connection->prepare($query);
+            $result->execute([$user_id]);
 
-        return $result->fetchAll();
+            return $result->fetchAll();
+        }
+
+        catch(PDOException $e) {
+            return false;
+        }
+    }
+
+    public function get_conversation($user_id, $other_person)
+    {
+        try {
+            $messages = [];
+            
+            // From Sender
+            $query = "SELECT * FROM `messages` WHERE `user_id` = ? AND `sender_id` = ?";
+            $result = $this->connection->prepare($query);
+            $result->execute([$user_id, $other_person]);
+
+            while($row = $result->fetch()){
+                array_push($messages, $row);
+            }
+
+            // From User
+            $query = "SELECT * FROM `messages` WHERE `user_id` = ? AND `sender_id` = ?";
+            $result = $this->connection->prepare($query);
+            $result->execute([$other_person, $user_id]);
+
+            while($row = $result->fetch()){
+                array_push($messages, $row);
+            }
+
+            return $messages;
+        }
+
+        catch (PDOException $e) {
+            return false;
+        }
     }
 
     public function get_message($message_id)
     {
-        $query = "SELECT * FROM `messages` WHERE `message_id` = ?";
-        $result = $this->connection->prepare($query);
-        $result->execute([$message_id]);
+        try{
+            $query = "SELECT * FROM `messages` WHERE `message_id` = ?";
+            $result = $this->connection->prepare($query);
+            $result->execute([$message_id]);
 
-        return $result->fetch();
+            return $result->fetch();
+        }
+
+        catch (PDOException $e){
+            return false;
+        }
     }
 
     public function delete_message($message_id)
     {
-        $query = "DELETE FROM `messages` WHERE `message_id` = ?";
-        $result = $this->connection->prepare($query);
-        $result->execute([$message_id]);
-        
-        return $result;
+        try{
+            $query = "DELETE FROM `messages` WHERE `message_id` = ?";
+            $result = $this->connection->prepare($query);
+            $result->execute([$message_id]);
+            
+            return $result;
+        }
+
+        catch (PDOException $e){
+            return false;
+        }
     }
 
 

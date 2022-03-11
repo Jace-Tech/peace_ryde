@@ -8,56 +8,106 @@ class FAQs {
         $this->connection = $connection;
     }
 
-    public function add_question($question, $answer) 
+    public function add_question($question, $answer, $tags) 
     {
-        $query = "INSERT INTO `faq` (`question`, `answer`) VALUES (:question, :answer)";
-        $result = $this->connection->prepare($query);
-        $result->execute([
-            'question' => $question,
-            'answer' => $answer
-        ]);
+        // try {
+            $query = "INSERT INTO `faq` (`question`, `answer`, `tags`) VALUES (:question, :answer, :tags)";
+            $result = $this->connection->prepare($query);
+            $result->execute([
+                'question' => $question,
+                'answer' => $answer,
+                'tags' => $tags
+            ]);
+    
+            return $result;
+        // }
 
-        return $result;
+        // catch (PDOException $e) {
+            // return false;
+        // }
     }
 
     public function get_all_questions()
     {
-        $query = "SELECT * FROM `questions`";
-        $result = $this->connection->prepare($query);
-        $result->execute();
+        try {
 
-        return $result->fetchAll();
+            $query = "SELECT * FROM `faq`";
+            $result = $this->connection->prepare($query);
+            $result->execute();
+    
+            return $result->fetchAll();
+        }
+
+        catch (PDOException $e) {
+            return false;
+        }
     }
 
     public function get_one_question($question_id)
     {
-        $query = "SELECT * FROM `questions` WHERE `question_id` = ?";
-        $result = $this->connection->prepare($query);
-        $result->execute([$question_id]);
+        try {
 
-        return $result->fetch();
+            $query = "SELECT * FROM `faq` WHERE `question_id` = ?";
+            $result = $this->connection->prepare($query);
+            $result->execute([$question_id]);
+    
+            return $result->fetch();
+        }
+
+        catch (PDOException $e) {
+            return false;
+        }
     }
 
     public function delete_question($question_id) 
     {
-        $query = "DELETE FROM `faq` WHERE `id` = ?";
-        $result = $this->connection->prepare($query);
-        $result->execute([$question_id]);
+        try{
 
-        return $result;
+            $query = "DELETE FROM `faq` WHERE `id` = ?";
+            $result = $this->connection->prepare($query);
+            $result->execute([$question_id]);
+    
+            return $result;
+        }
+
+        catch (PDOException $e){
+            return false;
+        }
+    }
+
+    public function get_questions_by_tag($tag)
+    {
+        try{
+
+            $query = "SELECT * FROM `faq` WHERE `tags` REGEXP ?";
+            $result = $this->connection->prepare($query);
+            $result->execute([$tag]);
+    
+            return $result;
+        }
+
+        catch (PDOException $e) {
+            return false;
+        }
     }
 
     public function update_question($question, $answer, $id) 
     {
-        $query = "UPDATE `faq` SET `question` = :question, `answer` = :answer WHERE `id` = :id";
-        $result = $this->connection->prepare($query);
-        $result->execute([
-            'question' => $question,
-            'answer' => $answer,
-            'id' => $id
-        ]);
+        try {
+            $query = "UPDATE `faq` SET `question` = :question, `answer` = :answer WHERE `id` = :id";
+            $result = $this->connection->prepare($query);
+            $result->execute([
+                'question' => $question,
+                'answer' => $answer,
+                'id' => $id
+            ]);
+    
+            return $result;
+        }
 
-        return $result;
+        catch (PDOException $e) {
+            return false;
+        }
     }
 
 }

@@ -1,35 +1,62 @@
 <?php 
 
-require_once("../utils/country_fee.php");
+function filter_field($input, $type = 'string')
+{
+    $filtered_input = null; 
 
-function get_visa_price($country) {
-    global $country_fee;
+    switch ($type) {
+        case 'email':{
+            $filtered_input = filter_var($input, FILTER_SANITIZE_EMAIL);
+            break;
+        }
+        
+        default:{
+            $filtered_input = htmlspecialchars(trim($input));
+            break;
+        }
+    }
 
-    if($country){
-        return $country_fee[strtolower($country)];
-    }
-    return null;
-}
-
-function get_total_price($country) {
-    $FREE_BIOMETRIC = ['usa'];
-    $visa_price = get_visa_price($country);
-    
-    if(!$visa_price) return;
-    
-    $fees_total = 0;
-    
-    if(array_search($country, $FREE_BIOMETRIC)){
-        $fees_total = $visa_price + ADMIN_PORTAL_FEE + IMMIGRATION_FEE;
-    }
-    else{
-        $fees_total = $visa_price + BIOMETRICS_FEE + ADMIN_PORTAL_FEE + IMMIGRATION_FEE;
-    }
-    
-    $taxes = ($fees_total * (VAT + TAX_US)) / 100;
-    $total_price = $fees_total + $taxes;
-    
-    return $total_price;
+    return $filtered_input;
 }
 
 
+function getGreeting()
+{
+    $hour = intval(date('H'));
+    $greeting = "Morning";
+
+    if($hour >= 16) $greeting = "Evening";
+    if($hour >= 12) $greeting = "Afternoon";
+
+    return $greeting;
+
+}
+
+function formatCountryArray($country) 
+{
+    $countries = json_decode($country, true);
+    return join(" - ", $countries);
+}
+
+function getSubName($_name)
+{
+    $name = explode(" ", $_name);
+    if(count($name) > 1){
+        return substr($name[0], 0, 1) . substr($name[1], 0, 1);
+    }
+
+    return substr($name[0], 0, 1);
+}
+
+function getLinkColor ($link) 
+{
+    $route = $_SERVER['PHP_SELF'];
+
+    if(strstr($route, $link)):
+        ?>
+            <script> 
+                let page = "<?= $link ?>"
+            </script>
+        <?php
+    endif;
+}
