@@ -79,6 +79,21 @@ class Message {
         }
     }
 
+    public function get_user_unread_messages($user_id)
+    {
+        try {
+            $query = "SELECT * FROM `messages` WHERE `user_id` = ? AND `is_read` = ?";
+            $result = $this->connection->prepare($query);
+            $result->execute([$user_id, 0]);
+
+            return $result->fetchAll();
+        }
+
+        catch(PDOException $e) {
+            return false;
+        }
+    }
+
     public function get_user_messages($user_id)
     {
         try {
@@ -100,7 +115,7 @@ class Message {
             $messages = [];
             
             // From Sender
-            $query = "SELECT * FROM `messages` WHERE `user_id` = ? AND `sender_id` = ?";
+            $query = "SELECT * FROM `messages` WHERE `user_id` = ? AND `sender_id` = ? ORDER BY `date` ASC";
             $result = $this->connection->prepare($query);
             $result->execute([$user_id, $other_person]);
 

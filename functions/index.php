@@ -60,3 +60,32 @@ function getLinkColor ($link)
         <?php
     endif;
 }
+
+function slugify($string)
+{
+    $text = explode(' ', $string);
+    $slug = join('-', $text);
+
+    return strtolower($slug);
+}
+
+
+function getWeekTime(int $week)
+{
+    return ((24 * 3600) * 7) * $week;
+}
+
+function sendMail ($subject, $message, $from, $to) 
+{
+    // To send HTML mail, the Content-type header must be set
+    $headers  = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+    
+    // Create email headers
+    $headers .= 'From: '.$from."\r\n".
+        'Reply-To: '.$from."\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+    
+    // Sending email
+    return mail($to, $subject, $message, $headers);
+}

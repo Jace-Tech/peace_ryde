@@ -4,17 +4,31 @@
 <?php require_once('../db/config.php'); ?>
 <?php require_once('../functions/index.php'); ?>
 <?php require_once('../models/User.php'); ?>
-<?php require_once('../models/Message.php'); ?>
 
 <?php
     $user = new User($connect);
-    $messages = new Message($connect);
+    $active = $title = "Message";
 ?>
 
 
 <!doctype html>
 <html lang="en">
 	<?php include('./components/main_header.php'); ?>
+        <script>
+            window.addEventListener("load", () => {
+                console.clear()
+                if(location.search.includes("?msg")){
+                    setTimeout(500, () => {
+                        document.body.setAttribute('x-data', "{ page: 'messages', sidebarOpen: false, sidebarExpanded: localStorage.getItem('sidebar-expanded') == 'true', msgSidebarOpen: false }")
+                    })
+                }
+                else {
+                    setTimeout(500, () => {
+                        document.body.setAttribute('x-data', "{ page: 'messages', sidebarOpen: false, sidebarExpanded: localStorage.getItem('sidebar-expanded') == 'true', msgSidebarOpen: true }")
+                    })
+                }
+            })
+        </script>
 			<main>
                 <div class="relative flex">
                     <div id="messages-sidebar" class="absolute z-20 top-0 bottom-0 w-full md:w-auto md:static md:top-auto md:bottom-auto -mr-px md:translate-x-0 transform transition-transform duration-200 ease-in-out" :class="msgSidebarOpen ? 'translate-x-0' : '-translate-x-full'">
@@ -61,17 +75,12 @@
 														<div class="px-5 py-4 border-t border-gray-200">
 															<div class="flex flex-wrap justify-end space-x-2">
                                                                 <button type="button" class="btn-sm border-gray-200 hover:border-gray-300 text-gray-600" @click="modalOpen = false">Cancel</button> 
-                                                                <button type="submit" name="broadcast" class="btn-sm bg-indigo-500 hover:bg-indigo-600 text-white">Send</button></div>
+                                                                <button type="submit" name="broadcast" class="btn-sm bg-indigo-500 hover:bg-indigo-600 text-white">Send</button>
+                                                            </div>
 														</div>
 													</div>
 												</form>
 											</div>
-                                        
-                                            <!-- <button class="p-1.5 shrink-0 rounded border border-gray-200 hover:border-gray-300 shadow-sm ml-2">
-                                                <svg class="w-4 h-4 fill-current text-gray-500" viewBox="0 0 16 16">
-                                                    <path d="M11.7.3c-.4-.4-1-.4-1.4 0l-10 10c-.2.2-.3.4-.3.7v4c0 .6.4 1 1 1h4c.3 0 .5-.1.7-.3l10-10c.4-.4.4-1 0-1.4l-4-4zM4.6 14H2v-2.6l6-6L10.6 8l-6 6zM12 6.6L9.4 4 11 2.4 13.6 5 12 6.6z" />
-                                                </svg>
-                                            </button> -->
                                         </div>
                                     </div>
                                 </div>
@@ -90,9 +99,9 @@
                                         <div class="text-xs font-semibold text-gray-400 uppercase mb-3">Direct messages</div>
                                         <ul class="mb-6">
                                             <?php if(count($user->get_all_users())): ?>
-                                                <?php foreach($user->get_all_users() as $user): extract($user); ?>
+                                                <?php foreach($user->get_all_users() as $_user): extract($_user); ?>
                                                     <li class="-mx-2">
-                                                        <a href="?msg=<?= $user_id; ?>" class="flex items-center justify-between w-full p-2 rounded <?= $active = $user_id == $_GET['msg'] ? "bg-indigo-100" : "bg-gray-100"; ?>" @click="msgSidebarOpen = false; $refs.contentarea.scrollTop = 99999999;">
+                                                        <a href="?msg=<?= $user_id; ?>" class="flex items-center justify-between w-full p-2 rounded <?= $active = $user_id == $_GET['msg'] ? "bg-indigo-100" : "bg-gray-100"; ?>"  @click="msgSidebarOpen = false; $refs.contentarea.scrollTop = 99999999;">
                                                             <div class="flex items-center truncate">
                                                                 <div class="flex shadow-sm mr-2 items-center justify-center <?= $active = $user_id == $_GET['msg'] ? "bg-gray-100" : "bg-gray-200"; ?> rounded-full w-8 h-8 text-xs font-semibold uppercase text-gray-500">
                                                                     <?= getSubName("$firstname $lastname") ?>
@@ -103,6 +112,7 @@
                                                                     </span>
                                                                 </div>
                                                             </div>
+
                                                             <div class="flex items-center ml-2">
                                                                 <?php if(count($messages->get_unread_messages($user_id, $LOGGED_USER['admin_id']))): ?>
                                                                     <div class="text-xs inline-flex font-medium bg-indigo-400 text-white rounded-full text-center leading-5 px-2">
@@ -146,7 +156,7 @@
                                         <!-- User -->
                                         <div class="flex items-start mb-4 last:mb-0" style="flex-direction: row-reverse;">
                                             <div class="flex shadow-sm ml-2 items-center justify-center bg-gray-200 rounded-full w-10 h-10 text-sm font-semibold uppercase text-gray-500">
-                                                <?= "JE" ?>
+                                                <?= getSubName($LOGGED_USER['name']); ?>
                                             </div>
                                             <div>
                                                 <div class="text-sm bg-indigo-500 text-white p-3 rounded-lg border border-transparent shadow-md mb-1" style="border-top-right-radius: 0;">
@@ -163,7 +173,9 @@
                                     <?php else: ?>
                                         <!-- Other Person -->
                                         <div class="flex items-start mb-4 last:mb-0">
-                                            <img class="rounded-full mr-4" src="images/user-40-11.jpg" width="40" height="40" alt="User 01" />
+                                            <div class="flex shadow-sm mr-2 items-center justify-center bg-gray-200 rounded-full w-10 h-10 text-sm font-semibold uppercase text-gray-500">
+                                                <?= getSubName($user->get_user($_GET['msg'])['firstname'] . " " . $user->get_user($_GET['msg'])['lastname']); ?>
+                                            </div>
                                             <div>
                                                 <div class="text-sm bg-white text-gray-800 p-3 rounded-lg rounded-tl-none border border-gray-200 shadow-md  mb-1">
                                                     <?= $message; ?>

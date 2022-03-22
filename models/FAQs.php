@@ -10,28 +10,28 @@ class FAQs {
 
     public function add_question($question, $answer, $tags) 
     {
-        // try {
-            $query = "INSERT INTO `faq` (`question`, `answer`, `tags`) VALUES (:question, :answer, :tags)";
+        try {
+            $query = "INSERT INTO `faq` (`question`, `answer`) VALUES (:question, :answer)";
             $result = $this->connection->prepare($query);
             $result->execute([
                 'question' => $question,
                 'answer' => $answer,
-                'tags' => $tags
+                // 'tags' => $tags
             ]);
     
             return $result;
-        // }
+        }
 
-        // catch (PDOException $e) {
-            // return false;
-        // }
+        catch (PDOException $e) {
+            return false;
+        }
     }
 
     public function get_all_questions()
     {
         try {
 
-            $query = "SELECT * FROM `faq`";
+            $query = "SELECT * FROM `faq` ORDER BY `date` DESC";
             $result = $this->connection->prepare($query);
             $result->execute();
     

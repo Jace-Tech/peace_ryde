@@ -1,5 +1,6 @@
 <?php 
 
+require("../addons/crsf_auth.php");
 require_once("../../models/Message.php");
 require_once("../../models/User.php");
 require_once("../../functions/index.php");

@@ -10,6 +10,8 @@
 <?php 
     $admin = new Admin($connect); 
     $service = new Service($connect); 
+
+    $active = $title = "Manage";
 ?>
 
 <!doctype html>

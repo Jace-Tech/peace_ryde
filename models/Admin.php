@@ -9,7 +9,7 @@ class Admin {
 
     public function generate_id(int $length = 10)
     {
-        $id = "adm-";
+        $id = "adm_";
 
         if(!count($this->getAllAdmins())){
            $id = "MAIN_ADMIN"; 
