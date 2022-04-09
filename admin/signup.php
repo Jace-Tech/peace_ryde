@@ -1,3 +1,5 @@
+<?php  session_start(); ?>
+
 <?php require_once('../db/config.php'); ?>
 <?php require_once('../models/Admin.php'); ?>
 
@@ -26,12 +28,13 @@
 			}
 		</script>
 		<main class="bg-white">
+			<?php include("./components/alert.php"); ?>
 			<div class="relative flex">
 				<div class="w-full md:w-1/2">
 					<div class="min-h-screen h-full flex flex-col after:flex-1">
 						<div class="flex-1">
 							<div class="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
-								<a class="block" href="index.html">
+								<a class="block" href="index.php">
 									<svg width="32" height="32" viewBox="0 0 32 32">
 										<defs>
 											<linearGradient x1="28.538%" y1="20.229%" x2="100%" y2="108.156%" id="logo-a">

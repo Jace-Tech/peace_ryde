@@ -1,5 +1,7 @@
 <?php    
 
+
+
 class User {
     private $connection;
 
@@ -22,10 +24,12 @@ class User {
     {
         extract($user);
 
+        $userId = $this->generate_user_id();
+
         $query = "INSERT INTO `users`(`user_id`, `title`, `firstname`, `middle_name`, `lastname`, `date_of_birth`, `gender`, `email`, `passport`, `phone`) VALUES (:userId, :title, :firstname, :middle_name, :lastname, :date_of_birth, :gender, :email, :passport, :phone)";
         $result = $this->connection->prepare($query);
         $result->execute([
-            'userId' => $this->generate_user_id(),
+            'userId' => $userId,
             'title' => $title,
             'firstname' => $firstname,
             'middle_name' => $middle_name,
@@ -37,7 +41,20 @@ class User {
             'phone' => $phone,
         ]);
 
-        return $result;
+        if($result) {
+            $query = "INSERT INTO `user_services`(`user_id`, `service_id`) VALUES (:userId, :serviceId)";
+            $result = $this->connection->prepare($query);
+            $result->execute([
+                "userId" => $userId,
+                "serviceId" => $serviceId
+            ]);
+
+            if($result) return $result;
+            else return false;
+        }
+        else {
+            return false;
+        }
     }
 
     public function get_user($user_id)

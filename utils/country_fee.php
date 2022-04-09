@@ -165,6 +165,10 @@ $country_fee = [
     'kenya' => 25
 ];
 
+ksort($country_fee);
+
+$titles = ["Master", "Mr", "Miss", "Mrs"];
+
 
 function get_visa_price($country) {
     global $country_fee;

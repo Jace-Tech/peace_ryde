@@ -29,6 +29,18 @@ class Service {
         return $result->fetchAll();
     }
 
+    public function getUserService($id)
+    {
+        $query = "SELECT * FROM `services` WHERE `service_id`= ?";
+        $result_service = $this->connection->prepare($query);
+        $result_service->execute([$id]);
+
+        $row_service = $result_service->fetch();
+        $role = $row_service['service'];
+
+        return $role;
+    }
+
     public function getService($id)
     {
         $sql = "SELECT * FROM `sub_admin` WHERE `admin_id` = ?";
