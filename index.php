@@ -25,6 +25,7 @@
   <link rel="stylesheet" type="text/css" href="css/fonts.css" />
   <link rel="stylesheet" type="text/css" href="css/New.css" />
 
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script type="text/javascript" src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/px2code/posize/build/v1.00.3.js"></script>
@@ -136,6 +137,7 @@
 
 
 <body class="body">
+  <?php include("./inc/alert.php"); ?>
   <main class="new new-main layout">
     <!-- ======= section1 ======= -->
     <section class="new-section1__section1 layout">

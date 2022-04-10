@@ -36,9 +36,8 @@ class Service {
         $result_service->execute([$id]);
 
         $row_service = $result_service->fetch();
-        $role = $row_service['service'];
 
-        return $role;
+        return $row_service;
     }
 
     public function getService($id)

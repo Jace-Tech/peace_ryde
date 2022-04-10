@@ -18,13 +18,22 @@
             return $id;
         }
 
+        function convertToNaira ($amount) {
+            $DOLLAR_RATE = 415.65;
+            $amount_in_naira = $amount * $DOLLAR_RATE;
+
+            return $amount_in_naira;
+        }
+
         function initialize_payment ($email, $amount, $callback_url = "") {
             $url = "https://api.paystack.co/transaction/initialize";
+            $ref = $this->generateReference();
+
             $fields = [
                 'email' => filter_var($email, FILTER_SANITIZE_EMAIL),
-                'amount' => intval($amount) * 100,
+                'amount' => round($this->convertToNaira($amount), 2) * 100,
                 'callback_url' => $callback_url,
-                'reference' => $this->generateReference()
+                'reference' => $ref
             ];
             $fields_string = http_build_query($fields);
 
@@ -46,7 +55,13 @@
             
             //execute post
             $result = curl_exec($ch);
-            return  json_decode($result, true);
+            $result = json_decode($result, true);
+
+            $data = [
+                "pay" => $result, 
+                "ref" => $ref
+            ];
+            return $data;
         }
 
         function verify_transaction($ref)

@@ -26,7 +26,7 @@ class User {
 
         $userId = $this->generate_user_id();
 
-        $query = "INSERT INTO `users`(`user_id`, `title`, `firstname`, `middle_name`, `lastname`, `date_of_birth`, `gender`, `email`, `passport`, `phone`) VALUES (:userId, :title, :firstname, :middle_name, :lastname, :date_of_birth, :gender, :email, :passport, :phone)";
+        $query = "INSERT INTO `users`(`user_id`, `title`, `firstname`, `middle_name`, `lastname`, `date_of_birth`, `gender`, `email`, `passport`, `country`, `phone`) VALUES (:userId, :title, :firstname, :middle_name, :lastname, :date_of_birth, :gender, :email, :passport, :country, :phone)";
         $result = $this->connection->prepare($query);
         $result->execute([
             'userId' => $userId,
@@ -38,6 +38,7 @@ class User {
             'gender' => $gender,
             'email' => $email,
             'passport' => $passport,
+            'country' => $country,
             'phone' => $phone,
         ]);
 
@@ -49,7 +50,7 @@ class User {
                 "serviceId" => $serviceId
             ]);
 
-            if($result) return $result;
+            if($result) return $userId;
             else return false;
         }
         else {

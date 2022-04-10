@@ -8,11 +8,24 @@ class UserLogin {
         $this->connection = $connection;
     }
 
+    public function generatePassword($length = 8)
+    {
+        $prefix = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+        $password = "";
+
+        for($i = 0; $i < $length; $i++) {
+            $password .= $prefix[rand(0, (strlen($prefix) - 1))];
+        }
+
+        return $password;
+    }
+
     public function register(array $user) 
     {
         extract($user);
 
-        $query = "INSERT INTO `user_login`(`user_id`, `email`, `password`) VALUES (:userId, :email, :password)";
+        $query = "INSERT INTO `user_login`(`user_id`, `email`, `password`) 
+            VALUES (:userId, :email, :password)";
         $result = $this->connection->prepare($query);
         $result->execute([
             'userId' => $user_id,
