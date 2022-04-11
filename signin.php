@@ -130,9 +130,21 @@
 {
   color: #555555;
 }
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: red;
-  opacity: 1; /* Firefox */
+
+::-webkit-input-placeholder {
+    color:#ffffff;
+}
+
+::-moz-placeholder {
+    color:#ffffff;
+}
+
+::-ms-placeholder {
+    color:#ffffff;
+}
+
+::placeholder {
+    color:#ffffff;
 }
 
     .span::before {
@@ -216,14 +228,14 @@
         <nav class="navbar navbar-expand-sm bg-nav shadow navbar-light height">
 
           <div class="container-fluid">
-            <a class="navbar-brand brand" href="index.php"><img src="assets/logo.png" width="164" style="margin-left: 51px; margin-top: 28px;"></a>
+            <a class="navbar-brand brand" href="Index.html"><img src="assets/logo.png" width="164" style="margin-left: 51px; margin-top: 28px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link nav link" href="index.php" style="color: #000000; margin-left:40px; margin-top: 19px;font-family: Ubuntu;
+                  <a class="nav-link nav link" href="Index.html" style="color: #000000; margin-left:40px; margin-top: 19px;font-family: Ubuntu;
                   font-style: normal;
                   font-weight: 400;
                   font-size: 14.5px;
@@ -399,6 +411,8 @@
                    
                     <form>
                         <div class="form-row" style="margin-left: 69px;">
+                          
+                          
                           <div class="form-group" style="margin-right: 202px; margin-top:72px">
                             <input type="text" class="form-control" style="border: 1px solid #ffffff; width:470px;font-family:ubuntu;height: 44px; margin-top:27px; background-color: #1161D9; color: #ffffff;" placeholder="Email"/>
 
