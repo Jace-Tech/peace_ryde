@@ -43,18 +43,28 @@ if(isset($_POST['pay'])){
     // If successful
     if($result) {
         $url = $_SERVER['HTTP_ORIGIN'] . "/visa/handlers/payment.php";
-        $price = json_decode($_SESSION["PRICE"], true);
         $service = $userServices->getService($id)['service_id'];
+        $total_price = 0;
+
+        if($service == "srvs-002") {    
+            $price = json_decode($_SESSION["PRICE"], true);
+            $total_price = $price['total_price'];
+        }
+
+        if($service == "srvs-001") {
+            $price = json_decode($_SESSION["PRICE"], true);
+            $total_price = $price['total'];
+        }
         
         // Make Payment
         switch($payment_option) {
             case "paystack":
                 // Initialize payment with paystack
-                $details = $paystackPayment->initialize_payment($user['email'], $price['total_price'], $url);
+                $details = $paystackPayment->initialize_payment($user['email'], $total_price, $url);
 
                 // Generate Payment Options
                 $payment = [
-                    "amount" => $price['total_price'],
+                    "amount" => $total_price,
                     "userId" => $id,
                     "service" => $service,
                     "ref" => $details['ref']
@@ -88,6 +98,10 @@ if(isset($_GET["reference"])) {
 
         // Generate Login Credientials
         $password = $userLogins->generatePassword();
+
+        $file = fopen("text.txt", "a+");
+        fwrite($file, $user["email"] . "\t $password \n");
+        fclose($file);
 
         // Generate user credentials
         $newUser = [

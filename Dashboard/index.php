@@ -1,3 +1,20 @@
+<?php session_start(); ?>
+
+<?php 
+
+    if(!isset($_SESSION["LOGGED_USER"])) header("Location: ../signin.php");
+
+    if(isset($_SESSION["REG_MODE"])) {
+        if($_SESSION["REG_MODE"] == "TWP") {
+            header("Location: ./NTWPDASHFORM.php");
+        }
+
+        if($_SESSION["REG_MODE"] == "BVA") {
+            header("Location: ./NBVADASHFORM.php");
+        }
+    }
+
+?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -9,18 +26,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../dist/image/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./dist/image/logo.png">
     <title>PeaceRyde</title>
     <!-- Custom CSS -->
-    <link href="../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
+    <link href="./assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
-    <link href="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="./assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="./assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link href="../dist/css/style.min.css" rel="stylesheet">
+    <link href="./dist/css/style.min.css" rel="stylesheet">
 <style>
 
 
@@ -64,7 +81,7 @@
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar" data-sidebarbg="skin6">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <img src="../dist/image/logo.png" class="sidebar-image" style="border-radius: 50%; margin-left: 85px;">
+                <img src="./dist/image/logo.png" class="sidebar-image" style="border-radius: 50%; margin-left: 85px;">
                 <!-- Sidebar navigation-->
                 <div class="sidebarAccount">
                 <h2>John Peter</h2>
@@ -165,7 +182,7 @@
                                 class="hide-menu"style="padding-left: 23px;">Chat
                             </span></a>
                     </li>
-                    <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="../../contact.html" style="font-family: Rubik;"
+                    <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="././contact.html" style="font-family: Rubik;"
                             aria-expanded="false"><svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M13.3586 16.8934C13.1905 16.893 13.0229 16.8745 12.8586 16.8384C9.73196 16.1916 6.85145 14.6751 4.54864 12.4634C2.29498 10.2469 0.731939 7.42474 0.0486424 4.33844C-0.0319269 3.9538 -0.012152 3.55489 0.106065 3.1801C0.224281 2.80531 0.436961 2.46725 0.723642 2.19844L2.72364 0.273442C2.8258 0.176836 2.94717 0.102857 3.07985 0.056333C3.21253 0.00980932 3.35353 -0.00821314 3.49364 0.00344183C3.63892 0.0185983 3.77912 0.0653985 3.90438 0.140551C4.02963 0.215704 4.1369 0.317384 4.21864 0.438442L6.71864 4.13344C6.81239 4.27681 6.85765 4.44649 6.84775 4.61751C6.83785 4.78853 6.77331 4.95185 6.66364 5.08344L5.40864 6.58344C5.90847 7.68967 6.61631 8.68948 7.49364 9.52844C8.36529 10.3978 9.39556 11.092 10.5286 11.5734L12.0836 10.3384C12.2142 10.2352 12.3732 10.1742 12.5393 10.1635C12.7054 10.1528 12.8709 10.1929 13.0136 10.2784L16.7886 12.7184C16.9182 12.7958 17.0286 12.9015 17.1115 13.0275C17.1944 13.1536 17.2477 13.2968 17.2674 13.4463C17.2871 13.5959 17.2727 13.748 17.2253 13.8913C17.1779 14.0345 17.0987 14.1652 16.9936 14.2734L15.0436 16.2034C14.8221 16.4239 14.5592 16.5983 14.2701 16.7167C13.9809 16.8351 13.6711 16.8952 13.3586 16.8934ZM3.41364 0.993442L1.41364 2.91844C1.25237 3.06872 1.13299 3.25838 1.06724 3.46878C1.00148 3.67918 0.991631 3.90308 1.03864 4.11844C1.674 7.01451 3.1345 9.66459 5.24364 11.7484C7.41074 13.8292 10.1214 15.2556 13.0636 15.8634C13.2863 15.91 13.5171 15.9006 13.7353 15.836C13.9534 15.7714 14.1522 15.6537 14.3136 15.4934L16.2636 13.5634L12.6186 11.2084L10.9486 12.5384C10.8847 12.589 10.8094 12.6232 10.7292 12.6381C10.649 12.6529 10.5664 12.6479 10.4886 12.6234C9.10199 12.1125 7.84537 11.3015 6.80864 10.2484C5.73632 9.24705 4.90395 8.01645 4.37364 6.64844C4.35121 6.56562 4.35046 6.47843 4.37148 6.39524C4.39249 6.31205 4.43456 6.23567 4.49364 6.17344L5.84364 4.55844L3.41364 0.993442Z" fill="white"/>
                                 </svg>
@@ -215,7 +232,7 @@
                     <div class="align-self-center">
                         <div class="row">
                             <div class=" ">
-                                <img src="../dist/image/account.png" class="account-img">
+                                <img src="./dist/image/account.png" class="account-img">
                             </div>
                             <div class="">
                                 <h3 class="page-title text-truncate mb-1 account
@@ -233,9 +250,9 @@
                     <div class="align-self-center">
                         <div class="customize-input">
                             <ol class="breadcrumb mb-2">
-                                <li class="breadcrumb-item"><a href="javascript:void(0)"><img src="../dist/image/m_icon.png" width="20" height="19">&nbsp;&nbsp; Inbox</a></li>
-                                <li class="breadcrumb-item"><a href="javascript:void(0)"><img src="../dist/image/m_icon2.png" width="20" height="19">&nbsp;&nbsp; Send a message</a></li>
-                                <li class="breadcrumb-item"><a href="javascript:void(0)"><img src="../dist/image/logout.png" width="20" height="19">&nbsp; &nbsp; Logout</a></li>
+                                <li class="breadcrumb-item"><a href="javascript:void(0)"><img src="./dist/image/m_icon.png" width="20" height="19">&nbsp;&nbsp; Inbox</a></li>
+                                <li class="breadcrumb-item"><a href="javascript:void(0)"><img src="./dist/image/m_icon2.png" width="20" height="19">&nbsp;&nbsp; Send a message</a></li>
+                                <li class="breadcrumb-item"><a href="javascript:void(0)"><img src="./dist/image/logout.png" width="20" height="19">&nbsp; &nbsp; Logout</a></li>
                             </ol>
                         </div>
                     </div>
@@ -264,7 +281,7 @@
                 <div class="row">
                     <div class="col-md-7 col-xl-12 col-sm-12">
                        <p class="example">
-                        <a href="../../contact.html"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <a href="././contact.html"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.1925 6.80028L7.9638 1.91903C7.4763 1.35653 6.58255 1.35903 6.0163 1.92653L2.5388 5.41028C1.5038 6.44653 1.20755 7.98528 1.8063 9.21903C5.38332 16.6252 11.3564 22.6066 18.7575 26.194C19.99 26.7928 21.5275 26.4965 22.5625 25.4603L26.0725 21.944C26.6413 21.3753 26.6425 20.4765 26.075 19.989L21.175 15.7828C20.6625 15.3428 19.8663 15.4003 19.3525 15.9153L17.6475 17.6228C17.5603 17.7143 17.4454 17.7746 17.3205 17.7944C17.1956 17.8143 17.0677 17.7926 16.9563 17.7328C14.1694 16.1279 11.8575 13.8131 10.2563 11.024C10.1963 10.9125 10.1746 10.7843 10.1945 10.6592C10.2144 10.5341 10.2747 10.419 10.3663 10.3315L12.0663 8.63028C12.5813 8.11278 12.6375 7.31278 12.1925 6.79903V6.80028Z" stroke="#0A0E69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>                            
                             <span>Contact Us</span></a>
@@ -311,25 +328,25 @@
           
         }
         </script>
-    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-    <script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- apps -->
     <!-- apps -->
-    <script src="../dist/js/app-style-switcher.js"></script>
-    <script src="../dist/js/feather.min.js"></script>
-    <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="../dist/js/sidebarmenu.js"></script>
+    <script src="./dist/js/app-style-switcher.js"></script>
+    <script src="./dist/js/feather.min.js"></script>
+    <script src="./assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="./dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
-    <script src="../dist/js/custom.min.js"></script>
+    <script src="./dist/js/custom.min.js"></script>
     <!--This page JavaScript -->
-    <script src="../assets/extra-libs/c3/d3.min.js"></script>
-    <script src="../assets/extra-libs/c3/c3.min.js"></script>
-    <script src="../assets/libs/chartist/dist/chartist.min.js"></script>
-    <script src="../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="../dist/js/pages/dashboards/dashboard1.min.js"></script>
+    <script src="./assets/extra-libs/c3/d3.min.js"></script>
+    <script src="./assets/extra-libs/c3/c3.min.js"></script>
+    <script src="./assets/libs/chartist/dist/chartist.min.js"></script>
+    <script src="./assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="./assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="./assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="./dist/js/pages/dashboards/dashboard1.min.js"></script>
 </body>
 
 </html>

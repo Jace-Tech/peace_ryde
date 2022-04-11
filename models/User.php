@@ -58,6 +58,19 @@ class User {
         }
     }
 
+    public function add_user_service($userId, $serviceId)
+    {
+        $query = "INSERT INTO `user_services`(`user_id`, `service_id`) VALUES (:userId, :serviceId)";
+        $result = $this->connection->prepare($query);
+        $result->execute([
+            "userId" => $userId,
+            "serviceId" => $serviceId
+        ]);
+
+        if($result) return $userId;
+        else return false;
+    }
+
     public function get_user($user_id)
     {
         $query = "SELECT * FROM `users` WHERE `user_id` = ?";

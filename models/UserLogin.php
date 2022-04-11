@@ -42,8 +42,16 @@ class UserLogin {
         $result_user = $this->connection->prepare($query_user);
         $result_user->execute([$email]);
 
-        if(!$result_user->rowCount()) return false;
-        if(password_verify($password, $result_user['password'])) return true;
+        if(!$result_user->rowCount()){
+            return false;
+            exit();
+        } 
+        
+        $user = $result_user->fetch();
+        if(password_verify($password, $user['password'])) {
+            return $user;
+            exit();
+        }
 
         return false;
     }

@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <?php include("./utils/country_fee.php"); ?>
-
 <!DOCTYPE html>
 <html>
 	<!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
@@ -15,6 +14,9 @@
 		<!-- Latest compiled and minified CSS -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<!-- Latest compiled JavaScript -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/common.css" />
@@ -25,6 +27,9 @@
 		<script type="text/javascript" src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/gh/px2code/posize/build/v1.00.3.js"></script>
 		<style>
+            * {
+                font-family: ubuntu, Arial, sans-serif;
+            }
 			.button {
 				width: 68px;
 				height: 28px;
@@ -438,7 +443,7 @@
                  font-family: ubuntu;
                  font-size: 18px;
                  font-weight: 300;
-                 ">The first step in applying for a <span style="font-size: 20px; font-weight: 500;">Nigeria Temporary Work Permit</span> is to fill the form below.<br>
+                 ">The first step in applying for a <span style="font-size: 20px; font-weight: 500;">Nigeria Business Visa on Arrival </span> is to fill the form below.<br>
 						<span>It takes less than 5 minutes to do this. After you submit your application, you can<br></span>
 						<span> move on to the next step to make payment</span>.
 					</p>
@@ -448,7 +453,7 @@
 								<h2 style="padding-left: 364px;font-family: 'Ubuntu';font-style: normal;font-weight: 500;font-size: 24px;color: #0A0E69;
                             ">Fill the form below</h2>
 								<p style="
-                            padding: 28px 373px 0px 390px;font-family: Ubuntu;font-size: 16px;font-style: normal;font-weight: 400;color: #0A0E69;
+                            padding: 28px 373px 0px 364px;font-family: Ubuntu;font-size: 16px;font-style: normal;font-weight: 400;color: #0A0E69;
                             
                             ">Your personal details</p>
 							</div>
@@ -458,7 +463,7 @@
 										<option selected>Title</option>
 										<?php foreach ($titles as $title) : ?>
 											<option value="<?= $title ?>">
-												<?= $title ?>
+                                                <?= $title ?>
 											</option>
 										<?php endforeach; ?>
 									</select>
@@ -512,10 +517,10 @@
 										<div class="form-group">
 											<select class="form-select" name="country_code" style="border: 1px solid #555555; height: 44px;margin-top: 27px; width:303px;font-family: ubuntu;" aria-label="Default select example">
 												<option selected> Country Code</option>
-												<option value="+1"> USA </option>
-												<option value="+234"> Nigeria </option>
+                                                <option value="+1"> USA </option>
+                                                <option value="+234"> Nigeria </option>
 											</select>
-											<input type="hidden" name="service" value="srvs-001">
+                                            <input type="hidden" name="service" value="srvs-002">
 										</div>
 
 										<div class="form-group" style="margin-right: 202px;">
@@ -526,8 +531,8 @@
 									<select class="form-select" name="country" style="border: 1px solid #555555; height: 44px;margin-left:116px;margin-top: 27px; width:502px;font-family: ubuntu;" aria-label="Default select example">
 										<option selected>Country </option>
 										<?php foreach ($country_fee as $key => $value) : ?>
-											<option value="<?= $key ?>"><?= $key ?></option>
-										<?php endforeach; ?>
+                                            <option value="<?= $key ?>"><?= $key ?></option>
+                                        <?php endforeach; ?>
 									</select>
 									<div style="margin-left: 116px; margin-top: 27px;">
 										<label>Are you a returning customer ? (do you have an account with us on this website)</label>
@@ -546,9 +551,9 @@
 										</div>
 									</div>
 									<div style="margin-left: 116px; margin-top:52px">
-										<button type="submit" name="twp" class="btn proceed">Proceed to payment</button>
+										<button type="submit" name="nbv" class="btn proceed">Proceed to payment</button>
 									</div>
-									</form>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -612,7 +617,7 @@
 				const passport = form.passport.value
 				const gender = Array.from(form.gender).filter(item => item.checked == true)[0].value
 
-				<?php $_SESSION["REG_MODE"] = "TWP"; ?>
+				<?php $_SESSION["REG_MODE"] = "BVA"; ?>
 
 				const data = {
 					country,

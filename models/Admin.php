@@ -31,9 +31,13 @@ class Admin {
         $result = $this->connection->prepare($query);
         $result->execute([$email]);
 
-        if(!$result || !$result->rowCount()) return ["status" => "error", "message" => "No users found"];
+        if($result->rowCount() < 1) {
+            return ["status" => "error", "message" => "No users found"];
+            exit();
+        }
 
         $admin = $result->fetch();
+        
         if(password_verify($password, $admin['password'])){
             return [
                 "status" => "success", 

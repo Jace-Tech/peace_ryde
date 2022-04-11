@@ -179,6 +179,16 @@ function get_visa_price($country) {
     return null;
 }
 
+function get_twp () {
+    $taxes = (IMMIGRATION_FEE * (VAT + TAX_US)) / 100;
+    $total = IMMIGRATION_FEE + $taxes;
+
+    return [
+        "tax" => $taxes,
+        "total" => $total
+    ];
+}
+
 function get_total_price($country) {
     $FREE_BIOMETRIC = ['usa'];
     $visa_price = get_visa_price($country);

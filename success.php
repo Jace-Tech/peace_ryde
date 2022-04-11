@@ -14,7 +14,22 @@
 
     $REF = $_SESSION["REF"];
     $ID = $_SESSION["REG_NO"];
+
     $PRICE = json_decode($_SESSION["PRICE"], true);
+
+    $service = $userServices->getService($ID)['service_id'];
+    $total_price = 0;
+
+    if($service == "srvs-002") {    
+        $price = json_decode($_SESSION["PRICE"], true);
+        $total_price = $price['total_price'];
+    }
+
+    if($service == "srvs-001") {
+        $price = json_decode($_SESSION["PRICE"], true);
+        $total_price = $price['total'];
+    }
+        
 
     $payment = $payments->getPayment($REF);
     $user = $users->get_user($ID);
@@ -101,7 +116,7 @@
 
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <p style="font-family: Rubik;
                             font-size: 16px;
                             font-weight: 400;
@@ -127,7 +142,8 @@
                             font-weight: 400;
                             color:#000000;
                             padding-top:16px; padding-left:85px;
-                            ">$ <?= $PRICE['total_price']; ?> (NGN <?= $paystackPayment->convertToNaira($PRICE['total_price']); ?>)</p>
+                            ">
+                            $ <?= round($total_price, 2); ?> (NGN <?= number_format(round($paystackPayment->convertToNaira($total_price), 2)); ?>)</p>
                               <p style="font-family: Rubik;
                               font-size: 16px;
                               font-weight: 400;
@@ -140,10 +156,13 @@
                                 color:#000000;
                                 padding-top:14px; padding-left:85px;
                                 "><?= date("d F Y", strtotime($payment["date"]));  ?></p>
-                                <!-- d F Y -->
                         </div>
                         <div style="margin-left: 116px; margin-top:26px;margin-bottom:85px ;">
-                            <a href="signin.php" type="submit" class="btn proceed">Return to Account</a>
+                            <?php if(isset($_SESSION['LOGGED_USER'])): ?>
+                                <a href="./Dashboard/index.php" class="btn proceed">Return to Account</a>
+                            <?php else: ?>
+                                <a href="signin.php" class="btn proceed">Return to Account</a>
+                            <?php endif; ?>
                         </div>
                     </div>
                         
@@ -151,6 +170,11 @@
             </div>
         </div>
         <div class="col-md-2"></div>
+        <?php 
+            unset($_SESSION['REF']);
+            unset($_SESSION['REG_NO']);
+            unset($_SESSION['PRICE']);
+        ?>
     </div>
 </body>
 </html>

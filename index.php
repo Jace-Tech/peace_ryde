@@ -435,7 +435,7 @@
 Temporary Residence Visas allow individuals reside in Nigeria for a period not exceeding two years. Visas and their brief descriptions are listed below. To view more information on each visa class  validity, etc.)</pre>
               </div>
               <div class="new-section2__block13 layout">
-                <a href="#" class="btn" style="font-family: Ubuntu;
+                <a href="./NBVForm.php" class="btn" style="font-family: Ubuntu;
                 font-style: normal;
                 font-weight: normal;
                 font-size: 14px;
@@ -464,7 +464,7 @@ Temporary Residence Visas allow individuals reside in Nigeria for a period not e
 Temporary Residence Visas allow individuals reside in Nigeria for a period not exceeding two years. Visas and their brief descriptions are listed below. To view more information on each visa class  validity, etc.)</pre>
               </div>
               <div class="new-section2__block13 layout">
-                <a href="#" class="btn" style="font-family: Ubuntu;
+                <a href="./NTWPForm.php" class="btn" style="font-family: Ubuntu;
                 font-style: normal;
                 font-weight: normal;
                 font-size: 14px;

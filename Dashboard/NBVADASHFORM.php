@@ -1,3 +1,11 @@
+<?php session_start(); ?>
+<?php  
+    include("../utils/country_fee.php");
+    if(isset($_SESSION['LOGGED_USER'])) {
+        $LOGGED_USER = json_decode($_SESSION['LOGGED_USER'], true);
+    }
+?>
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -9,18 +17,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../dist/image/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./dist/image/logo.png">
     <title>PeaceRyde</title>
     <!-- Custom CSS -->
-    <link href="../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
+    <link href="./assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
-    <link href="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="./assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="./assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link href="../dist/css/style.min.css" rel="stylesheet">
+    <link href="./dist/css/style.min.css" rel="stylesheet">
 <style>
 
 
@@ -64,7 +72,7 @@
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar" data-sidebarbg="skin6">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <img src="../dist/image/logo.png" class="sidebar-image" style="border-radius: 50%; margin-left: 85px;">
+                <img src="./dist/image/logo.png" class="sidebar-image" style="border-radius: 50%; margin-left: 85px;">
                 <!-- Sidebar navigation-->
                 <div class="sidebarAccount">
                 <h2>John Peter</h2>
@@ -159,7 +167,7 @@
                                 class="hide-menu"style="padding-left: 23px;">Chat
                             </span></a>
                     </li>
-                    <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="../../contact.html" style="font-family: Rubik;"
+                    <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="././contact.html" style="font-family: Rubik;"
                             aria-expanded="false"><svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M13.3586 16.8934C13.1905 16.893 13.0229 16.8745 12.8586 16.8384C9.73196 16.1916 6.85145 14.6751 4.54864 12.4634C2.29498 10.2469 0.731939 7.42474 0.0486424 4.33844C-0.0319269 3.9538 -0.012152 3.55489 0.106065 3.1801C0.224281 2.80531 0.436961 2.46725 0.723642 2.19844L2.72364 0.273442C2.8258 0.176836 2.94717 0.102857 3.07985 0.056333C3.21253 0.00980932 3.35353 -0.00821314 3.49364 0.00344183C3.63892 0.0185983 3.77912 0.0653985 3.90438 0.140551C4.02963 0.215704 4.1369 0.317384 4.21864 0.438442L6.71864 4.13344C6.81239 4.27681 6.85765 4.44649 6.84775 4.61751C6.83785 4.78853 6.77331 4.95185 6.66364 5.08344L5.40864 6.58344C5.90847 7.68967 6.61631 8.68948 7.49364 9.52844C8.36529 10.3978 9.39556 11.092 10.5286 11.5734L12.0836 10.3384C12.2142 10.2352 12.3732 10.1742 12.5393 10.1635C12.7054 10.1528 12.8709 10.1929 13.0136 10.2784L16.7886 12.7184C16.9182 12.7958 17.0286 12.9015 17.1115 13.0275C17.1944 13.1536 17.2477 13.2968 17.2674 13.4463C17.2871 13.5959 17.2727 13.748 17.2253 13.8913C17.1779 14.0345 17.0987 14.1652 16.9936 14.2734L15.0436 16.2034C14.8221 16.4239 14.5592 16.5983 14.2701 16.7167C13.9809 16.8351 13.6711 16.8952 13.3586 16.8934ZM3.41364 0.993442L1.41364 2.91844C1.25237 3.06872 1.13299 3.25838 1.06724 3.46878C1.00148 3.67918 0.991631 3.90308 1.03864 4.11844C1.674 7.01451 3.1345 9.66459 5.24364 11.7484C7.41074 13.8292 10.1214 15.2556 13.0636 15.8634C13.2863 15.91 13.5171 15.9006 13.7353 15.836C13.9534 15.7714 14.1522 15.6537 14.3136 15.4934L16.2636 13.5634L12.6186 11.2084L10.9486 12.5384C10.8847 12.589 10.8094 12.6232 10.7292 12.6381C10.649 12.6529 10.5664 12.6479 10.4886 12.6234C9.10199 12.1125 7.84537 11.3015 6.80864 10.2484C5.73632 9.24705 4.90395 8.01645 4.37364 6.64844C4.35121 6.56562 4.35046 6.47843 4.37148 6.39524C4.39249 6.31205 4.43456 6.23567 4.49364 6.17344L5.84364 4.55844L3.41364 0.993442Z" fill="white"/>
                                 </svg>
@@ -185,7 +193,8 @@
                             <br>
                             <br>
                             <br>
-                            <br> <br>
+                            <br> 
+                            <br>
                             <br>
                             <br>
                         
@@ -205,18 +214,18 @@
         <div class="page-wrapper" id="main">
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>           
                 <div class="align-self-center">                       
-                    <h3 class="page-title" style="font-family: Ubuntu;font-size: 30px;font-style: normal;font-family: Ubuntu;font-weight: 500;color:#0A0E69;padding-left:200px;">Nigeria Business Visa on Arrival </h3>  
+                    <h3 class="page-title" style="font-family: Ubuntu;font-size: 30px;font-style: normal;font-family: Ubuntu;font-weight: 500;color:#0A0E69;padding-left:200px;">  Nigeria Business Visa on Arrival   </h3>  
                     <p style="padding-top: 30px;padding-left:304px;font-family: Ubuntu;font-size: 24px;font-style: normal;font-weight: 500; color:#0A0E69;">Fill the Form Below</p>   
                     <p style="font-family: Ubuntu;font-size: 18px;font-style: normal;font-weight: 400;padding-top:12px;padding-left:323px;color:#0A0E69;">Your personal details</p>                                          
                 </div>
-                <form style="padding-left: 121px;">
+                <form action="../handlers/form_handler.php" method="post" data-form style="padding-left: 121px;">
                     <div class="form-body">
-                        <select class="form-select" style="color: #5A5A5A;border: 1px solid #555555; width:586px; height: 44px; margin-top:47px"
+                        <select class="form-select" name="title" style="color: #5A5A5A;border: 1px solid #555555; width:586px; height: 44px; margin-top:47px"
                     aria-label="Default select example">
                     <option selected>Title</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <?php foreach($titles as $title): ?>
+                        <option value="<?= $title ?>"><?= $title ?></option>
+                    <?php endforeach; ?>
                   </select>
                   <p style="padding-top:19px; color: #C8730F;font-family: Ubuntu;
                   font-size: 13px;
@@ -227,24 +236,25 @@
                         <div class="row" style="margin-top: 25px;">
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <input type="text" style="width:227px; height:43px;border:1px solid #555555;font-size: 13px;" class="form-control" placeholder="First Name (as on passport)">
+                                    <input name="firstname" type="text" style="width:227px; height:43px;border:1px solid #555555;font-size: 13px;" class="form-control" placeholder="First Name (as on passport)">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <input type="text" style="width:227px;height:43px;border:1px solid #555555;font-size: 13px;" class="form-control" placeholder="Middle Name (as on passport)">
+                                    <input name="middlename" type="text" style="width:227px;height:43px;border:1px solid #555555;font-size: 13px;" class="form-control" placeholder="Middle Name (as on passport)">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <input type="text" style="width:227px;height:43px;border:1px solid #555555;font-size: 13px;" class="form-control" placeholder="Last Name (as on passport)">
+                                    <input type="hidden" name="service" value="srvs-002">
+                                    <input name="lastname" type="text" style="width:227px;height:43px;border:1px solid #555555;font-size: 13px;" class="form-control" placeholder="Last Name (as on passport)">
                                 </div>
                             </div>
                         </div>
                         <div class="row" style="margin-top: 25px;">
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <input type="text" style="width:227px; height:43px;border:1px solid #555555;font-size: 13px;" class="form-control" placeholder="Date of birth">
+                                    <input type="date" name="dob"  style="width:227px; height:43px;border:1px solid #555555;font-size: 13px;" class="form-control" placeholder="Date of birth">
                                 </div>
                             </div>
                             <div class="col-md-1">
@@ -255,15 +265,15 @@
                                 <br>
                                 <div class="form-check form-check-inline">
                                     <div class="custom-control custom-radio">
-                                        <input type="radio" class="custom-control-input" id="customControlValidation2"
-                                            name="radio-stacked">
+                                        <input type="radio" value="male" class="custom-control-input" id="customControlValidation2"
+                                            name="gender">
                                         <label class="custom-control-label" for="customControlValidation2">Male</label>
                                     </div>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <div class="custom-control custom-radio">
-                                        <input type="radio" class="custom-control-input" id="customControlValidation3"
-                                            name="radio-stacked">
+                                        <input type="radio" value="female" class="custom-control-input" id="customControlValidation3"
+                                            name="gender">
                                         <label class="custom-control-label" for="customControlValidation3">Female</label>
                                     </div>
                                 </div>
@@ -273,53 +283,78 @@
                         <div class="row" style="margin-top: 25px;">
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <input type="text" style="width:307px; height:43px;border:1px solid #555555;font-size: 13px;" class="form-control" placeholder="Email address">
+                                    <input name="email" value="<?= $LOGGED_USER['email']; ?>"type="text" style="width:307px; height:43px;border:1px solid #555555;font-size: 13px;" class="form-control" placeholder="Email address">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <input type="text" style="width:307px;height:43px;border:1px solid #555555;font-size: 13px;" class="form-control" placeholder="Passport No">
+                                    <input name="passport" type="text" style="width:307px;height:43px;border:1px solid #555555;font-size: 13px;" class="form-control" placeholder="Passport No">
                                 </div>
                             </div>                            
                         </div>
                         <div class="row" style="margin-top: 25px;">
                             <div class="col-md-4">
-                                <select class="form-select" style="color: #5A5A5A;border: 1px solid #555555; width:303px; height: 44px;"
-                    aria-label="Default select example">
-                    <option selected>Country code</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
+                                <select class="form-select" name="countryCode" style="color: #5A5A5A;border: 1px solid #555555; width:303px; height: 44px;"
+                                aria-label="Default select example">
+                                <option selected>Country code</option>
+                                <option value="+1">USA</option>
+                                <option value="+234">Nigeria</option>
+                            </select>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <input type="text" style="width:307px;height:43px;border:1px solid #555555;font-size: 13px;" class="form-control" placeholder="Mobile number">
+                                    <input type="hidden" name="nbv" value="">
+                                    <input name="phone" type="text" style="width:307px;height:43px;border:1px solid #555555;font-size: 13px;" class="form-control" placeholder="Mobile number">
                                 </div>
                             </div>                            
                         </div>
                         <p style="height: 16px;padding-top: 27px;font-family: Ubuntu;font-size: 14px;font-style: normal;font-weight: 400;">Please select below your Nationality (as on passport)</p>
-                        <select class="form-select" style="border: 1px solid #555555; width:502px; height: 44px; margin-top:27px;color: #5A5A5A;"
+                        <select name="country" class="form-select" style="border: 1px solid #555555; width:502px; height: 44px; margin-top:27px;color: #5A5A5A;"
                     aria-label="Default select example">
-                    <option selected>Select One</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option selected>Select Country</option>
+                    <?php foreach ($country_fee as $key => $value): ?>
+                        <option value="<?= $key ?>"><?= $key ?></option>
+                    <?php endforeach; ?>
                   </select>
                     </div>
                     <div style="margin-top: 62px; margin-bottom: 204px;">
-                        <button type="submit" class="btn" style="background-color: #A0BD1C; width: 157px; height: 44px;font-family: Ubuntu;color:#ffffff;font-size: 14px;font-style: normal;font-weight: 400;">Proceed to Payment</button>
+                        <button data-btn type="button" class="btn" style="background-color: #A0BD1C; width: 157px; height: 44px;font-family: Ubuntu;color:#ffffff;font-size: 14px;font-style: normal;font-weight: 400;">Proceed to Payment</button>
                     </div>
-                 
                   
-                       
-                  
-                
-                     
                 </form>
         </div>
  
     </div>
+    <script>
+        console.clear();
+        const storedUser = localStorage.getItem("USER_REG");
+        const form = document.querySelector("[data-form]")
+        console.log({storedUser});
+        
+        if(storedUser) {
+            const { email, dob, title, passport, gender, country, countryCode, firstname, middlename, lastname, service, phone} = JSON.parse(storedUser)
+
+            form.elements.email.value = email
+            form.elements.dob.value = dob
+            form.elements.firstname.value = firstname
+            form.elements.lastname.value = lastname
+            form.elements.middlename.value = middlename
+            form.elements.lastname.value = lastname
+            form.elements.service.value = service
+            form.elements.phone.value = phone
+            form.elements.passport.value = passport
+            Array.from(form.elements.title.children).filter(item => item.value == title )[0].selected = true
+            Array.from(form.elements.country.children).filter(item => item.value == country )[0].selected = true
+            Array.from(form.elements.countryCode.children).filter(item => item.value == countryCode )[0].selected = true
+            Array.from(form.elements.gender).filter(item => item.value == gender )[0].checked = true
+        }
+
+        document.querySelector("[data-btn]")
+            .addEventListener("click", () => {
+                localStorage.removeItem("USER_REG")
+                form.submit()
+            })
+    </script>
     <script>
         function openNav() {
           document.getElementById("sidebar").style.width = "260px";
@@ -332,25 +367,25 @@
           
         }
         </script>
-    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-    <script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- apps -->
     <!-- apps -->
-    <script src="../dist/js/app-style-switcher.js"></script>
-    <script src="../dist/js/feather.min.js"></script>
-    <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="../dist/js/sidebarmenu.js"></script>
+    <script src="./dist/js/app-style-switcher.js"></script>
+    <script src="./dist/js/feather.min.js"></script>
+    <script src="./assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="./dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
-    <script src="../dist/js/custom.min.js"></script>
+    <script src="./dist/js/custom.min.js"></script>
     <!--This page JavaScript -->
-    <script src="../assets/extra-libs/c3/d3.min.js"></script>
-    <script src="../assets/extra-libs/c3/c3.min.js"></script>
-    <script src="../assets/libs/chartist/dist/chartist.min.js"></script>
-    <script src="../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="../dist/js/pages/dashboards/dashboard1.min.js"></script>
+    <script src="./assets/extra-libs/c3/d3.min.js"></script>
+    <script src="./assets/extra-libs/c3/c3.min.js"></script>
+    <script src="./assets/libs/chartist/dist/chartist.min.js"></script>
+    <script src="./assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="./assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="./assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="./dist/js/pages/dashboards/dashboard1.min.js"></script>
 </body>
 
 </html>

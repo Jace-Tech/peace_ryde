@@ -13,7 +13,8 @@
 
 	$service_name = $services->getUserService($service['service_id'])['service'];
 
-    $PRICE = json_decode($_SESSION["PRICE"], true);
+	$PRICE = json_decode($_SESSION["PRICE"], true);
+
 ?>
 
 
@@ -68,86 +69,230 @@
 
 	<body style="background-color: #1161D9; overflow-x: hidden;">
 		<div class="row">
-			<div class="col-md-5">
-				<img src="Dashboard/dist/image/logo.png" style="border-radius: 50%; margin-left: 36px; margin-top: 28px;">
+			<?php if($service['service_id'] === "srvs-002"): ?>
+				<div class="col-md-5">
+					<img src="Dashboard/dist/image/logo.png" style="border-radius: 50%; margin-left: 36px; margin-top: 28px;">
 
-				<h2 style="font-family: Rubik;
-            font-size: 30px;
-            font-weight: 700;
-            color:#F1F5F6;
-            text-align: left;
-            padding-left: 186px;
-            padding-top: 86px;
-            ">Payment</h2>
-				<div class="row" style="margin-left: 186px; margin-top: 14px;">
-					<div class="col-md-8">
-						<p style="font-family: Ubuntu;
-                    font-size: 18px;
-                    font-weight: 700;
-                    color:#F1F5F6;
-                    ">Services</p>
+					<h2 style="font-family: Rubik; font-size: 30px; font-weight: 700; color:#F1F5F6; text-align: left; padding-left: 186px; padding-top: 86px; ">Payment</h2>
+					<div class="row" style="margin-left: 186px; margin-top: 14px;">
+						<div class="col-md-8">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						color:#F1F5F6;
+						">Services</p>
+						</div>
+						<div class="col-md-4">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						padding-left: 200px;
+						color:#F1F5F6;">Price($)</p>
+						</div>
 					</div>
-					<div class="col-md-4">
-						<p style="font-family: Ubuntu;
-                    font-size: 18px;
-                    font-weight: 700;
-                    padding-left: 200px;
-                    color:#F1F5F6;">Price($)</p>
+					<div style="margin-left: 186px; margin-top: 26px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px;"></div>
+					<div class="row" style="margin-left: 186px; margin-top: 15px;">
+						<div class="col-md-8">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						color:#F1F5F6;
+						"><?= $service_name; ?></p>
+						</div>
+						<div class="col-md-4">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						padding-left: 200px;
+						color:#F1F5F6;"> <?= round($PRICE['fees_total'], 2); ?> </p>
+						</div>
 					</div>
+					<div class="row" style="margin-left: 186px; margin-top: 17px;">
+						<div class="col-md-8">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						color:#F1F5F6;
+						">Tax/ VAT</p>
+						</div>
+						<div class="col-md-4">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						padding-left: 200px;
+						color:#F1F5F6;"> <?= round($PRICE['taxes'], 2); ?></p>
+						</div>
+					</div>
+					<div style="margin-left: 186px; margin-top: 47px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px;"></div>
+					<div class="row" style="margin-left: 186px; margin-top: 17px;">
+						<div class="col-md-8">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						color:#F1F5F6;
+						">Total</p>
+						</div>
+						<div class="col-md-4">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						padding-left: 200px;
+						color:#F1F5F6;"><?= round($PRICE['total_price'], 2); ?></p>
+						</div>
+					</div>
+					<div style="margin-left: 186px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px; margin-top: 17px;"></div>
+					<div style="margin-left: 186px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px; margin-top: 6px;"></div>
 				</div>
-				<div style="margin-left: 186px; margin-top: 26px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px;"></div>
-				<div class="row" style="margin-left: 186px; margin-top: 15px;">
-					<div class="col-md-8">
-						<p style="font-family: Ubuntu;
-                    font-size: 18px;
-                    font-weight: 700;
-                    color:#F1F5F6;
-                    "><?= $service_name; ?></p>
+			<?php elseif($service['service_id'] === "srvs-001"): ?>
+				<div class="col-md-5">
+					<img src="Dashboard/dist/image/logo.png" style="border-radius: 50%; margin-left: 36px; margin-top: 28px;">
+
+					<h2 style="font-family: Rubik; font-size: 30px; font-weight: 700; color:#F1F5F6; text-align: left; padding-left: 186px; padding-top: 86px; ">Payment</h2>
+					<div class="row" style="margin-left: 186px; margin-top: 14px;">
+						<div class="col-md-8">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						color:#F1F5F6;
+						">Services</p>
+						</div>
+						<div class="col-md-4">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						padding-left: 200px;
+						color:#F1F5F6;">Price($)</p>
+						</div>
 					</div>
-					<div class="col-md-4">
-						<p style="font-family: Ubuntu;
-                    font-size: 18px;
-                    font-weight: 700;
-                    padding-left: 200px;
-                    color:#F1F5F6;"> <?= round($PRICE['fees_total'], 2); ?> </p>
+					<div style="margin-left: 186px; margin-top: 26px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px;"></div>
+					<div class="row" style="margin-left: 186px; margin-top: 15px;">
+						<div class="col-md-8">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						color:#F1F5F6;
+						"><?= "Nigeria Temporary Work Permit (TWP)" ?></p>
+						</div>
+						<div class="col-md-4">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						padding-left: 200px;
+						color:#F1F5F6;"> <?= round(200, 2); ?> </p>
+						</div>
 					</div>
+					<div class="row" style="margin-left: 186px; margin-top: 17px;">
+						<div class="col-md-8">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						color:#F1F5F6;
+						">Tax/ VAT</p>
+						</div>
+						<div class="col-md-4">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						padding-left: 200px;
+						color:#F1F5F6;"> <?= round($PRICE['tax'], 2); ?></p>
+						</div>
+					</div>
+					<div style="margin-left: 186px; margin-top: 47px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px;"></div>
+					<div class="row" style="margin-left: 186px; margin-top: 17px;">
+						<div class="col-md-8">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						color:#F1F5F6;
+						">Total</p>
+						</div>
+						<div class="col-md-4">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						padding-left: 200px;
+						color:#F1F5F6;"><?= round($PRICE['total'], 2); ?></p>
+						</div>
+					</div>
+					<div style="margin-left: 186px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px; margin-top: 17px;"></div>
+					<div style="margin-left: 186px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px; margin-top: 6px;"></div>
 				</div>
-				<div class="row" style="margin-left: 186px; margin-top: 17px;">
-					<div class="col-md-8">
-						<p style="font-family: Ubuntu;
-                    font-size: 18px;
-                    font-weight: 700;
-                    color:#F1F5F6;
-                    ">Tax/ VAT</p>
+			<?php else: ?>
+				<div class="col-md-5">
+					<img src="Dashboard/dist/image/logo.png" style="border-radius: 50%; margin-left: 36px; margin-top: 28px;">
+
+					<h2 style="font-family: Rubik; font-size: 30px; font-weight: 700; color:#F1F5F6; text-align: left; padding-left: 186px; padding-top: 86px; ">Payment</h2>
+					<div class="row" style="margin-left: 186px; margin-top: 14px;">
+						<div class="col-md-8">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						color:#F1F5F6;
+						">Services</p>
+						</div>
+						<div class="col-md-4">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						padding-left: 200px;
+						color:#F1F5F6;">Price($)</p>
+						</div>
 					</div>
-					<div class="col-md-4">
-						<p style="font-family: Ubuntu;
-                    font-size: 18px;
-                    font-weight: 700;
-                    padding-left: 200px;
-                    color:#F1F5F6;"> <?= round($PRICE['taxes'], 2); ?></p>
+					<div style="margin-left: 186px; margin-top: 26px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px;"></div>
+					<div class="row" style="margin-left: 186px; margin-top: 15px;">
+						<div class="col-md-8">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						color:#F1F5F6;
+						"><?= $service_name; ?></p>
+						</div>
+						<div class="col-md-4">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						padding-left: 200px;
+						color:#F1F5F6;"> <?= round($PRICE['fees_total'], 2); ?> </p>
+						</div>
 					</div>
+					<div class="row" style="margin-left: 186px; margin-top: 17px;">
+						<div class="col-md-8">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						color:#F1F5F6;
+						">Tax/ VAT</p>
+						</div>
+						<div class="col-md-4">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						padding-left: 200px;
+						color:#F1F5F6;"> <?= round($PRICE['taxes'], 2); ?></p>
+						</div>
+					</div>
+					<div style="margin-left: 186px; margin-top: 47px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px;"></div>
+					<div class="row" style="margin-left: 186px; margin-top: 17px;">
+						<div class="col-md-8">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						color:#F1F5F6;
+						">Total</p>
+						</div>
+						<div class="col-md-4">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						padding-left: 200px;
+						color:#F1F5F6;"><?= round($PRICE['total_price'], 2); ?></p>
+						</div>
+					</div>
+					<div style="margin-left: 186px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px; margin-top: 17px;"></div>
+					<div style="margin-left: 186px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px; margin-top: 6px;"></div>
 				</div>
-				<div style="margin-left: 186px; margin-top: 47px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px;"></div>
-				<div class="row" style="margin-left: 186px; margin-top: 17px;">
-					<div class="col-md-8">
-						<p style="font-family: Ubuntu;
-                    font-size: 18px;
-                    font-weight: 700;
-                    color:#F1F5F6;
-                    ">Total</p>
-					</div>
-					<div class="col-md-4">
-						<p style="font-family: Ubuntu;
-                    font-size: 18px;
-                    font-weight: 700;
-                    padding-left: 200px;
-                    color:#F1F5F6;"><?= round($PRICE['total_price'], 2); ?></p>
-					</div>
-				</div>
-				<div style="margin-left: 186px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px; margin-top: 17px;"></div>
-				<div style="margin-left: 186px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px; margin-top: 6px;"></div>
-			</div>
+			<?php endif; ?>
+			
 			<div class="col-md-6">
 				<form method="post" action="./handlers/payment.php"class="card" style="width: 502px; height: 653px; margin-top: 52px; background-color: #ffffff; margin-left: 200px;">
 					<div style="margin-top: 31px;">
