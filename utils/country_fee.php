@@ -179,8 +179,28 @@ function get_visa_price($country) {
     return null;
 }
 
+
+function get_share_price($shares) {
+    $def_price = 800;
+    $price = ($shares * $def_price) / 10000000;
+    return $price;
+}
+
+
+function get_bi_price ($shares = 10000000) {
+    $price = get_share_price($shares);
+    $taxes =  $price * ((VAT + TAX_US) / 100);
+    $total = $price + $taxes;
+
+    return [
+        'tax' => $taxes,
+        'total' => $total,
+        'price' => $price
+    ];
+}
+
 function get_twp () {
-    $taxes = (IMMIGRATION_FEE * (VAT + TAX_US)) / 100;
+    $taxes = IMMIGRATION_FEE * ((VAT + TAX_US) / 100);
     $total = IMMIGRATION_FEE + $taxes;
 
     return [
@@ -204,7 +224,7 @@ function get_total_price($country) {
         $fees_total = $visa_price + BIOMETRICS_FEE + ADMIN_PORTAL_FEE + IMMIGRATION_FEE;
     }
     
-    $taxes = ($fees_total * (VAT + TAX_US)) / 100;
+    $taxes = $fees_total * ((VAT + TAX_US) / 100);
     $total_price = $fees_total + $taxes;
     
     return [

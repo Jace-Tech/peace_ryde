@@ -74,9 +74,7 @@ function getWeekTime(int $week)
 {
     return ((24 * 3600) * 7) * $week;
 }
-?>
- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<?php
+
 function sendMail ($subject, $_message, $from, $to) 
 {
     // To send HTML mail, the Content-type header must be set
