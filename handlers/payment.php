@@ -60,6 +60,9 @@ if(isset($_POST['pay'])){
             $price = json_decode($_SESSION["PRICE"], true);
             $total_price = $price['total'];
         }
+
+        print_r($get_total_price);
+        die();
         
         // Make Payment
         switch($payment_option) {
