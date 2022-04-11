@@ -138,6 +138,8 @@ if(isset($_POST['bi'])) {
 
     // Get TWP Calculations
     $fees = get_bi_price($shares);
+    print_r($fees);
+    die();
 
     $_SESSION["PRICE"] = json_encode($fees);
 
