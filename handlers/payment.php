@@ -28,10 +28,6 @@ if(isset($_POST['pay'])){
     $POST = filter_var_array($_POST, FILTER_SANITIZE_STRING);
     extract($POST);
 
-    $url = $_SERVER['HTTP_ORIGIN'] . "/visa/handlers/payment.php";
-    print_r($url);
-    die();
-
     // Generate Card Options
     $card = [
         "userId" => $id,
@@ -46,7 +42,7 @@ if(isset($_POST['pay'])){
     
     // If successful
     if($result) {
-        $url = $_SERVER['HTTP_ORIGIN'] . "/visa/handlers/payment.php";
+        $url = $_SERVER['HTTP_ORIGIN'] . "/handlers/payment.php";
         $service = $userServices->getService($id)['service_id'];
         $total_price = 0;
 
