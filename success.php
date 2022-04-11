@@ -5,10 +5,12 @@
 <?php 
     include("./db/config.php");
     include("./models/User.php");
+    include("./models/UserService.php");
     include("./models/Payment.php");
     include("./payment/Paystack.php");
 
     $users = new User($connect);
+    $userServices = new UserService($connect);
     $payments = new Payment($connect);
     $paystackPayment = new PaystackPayment($connect);
 
@@ -30,7 +32,6 @@
         $total_price = $price['total'];
     }
         
-
     $payment = $payments->getPayment($REF);
     $user = $users->get_user($ID);
 
