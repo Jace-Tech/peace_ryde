@@ -31,6 +31,11 @@
         $price = json_decode($_SESSION["PRICE"], true);
         $total_price = $price['total'];
     }
+
+    if($service == "srvs-003") {
+        $price = json_decode($_SESSION["PRICE"], true);
+        $total_price = $price['total'];
+    }
         
     $payment = $payments->getPayment($REF);
     $user = $users->get_user($ID);

@@ -478,31 +478,32 @@ font-weight: 400;
                             ">Business Registration</p>
                         </div>
                         <div>
-                            <form>
+                            <form method="post" action="./handlers/form_handler.php">
                               <div class="form-row" style="margin-left: 116px;">
                                 <div class="form-group">                                 
-                                    <input type="text" class="form-control"
+                                    <input required name="companyName" type="text" class="form-control"
                                     style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px; height: 44px;width:303px; margin-right:55px;" placeholder="Company Name" >
                                 </div>
                                 
                                 <div class="form-group" style="margin-right: 202px;">
-                                    <input type="text" class="form-control"
+                                    <input required name="email" type="email" class="form-control"
                                     style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px; width:303px;height: 44px;" placeholder="Email" >
                                   </div>
                               </div>
                               <div class="form-row" style="margin-left: 116px;">
                                 <div class="form-group">                                 
-                                    <input type="text" class="form-control"
+                                    <input required name="coperateAddress" type="text" class="form-control"
                                     style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px; height: 44px;width:303px; margin-right:55px;" placeholder="Coporate Address" >
                                 </div>
                                 
                                 <div class="form-group" style="margin-right: 202px;">
-                                    <input type="text" class="form-control"
+                                    <input type="hidden" name="service" value="srvs-003">
+                                    <input required name="shares" type="number" min="10000000" class="form-control"
                                     style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px; width:303px;height: 44px;" placeholder="No of Shares" >
                                   </div>
                               </div>
                               <div style="margin-left: 116px; margin-top:56px;margin-bottom:85px ;">
-                                  <button type="submit" class="btn proceed">Proceed to payment</button>
+                                  <button type="submit" name="bi" class="btn proceed">Proceed to payment</button>
                               </div>
                             </form>
                         </div>

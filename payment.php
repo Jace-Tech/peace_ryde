@@ -245,14 +245,14 @@
 						font-size: 18px;
 						font-weight: 700;
 						color:#F1F5F6;
-						"><?= $service_name; ?></p>
+						"><?= "Nigeria Business Incorporation" ?></p>
 						</div>
 						<div class="col-md-4">
 							<p style="font-family: Ubuntu;
 						font-size: 18px;
 						font-weight: 700;
 						padding-left: 200px;
-						color:#F1F5F6;"> <?= round($PRICE['fees_total'], 2); ?> </p>
+						color:#F1F5F6;"> <?= round($PRICE['price'], 2); ?> </p>
 						</div>
 					</div>
 					<div class="row" style="margin-left: 186px; margin-top: 17px;">
@@ -268,7 +268,7 @@
 						font-size: 18px;
 						font-weight: 700;
 						padding-left: 200px;
-						color:#F1F5F6;"> <?= round($PRICE['taxes'], 2); ?></p>
+						color:#F1F5F6;"> <?= round($PRICE['tax'], 2); ?></p>
 						</div>
 					</div>
 					<div style="margin-left: 186px; margin-top: 47px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px;"></div>
@@ -285,7 +285,7 @@
 						font-size: 18px;
 						font-weight: 700;
 						padding-left: 200px;
-						color:#F1F5F6;"><?= round($PRICE['total_price'], 2); ?></p>
+						color:#F1F5F6;"><?= round($PRICE['total'], 2); ?></p>
 						</div>
 					</div>
 					<div style="margin-left: 186px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px; margin-top: 17px;"></div>

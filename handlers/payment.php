@@ -55,6 +55,11 @@ if(isset($_POST['pay'])){
             $price = json_decode($_SESSION["PRICE"], true);
             $total_price = $price['total'];
         }
+
+        if($service == "srvs-001") {
+            $price = json_decode($_SESSION["PRICE"], true);
+            $total_price = $price['total'];
+        }
         
         // Make Payment
         switch($payment_option) {

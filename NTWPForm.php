@@ -454,7 +454,7 @@
 							</div>
 							<div>
 								<form data-form action="./handlers/form_handler.php" method="post">
-									<select class="form-select" name="title" style="border: 1px solid #555555; width:352px; margin-left:116px; margin-top:72px" aria-label="Default select example">
+									<select required class="form-select" name="title" style="border: 1px solid #555555; width:352px; margin-left:116px; margin-top:72px" aria-label="Default select example">
 										<option selected>Title</option>
 										<?php foreach ($titles as $title) : ?>
 											<option value="<?= $title ?>">
@@ -466,19 +466,19 @@
 
 									<div class="form-row" style="margin-left: 116px;">
 										<div class="form-group">
-											<input type="text" name="firstname" class="form-control" style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px;height: 44px; width:227px;" placeholder="First Name">
+											<input required type="text" name="firstname" class="form-control" style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px;height: 44px; width:227px;" placeholder="First Name">
 										</div>
 										<div class="form-group">
-											<input type="text" name="middlename" class="form-control" style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px;height: 44px; width:227px; " placeholder="Middle Name">
+											<input required type="text" name="middlename" class="form-control" style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px;height: 44px; width:227px; " placeholder="Middle Name">
 										</div>
 										<div class="form-group" style="margin-right: 117px;">
-											<input type="text" name="lastname" class="form-control" style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px;height: 44px; width:227px;" placeholder="Last Name">
+											<input required type="text" name="lastname" class="form-control" style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px;height: 44px; width:227px;" placeholder="Last Name">
 										</div>
 									</div>
 
 									<div class="form-row" style="margin-left: 116px;">
 										<div class="form-group">
-											<input type="date" name="dob" class="form-control" style="border:1px solid #555555; font-family: ubuntu; margin-top: 25px;height: 44px; width:227px;" placeholder="DD/MM/YY">
+											<input required type="date" name="dob" class="form-control" style="border:1px solid #555555; font-family: ubuntu; margin-top: 25px;height: 44px; width:227px;" placeholder="DD/MM/YY">
 										</div>
 										<div class="col-md-12" style="margin-top: 25px;">
 											<label style="padding-left: 78px;">Gender</label>
@@ -501,16 +501,16 @@
 
 									<div class="form-row" style="margin-left: 116px;">
 										<div class="form-group">
-											<input type="text" class="form-control" name="email" style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px;height: 44px; width:303px;" placeholder="Email address">
+											<input required type="text" class="form-control" name="email" style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px;height: 44px; width:303px;" placeholder="Email address">
 										</div>
 
 										<div class="form-group" style="margin-right: 202px;">
-											<input type="text" name="passport" class="form-control" style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px;height: 44px; width:303px;" placeholder="Passport No">
+											<input required type="text" name="passport" class="form-control" style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px;height: 44px; width:303px;" placeholder="Passport No">
 										</div>
 									</div>
 									<div class="form-row" style="margin-left: 116px;">
 										<div class="form-group">
-											<select class="form-select" name="country_code" style="border: 1px solid #555555; height: 44px;margin-top: 27px; width:303px;font-family: ubuntu;" aria-label="Default select example">
+											<select required class="form-select" name="country_code" style="border: 1px solid #555555; height: 44px;margin-top: 27px; width:303px;font-family: ubuntu;" aria-label="Default select example">
 												<option selected> Country Code</option>
 												<option value="+1"> USA </option>
 												<option value="+234"> Nigeria </option>
@@ -519,11 +519,11 @@
 										</div>
 
 										<div class="form-group" style="margin-right: 202px;">
-											<input type="tel" name="phone" class="form-control" style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px;height: 44px; width:303px;" placeholder="Mobile number">
+											<input required type="tel" name="phone" class="form-control" style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px;height: 44px; width:303px;" placeholder="Mobile number">
 										</div>
 									</div>
 									<p style="padding-left: 116px; padding-top: 27px;font-family: Ubuntu;font-size: 14px;font-style: normal;font-weight: 400;">Please select below your Nationality (as on passport)</p>
-									<select class="form-select" name="country" style="border: 1px solid #555555; height: 44px;margin-left:116px;margin-top: 27px; width:502px;font-family: ubuntu;" aria-label="Default select example">
+									<select required class="form-select" name="country" style="border: 1px solid #555555; height: 44px;margin-left:116px;margin-top: 27px; width:502px;font-family: ubuntu;" aria-label="Default select example">
 										<option selected>Country </option>
 										<?php foreach ($country_fee as $key => $value) : ?>
 											<option value="<?= $key ?>"><?= $key ?></option>
