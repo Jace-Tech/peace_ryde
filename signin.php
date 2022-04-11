@@ -400,7 +400,7 @@
                     <form>
                         <div class="form-row" style="margin-left: 69px;">
                           <div class="form-group" style="margin-right: 202px; margin-top:72px">
-                            <input type="text" class="form-control" style="border: 1px solid #ffffff; width:470px;font-family:ubuntu;height: 44px; margin-top:27px; background-color: #fff; color: #ffffff;" placeholder="Email"/>
+                            <input type="text" class="form-control" style="border: 1px solid #ffffff; width:470px;font-family:ubuntu;height: 44px; margin-top:27px; background-color: #1161D9; color: #ffffff;" placeholder="Email"/>
 
                             <input type="text" class="form-control" style="border: 1px solid #ffffff; width:470px;font-family:ubuntu;height: 44px; margin-top:27px; background-color: #1161D9; color: #ffffff;" placeholder="Password"/>                            
                             </div>
