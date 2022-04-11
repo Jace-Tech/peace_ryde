@@ -91,7 +91,7 @@ function sendMail ($subject, $_message, $from, $to)
 
     $message = "<html>
         <head>
-            <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'> 
+            <link rel='shortcut icon' href='http://test.peacerydeafrica.com/app/assets/logo.png' type='image/x-icon'> 
         </head> <body>";
     $message  .= $_message;
     $message .= "</body></html>";
