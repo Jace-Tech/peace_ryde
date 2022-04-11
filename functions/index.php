@@ -74,8 +74,10 @@ function getWeekTime(int $week)
 {
     return ((24 * 3600) * 7) * $week;
 }
-
-function sendMail ($subject, $message, $from, $to) 
+?>
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<?php
+function sendMail ($subject, $_message, $from, $to) 
 {
     // To send HTML mail, the Content-type header must be set
     $headers  = 'MIME-Version: 1.0' . "\r\n";
@@ -85,6 +87,15 @@ function sendMail ($subject, $message, $from, $to)
     $headers .= 'From: '.$from."\r\n".
         'Reply-To: '.$from."\r\n" .
         'X-Mailer: PHP/' . phpversion();
+    
+
+    $message = "<html>
+        <head>
+            <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'> 
+        </head> <body>";
+    $message  .= $_message;
+    $message .= "</body></html>";
+
     
     // Sending email
     return mail($to, $subject, $message, $headers);
