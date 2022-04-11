@@ -61,9 +61,6 @@ if(isset($_POST['pay'])){
             $total_price = $price['total'];
         }
 
-        print_r($get_total_price);
-        die();
-        
         // Make Payment
         switch($payment_option) {
             case "paystack":
