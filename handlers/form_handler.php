@@ -28,7 +28,7 @@ if(isset($_POST['twp'])) {
         "phone" => $country_code . $phone
     ];
 
-    if($_SESSION['LOGGED_USER']) {
+    if(isset($_SESSION['LOGGED_USER'])) {
         $LOGGED_USER = json_decode($_SESSION['LOGGED_USER'], true);
         $users->add_user_service($LOGGED_USER['user_id'], $service);
 
@@ -70,7 +70,7 @@ if(isset($_POST['nbv'])) {
     ];
 
 
-    if($_SESSION['LOGGED_USER']) {
+    if(isset($_SESSION['LOGGED_USER'])) {
         $LOGGED_USER = json_decode($_SESSION['LOGGED_USER'], true);
         $users->add_user_service($LOGGED_USER['user_id'], $service);
 
@@ -103,7 +103,7 @@ if(isset($_POST['bi'])) {
     ];
 
 
-    if($_SESSION['LOGGED_USER']) {
+    if(isset($_SESSION['LOGGED_USER'])) {
         $LOGGED_USER = json_decode($_SESSION['LOGGED_USER'], true);
         $users->add_user_service($LOGGED_USER['user_id'], $service);
 
