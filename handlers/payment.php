@@ -56,7 +56,7 @@ if(isset($_POST['pay'])){
             $total_price = $price['total'];
         }
 
-        if($service == "srvs-001") {
+        if($service == "srvs-003") {
             $price = json_decode($_SESSION["PRICE"], true);
             $total_price = $price['total'];
         }
