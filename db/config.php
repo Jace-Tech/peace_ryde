@@ -1,9 +1,9 @@
 <?php   
 
 define('HOST', 'localhost');
-define('USERNAME', 'root');
-define('PASSWORD', '');
-define('DB', 'peace_ryde');
+define('USERNAME', 'peacery3_peacery3');
+define('PASSWORD', 'iH#;4bM3j1M1iP');
+define('DB', 'peacery3_peace_ryde');
 
 $DSN = "mysql:host=" . HOST . ";dbname=" . DB; 
 $connect = new PDO($DSN, USERNAME, PASSWORD);
