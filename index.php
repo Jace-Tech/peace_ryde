@@ -23,9 +23,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/common.css" />
   <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+  
   <link rel="stylesheet" type="text/css" href="css/New.css" />
+  <link rel="stylesheet" type="text/css" href="css/responsive.css" />
 
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script type="text/javascript" src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/px2code/posize/build/v1.00.3.js"></script>
@@ -47,26 +48,7 @@
       padding-right: 60px;
 
     }
-    .buttons {
-      width: 68px;
-      height: 28px;
-      padding-top: 3px;
-      margin-top: 12px;
-      background: #a0bd1c;
-      border-radius: 6px;
-      font-size: 13px;;
-      font-weight: 300;
-      font-style: normal;
-      color: #FBFCFB;
-      font-family: Ubuntu;
-      text-align: center;
-      padding-right: 60px;
-    }
-
-    .buttons:hover
-    {
-      color:white;
-    }
+    
     .button2 {
     background-color: #FBFCFB;
     width: 89px;
@@ -87,19 +69,7 @@
       background-color: #a0bd1c;
       color: white;
     }
-    .applybtn
-    {
-      padding-left: 30.5px; font-weight: 300;
-            padding-top: 13px;
-            padding-bottom: 13px;
-            padding-right: 30.5px; color:#ffffff; font-family: ubuntu; font-size: 16px;
-    }
-   .applybtn:hover
-   {
-
-    color: #ffffff;
-    
-   }
+   
     .button:hover {
       background-color: #FBFCFB;
       border: 1px solid #a0bd1c;
@@ -137,7 +107,6 @@
 
 
 <body class="body">
-  <?php include("./inc/alert.php"); ?>
   <main class="new new-main layout">
     <!-- ======= section1 ======= -->
     <section class="new-section1__section1 layout">
@@ -146,30 +115,13 @@
           <div class="new-section1__flex1 layout">
             <div class="new-section1__text-body8-box layout">
               <div class="new-section1__text-body8">
-                <span><b style="font-weight: 500;margin-left: 587px;
-                  margin-top: 18px;
-                  font-family: Ubuntu;
-                  font-style: normal;
-                  color: #ffffff;">FREE </b></span><span class="new-section1__text-body8-span2 text" style="font-weight: 300;">Business
+                <span><b class="free">FREE </b></span><span class="new-section1__text-body8-span2 text business">Business
                   Name Availability Search</span>
               </div>
             </div>
             <div class="new-section1__flex1-spacer"></div>
             <div class="new-section1__flex1-item">
-              <input type="text" class="form-control" style="width: 230px;
-              height: 28px;
-              left: 874px;
-              margin-top: 10px;
-              background: #F1F5F6;
-              text-align: center;
-              border-radius: 6px;
-              color:#15042336;
-;
-              font-family: Ubuntu;
-              font-size: 14px;
-              line-height: 16px;
-              text-transform: lowercase;
-              color: rgba(21, 4, 35, 0.21);" placeholder=" search business name here">
+              <input type="text" class="form-control form" placeholder=" search business name here">
             </div>
             <div class="new-section1__flex1-spacer1"></div>
             <div class="new-section1__flex1-item1">
@@ -180,25 +132,14 @@
             </div>
             <div class="new-section1__flex1-spacer2"></div>
 
-            <a href="+1 (708) 318-0273" style="color: white;
-            padding-top: 18px;
-            width: 120px;
-            height: 16px;
-            left: 1208px;
-            font-family: 'Ubuntu';
-            font-style: normal;
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 16px;
-            text-decoration-line: none;
-            color: #FFFFFF;">+1 (708) 318-0273</a>
+            <a href="+1 (708) 318-0273" class="phone">+1 (708) 318-0273</a>
           </div>
         </div>
 
         <nav class="navbar navbar-expand-sm bg-nav shadow navbar-light height">
 
           <div class="container-fluid">
-            <a class="navbar-brand brand" href="index.php"><img src="assets/logo.png" width="164" style="margin-left: 51px; margin-top: 28px;"></a>
+            <a class="navbar-brand brand" href="index.php"><img src="assets/logo.png" class="logoimg" width="164"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -363,13 +304,6 @@
                 </ul>
               </li>
             </ul>
-              <!-- <div class="d-flex">
-
-                <button class="btn button" type="button" style="margin-right: 50px;">Apply</button>
-                <button class="btn button2 mr-10" type="button">Sign In</button>
-                <span></span>
-                <a class="nav-link" href="#" style="color: black; padding-right: 20px;">English</a>
-              </div> -->
             </div>
           </div>
         </nav>
@@ -379,32 +313,17 @@
         <div style="background-image: url(assets/bg.png);background-size: contain; background-repeat: no-repeat;"
           class="new-section1__cover-block layout">
           <h4 class="new-section1__highlights5-box layout">
-            <pre class="new-section1__highlights5" style="margin-left:-7%; font-family: rubik;">
+            <pre class="new-section1__highlights5 shop">
               Your One-stop shop for </pre>
           </h4>
-          <h1 class="new-section1__hero-title2 layout" style="width: 649px;
-          height: 125px;
-          font-family: Rubik;
-          font-style: normal;
-          font-weight: 600;
-          font-size: 50px;
-          line-height: 61.5px;
-          letter-spacing: 0.04em;
-          color: #000080;">
+          <h1 class="bannertext new-section1__hero-title2 layout ">
             Nigeria Visa and <br>Business Incorporation
           </h1>
-          <h2 class="new-section1__medium-title layout" style="font-family: Ubuntu;
-          font-size: 25px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: 29px;
-          letter-spacing: 0em;
-          text-align: left;
-          ">
+          <h2 class="new-section1__medium-title layout made">
             Made easy, fast and convenient!
           </h2>
-          <div class="new-section1__block11 layout" style="width: 150px; height: 55px;">
-            <a href="" class="btn applybtn" style="">Apply NOW</a>
+          <div class="new-section1__block11 layout applys">
+            <a href="" class="btn applybtn">Apply NOW</a>
 
             <!-- <h5 class="new-section1__highlights1 layout">Apply NOW</h5> -->
           </div>
@@ -435,7 +354,7 @@
 Temporary Residence Visas allow individuals reside in Nigeria for a period not exceeding two years. Visas and their brief descriptions are listed below. To view more information on each visa class  validity, etc.)</pre>
               </div>
               <div class="new-section2__block13 layout">
-                <a href="./NBVForm.php" class="btn" style="font-family: Ubuntu;
+                <a href="#" class="btn" style="font-family: Ubuntu;
                 font-style: normal;
                 font-weight: normal;
                 font-size: 14px;
@@ -464,7 +383,7 @@ Temporary Residence Visas allow individuals reside in Nigeria for a period not e
 Temporary Residence Visas allow individuals reside in Nigeria for a period not exceeding two years. Visas and their brief descriptions are listed below. To view more information on each visa class  validity, etc.)</pre>
               </div>
               <div class="new-section2__block13 layout">
-                <a href="./NTWPForm.php" class="btn" style="font-family: Ubuntu;
+                <a href="#" class="btn" style="font-family: Ubuntu;
                 font-style: normal;
                 font-weight: normal;
                 font-size: 14px;
@@ -513,14 +432,14 @@ Temporary Residence Visas allow individuals reside in Nigeria for a period not e
           <!-- <div class="new-section3__box3 layout"></div> -->
           <div class="new-section3__block2 layout">
             <div class="new-section3__block2-spacer"></div>
-            <div style="width: 811px; height: 87px;">
+            <div class="width">
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 col-xs-3 col-sm-3">
                   <div class="new-section3__block2-item">
                     <div class="new-section3__block3 layout">
                       <div class="new-section3__block3-item">
                         <div
-                          style="background-image: url(assets/nationality.png); background-repeat: no-repeat; margin-left: 36px;"
+                          style="background-image: url(assets/nationality.png); background-repeat: no-repeat;"
                           class="new-section3__icon4 layout">
                         </div>
                       </div>
@@ -537,23 +456,15 @@ Temporary Residence Visas allow individuals reside in Nigeria for a period not e
                             <option value="2">Two</option>
                             <option value="3">Three</option>
                           </select>
-                          <!-- <h5 class="new-section3__highlights3-box layout">
-                            <pre class="new-section3__highlights3">
-        Please select </pre>
-                          </h5> -->
+
                         </div>
                       </div>
-                      <!-- <div class="new-section3__block3-spacer1"></div>
-                      <div class="new-section3__block3-item2">
-                        <div class="new-section3__block4 layout">
-                          <div style="background-image: url(assets/na.png);" class="new-section3__image6 layout"></div>
-                        </div>
-                      </div> -->
+
                     </div>
                   </div>
                 </div>
     
-                <div class="col-md-3" style="margin-left: 80px;">
+                <div class="col-md-3 col-xs-3 col-sm-3 ml-80">
                   <div class="new-section3__block2-item1">
                     <div class="new-section3__block5 layout">
                       <div class="new-section3__block5-item">
@@ -580,7 +491,7 @@ Temporary Residence Visas allow individuals reside in Nigeria for a period not e
                   </div>
                 </div>
     
-                <div class="col-md-3" style="margin-left: 80px;">
+                <div class="col-md-3 col-xs-3 col-sm-3 ml-80" >
                   <div class="new-section3__block2-item2">
                     <div class="new-section3__block7 layout">
                       <div class="new-section3__block5-item">
@@ -608,10 +519,10 @@ Temporary Residence Visas allow individuals reside in Nigeria for a period not e
                   </div>
                 </div>
     
-                          </div>
+              </div>
             </div>
-            <div class="col-md-2">
-              <button class="btn" style="background-color: #1161d9; color: white; height: 87px; width: 214px;">
+            <div class="row ">
+              <button class="btn blue">
                 <div class="row">
                   <div class="col-md-9">
                     <h4 class="new-section3__highlights4 layout">Get started</h4>
@@ -645,115 +556,63 @@ Temporary Residence Visas allow individuals reside in Nigeria for a period not e
           <ul class="list-group list-group-horizontal ">
             <li class="mt-5">
               <div>
-                <img src="assets/1.png" width="113" style="height: 110px;
-                width: 113px;
-                margin-left: 146px;
-                top: 252px;
-                border-radius: 0px;">
+                <img src="assets/1.png" class="img1" width="113">
 
-                <h1 style="font-size: 23px;               
-                  color: #F1F5F6;                 
-                  font-family: Ubuntu;   
-                  margin-top: 10px;              
-                  height: 20px;
-                  width: 11px;
-                  padding-left: 202px;">
+                <h1 class="img1h1">
                   1</h1>
 
-                <h4 style="
-                color: #F1F5F6;             
-                font-family: Ubuntu;
-                height: 20px;
-                padding-left: 175px;
-                margin-top:16px;
-                " class="">Fill
-                  Online<br> application form</h4>
+                <h4 class="img1h4">
+                  <span id="content1">Fill
+                    Online</span><span id="content2">application form</span>
+    
               </div>
             </li>
             <li class="mt-5">
               <div>
-                <img src="assets/2.png" width="113" style="margin-left: 110px;">
+                <img src="assets/2.png" width="113" class="img2">
 
-                <h1 style="    font-size: 16px;
-                  text-align: center;
-                  color: #F1F5F6;
-                  margin-left:116px ;
-                  font-family: Ubuntu;
-                  margin-top: 10px;
-                  font-family: Rubik;
-                  font-style: normal;
-                  font-weight: 500;
-                  font-size: 23px;
-                  line-height: 20px;">
+                <h1 class="img2h1">
                   2
                 </h1>
 
-                <h4 style=" text-align: center; color: #F1F5F6; margin-left: 110px; font-family:Ubuntu" class="mt-2">Make
+                <h4 class="mt-2 img2h4">Make
                   Payment</h4>
               </div>
             </li>
             <li class="mt-5">
               <div class="">
-                <img src="assets/3.png" width="113" style="margin-left: 110px;">
+                <img src="assets/3.png" width="113" class="img3">
 
-                <h1 style="    font-size: 16px;
-                  text-align: center;
-                  color: #F1F5F6;
-                  margin-left: 96px;
-                  font-family: Ubuntu;
-                  margin-top: 10px;
-                  font-family: Rubik;
-                  font-style: normal;
-                  font-weight: 500;
-                  font-size: 23px;
-                  line-height: 20px;">
+                <h1 class="img3h1">
                   3
                 </h1>
 
-                <h4 style="color: #F1F5F6; margin-left: 110px; font-family:Ubuntu" class="mt-2">
+                <h4 class="mt-2 img3h4">
                   Upload
                   relevant documents</h4>
               </div>
             </li>
             <li class="mt-5">
               <div>
-                <img src="assets/4.png" width="113" style="margin-left: 110px;">
+                <img src="assets/4.png" width="113" class="img4">
 
-                <h1 style="
-                  text-align: center;
-                  color: #F1F5F6;
-                  margin-left: 116px;
-                  margin-top: 10px;
-                  font-family: Rubik;
-                  font-style: normal;
-                  font-weight: 500;
-                  font-size: 23px;
-                  line-height: 20px;">
+                <h1 class="img4h1">
                   4
                 </h1>
 
-                <h4 style=" text-align: center; color: #F1F5F6; margin-left: 110px; font-family:Ubuntu" class="mt-2">
+                <h4 class="mt-2 img4h4">
                   Track
                   Progress</h4>
               </div>
             </li>.
-            <li class="mt-5" style="margin-left: 110px; margin-right: 146px;">
+            <li class="mt-5 img5">
               <div>
-                <img src="assets/5.png" width="113">
-                <h1 style="
-                  text-align: center;
-                  color: #F1F5F6;
-                  margin-left: 5.5px;
-                  margin-top: 10px;
-                  font-family: Rubik;
-                  font-style: normal;
-                  font-weight: 500;
-                  font-size: 23px;
-                  line-height: 20px;">
+                <img src="assets/5.png" width="113" class="img56">
+                <h1 class="img5h1">
                   5
                 </h1>
 
-                <h4 style=" text-align: center; color: #F1F5F6; margin-left: 10px; font-family:Ubuntu" class="mt-2">Get
+                <h4 class="mt-2 img5h4">Get
                   your Visa</h4>
               </div>
             </li>
@@ -765,18 +624,17 @@ Temporary Residence Visas allow individuals reside in Nigeria for a period not e
     </section>
     <comment content="======= End section4 =======" break="true"></comment><!-- ======= section5 ======= -->
     <section class="new-section5__section5 layout">
-      <h1 class="new-section5__hero-title1 layout" style="margin-top: 94px;
-      margin-left: 485px;font-family: Rubik;font-style: normal;font-weight: normal;font-size: 35px;">
+      <h1 class="new-section5__hero-title1 layout hands">
         You are in the right hands
       </h1>
-      <div class="new-section5__flex3 layout">
+      <div class="new-section5__flex3 layout flexd">
 
         <div class="">
           <div class="new-section5__flex3-item">
-            <div class="new-section5__content-box1 layout" style="height: 354px;width: 281px;">
-              <img src="assets/800.png" width="84">
-              <h1 class="new-section5__hero-title4 layout" data-max="800" style="letter-spacing: 0.04em;">+</h1>
-              <h5 class="new-section5__highlights1 layout" style="font-weight: 300;">
+            <div class="new-section5__content-box1 layout cardwidth" style="height: 354px;">
+              <img src="assets/800.png" width="84" class="cardimg">
+              <h1 class="new-section5__hero-title4 layout cardh1" data-max="800">+</h1>
+              <h5 class="new-section5__highlights1 layout cardh5">
                 We have processed over 800 Nigeria Business Visas
               </h5>
             </div>
@@ -785,10 +643,10 @@ Temporary Residence Visas allow individuals reside in Nigeria for a period not e
         <div class="new-section5__flex3-spacer"></div>
         <div class="">
           <div class="new-section5__flex3-item">
-            <div class="new-section5__content-box1 layout" style="height: 354px;width: 281px;">
-              <img src="assets/1000.png" width="84">
-              <h1 class="new-section5__hero-title4 layout" data-max="1000" style="letter-spacing: 0.04em;">+</h1>
-              <h5 class="new-section5__highlights1 layout" style="font-weight: 300;">
+            <div class="new-section5__content-box1 layout cardwidth" style="height: 354px;">
+              <img src="assets/1000.png" width="84" class="cardimg">
+              <h1 class="new-section5__hero-title4 layout cardh1" data-max="1000">+</h1>
+              <h5 class="new-section5__highlights1 layout cardh5">
                 We have processed over 1000 Temporary Work Permits
               </h5>
             </div>
@@ -797,10 +655,10 @@ Temporary Residence Visas allow individuals reside in Nigeria for a period not e
         <div class="new-section5__flex3-spacer"></div>
         <div class="">
           <div class="new-section5__flex3-item">
-            <div class="new-section5__content-box1 layout" style="height: 354px;width: 281px;">
-              <img src="assets/200.png" width="84">
-              <h1 class="new-section5__hero-title4 layout" data-max="200" style="letter-spacing: 0.04em;">+</h1>
-              <h5 class="new-section5__highlights1 layout" style="font-weight: 300;">
+            <div class="new-section5__content-box1 layout cardwidth" style="height: 354px;">
+              <img src="assets/200.png" width="84" class="cardimg">
+              <h1 class="new-section5__hero-title4 layout cardh1" data-max="200">+</h1>
+              <h5 class="new-section5__highlights1 layout cardh5">
                 We have Incorperated over 200 Nigeria Businesses
               </h5>
             </div>
