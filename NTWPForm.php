@@ -14,7 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 		<!-- Latest compiled and minified CSS -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<!-- Latest compiled JavaScript -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/common.css" />
@@ -557,10 +557,9 @@
 			</section>
 
 			<comment content="======= End section7 =======" break="true"></comment><!-- ======= section8 ======= -->
-
 			<!-- ======= End section8 ======= -->
 
-		</main>
+			</main>
 		<script type="text/javascript">
 			AOS.init();
 		</script>
@@ -612,7 +611,7 @@
 				const passport = form.passport.value
 				const gender = Array.from(form.gender).filter(item => item.checked == true)[0].value
 
-				<?php $_SESSION["REG_MODE"] = "TWP"; ?>
+				<?php $_SESSION["REG_MODE"] = "BVA"; ?>
 
 				const data = {
 					country,
