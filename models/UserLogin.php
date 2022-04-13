@@ -30,7 +30,7 @@ class UserLogin {
         $result->execute([
             'userId' => $user_id,
             'email' => $email,
-            'password' => password_hash($password, PASSWORD_BCRYPT)
+            'password' => md5($password)
         ]);
 
         return $result;
@@ -38,9 +38,9 @@ class UserLogin {
 
     public function login ($email, $password) 
     {
-        $query_user = "SELECT * FROM `user_login` WHERE `email` = ?";
+        $query_user = "SELECT * FROM `user_login` WHERE `email` = ? AND `password` = ?";
         $result_user = $this->connection->prepare($query_user);
-        $result_user->execute([$email]);
+        $result_user->execute([$email, md5($password)]);
 
         if(!$result_user->rowCount()){
             return false;
