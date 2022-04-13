@@ -27,8 +27,8 @@
 // }
 
     if(isset($_POST['hash'])) {
-        $password = md5($_POST['password'], PASSWORD_DEFAULT);
-        $password2 = md5($_POST['password2'], PASSWORD_DEFAULT);
+        $password = md5($_POST['password']);
+        $password2 = md5($_POST['password2']);
 
         echo "<h1>$password</h1>";
         echo "<h1>$password2</h1>";
