@@ -46,10 +46,11 @@
                     <?php if(!isset($_GET['q'])): ?>
                         <div class="grid grid-cols-12 gap-6">
                             <?php if(count($users->get_all_users())): ?>
-                                <?php foreach($users->get_all_users() as $user): ?>
+                                <?php foreach($users->get_all_users() as $user):  ?>
                                     <div class="col-span-full sm:col-span-6 xl:col-span-3 bg-white shadow-lg rounded-sm border border-gray-200">
                                         <div class="flex flex-col h-full">
                                             <div class="grow p-5">
+                                                <?=  print_r($user); ?>
                                                 <div class="relative">
                                                     <div class="absolute top-0 right-0 inline-flex" x-data="{ open: false }">
                                                         <button class="text-gray-400 hover:text-gray-500 rounded-full" :class="{ 'bg-gray-100 text-gray-500': open }" aria-haspopup="true" @click.prevent="open = !open" :aria-expanded="open" aria-expanded="false">

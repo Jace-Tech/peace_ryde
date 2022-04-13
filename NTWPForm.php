@@ -611,7 +611,7 @@
 				const passport = form.passport.value
 				const gender = Array.from(form.gender).filter(item => item.checked == true)[0].value
 
-				<?php $_SESSION["REG_MODE"] = "BVA"; ?>
+				<?php $_SESSION["REG_MODE"] = "TWP"; ?>
 
 				const data = {
 					country,
