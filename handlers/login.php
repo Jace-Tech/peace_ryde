@@ -8,6 +8,7 @@ $userLogins = new UserLogin($connect);
 
 if(isset($_POST["login"])) {
     $POST = filter_var_array($_POST, FILTER_SANITIZE_STRING);
+    var_dump($POST);
     extract($POST);
 
     $result = $userLogins->login($email, $password);
