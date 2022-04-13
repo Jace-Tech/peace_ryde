@@ -1,6 +1,7 @@
 <?php require_once("./addons/session.php"); ?>
 <?php require_once('../db/config.php'); ?>
 <?php require_once('../models/Review.php'); ?>
+<?php require_once('../models/UserService.php'); ?>
 <?php require_once('../models/Service.php'); ?>
 <?php require_once('../models/User.php'); ?>
 <?php require_once('../utils/country_fee.php'); ?>
@@ -10,6 +11,7 @@
 <?php 
     $active = $title = "users";
     $users = new User($connect);
+    $userServices = new UserService($connect);
     $services = new Service($connect);
 ?>
 
@@ -104,7 +106,7 @@
                                                 </header>
                                                 <div class="text-center mt-2">
                                                     <div class="text-sm">
-                                                        <?= $services->getUserService($user['service']); ?>
+                                                        <?= $services->getUserService($userServices->getService($user["user_id"])['service_id']); ?>
                                                     </div>
                                                 </div>
                                             </div>
