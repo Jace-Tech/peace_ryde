@@ -52,8 +52,10 @@ class UserLogin {
             return $user;
             exit();
         }
-
-        return false;
+        else {
+            return false;
+            exit();
+        }
     }
 
 }
