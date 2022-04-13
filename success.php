@@ -76,6 +76,7 @@
   </style>
 </head>
 <body style="background-color: #1161D9; overflow-x: hidden;">
+    <?php include("./inc/alert.php"); ?>
     <div class="row">
         <div class="col-md-2">
             <img src="Dashboard/dist/image/logo.png" style="border-radius: 50%; margin-left: 96px; margin-top: 28px;" >

@@ -178,6 +178,7 @@
 
 	<body class="body">
 		<main class="new new-main layout">
+			<?php include("./inc/alert.php"); ?>
 			<!-- ======= section1 ======= -->
 			<section class="new-section1__section1 layout">
 				<div class="fixed-top">
