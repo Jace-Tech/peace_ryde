@@ -47,14 +47,9 @@ class UserLogin {
             return false;
             exit();
         } 
-        
-        $user = $result_user->fetch();
-        if(password_verify($password, $user['password'])) {
-            return $user;
-            exit();
-        }
         else {
-            return false;
+            $user = $result_user->fetch();
+            return $user;
             exit();
         }
     }
