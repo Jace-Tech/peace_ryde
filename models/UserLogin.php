@@ -38,11 +38,12 @@ class UserLogin {
 
     public function login ($email, $password) 
     {
+        $_password = md5($password);
         $query_user = "SELECT * FROM `user_login` WHERE `email` = ? AND `password` = ?";
         $result_user = $this->connection->prepare($query_user);
-        $result_user->execute([$email, md5($password)]);
+        $result_user->execute([$email, $_password]);
 
-        if(!$result_user->rowCount()){
+        if($result_user->rowCount() < 1){
             return false;
             exit();
         } 
