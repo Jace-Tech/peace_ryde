@@ -68,7 +68,7 @@
 					<div class="grid grid-cols-12 gap-6">
 						<!-- All Users -->
 						<div class="flex flex-col col-span-full sm:col-span-6 xl:col-span-4 bg-white shadow-lg rounded-sm border border-gray-200">
-							<div class="px-5 pt-5">
+							<a href="./users.php" class="px-5 pt-5 block">
 								<header class="flex justify-between items-start mb-2">
 									<img src="images/icon-01.svg" width="32" height="32" alt="Icon 01" />
 									<h2 class="text-lg font-semibold text-gray-800 mb-2">No of users</h2>
@@ -78,12 +78,12 @@
 										<?= count($users->get_all_users()); ?>
 									</div>
 								</div>
-							</div>
+							</a>
 						</div>
 
 						<!-- All SubAdmins -->
 						<div class="flex flex-col col-span-full sm:col-span-6 xl:col-span-4 bg-white shadow-lg rounded-sm border border-gray-200">
-							<div class="px-5 pt-5">
+							<a href="./subadmins.php" class="px-5 pt-5 block">
 								<header class="flex justify-between items-start mb-2">
 									<img src="images/icon-02.svg" width="32" height="32" alt="Icon 02" />
 									<h2 class="text-lg font-semibold text-gray-800 mb-2">No of sub-admins</h2>
@@ -93,12 +93,12 @@
 										<?= count($subadmins->getAllSubAdmins()) ?>
 									</div>
 								</div>
-							</div>
+							</a>
 						</div>
 
 						<!-- All  -->
 						<div class="flex flex-col col-span-full sm:col-span-6 xl:col-span-4 bg-white shadow-lg rounded-sm border border-gray-200">
-							<div class="px-5 pt-5">
+							<a href="./reviews.php" class="px-5 pt-5 block">
 								<header class="flex justify-between items-start mb-2">
 									<img src="images/icon-03.svg" width="32" height="32" alt="Icon 03" />
 									<h2 class="text-lg font-semibold text-gray-800 mb-2">No of reviews</h2>
@@ -108,7 +108,7 @@
 										<?= count($reviews->getAllReviews()); ?>
 									</div>
 								</div>
-							</div>
+							</a>
 						</div>
 					</div>
 				</div>
