@@ -106,7 +106,7 @@
                                                 </header>
                                                 <div class="text-center mt-2">
                                                     <div class="text-sm">
-                                                        <?= $services->getUserService($userServices->getService($user["user_id"])['service_id']); ?>
+                                                        <?= $services->getUserService($userServices->getService($user["user_id"])['service_id'])['service']; ?>
                                                     </div>
                                                 </div>
                                             </div>
