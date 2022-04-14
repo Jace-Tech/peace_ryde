@@ -92,7 +92,7 @@ class User {
     public function searchUser ($query) {
         $query = "SELECT * FROM `users` WHERE `firstname` REGEXP ?";
         $result = $this->connection->prepare($query);
-        $result->execute([$query, $query, $query]);
+        $result->execute([$query]);
 
         return $result->fetchAll();
     }
