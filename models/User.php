@@ -89,6 +89,14 @@ class User {
         return $result->fetchAll();
     }
 
+    public function searchUser ($query) {
+        $query = "SELECT * FROM `users` WHERE `firstname` REGEXP ? OR `lastname` REGEXP ? OR `middle_name` REGEXP ?";
+        $result = $this->connection->prepare($query);
+        $result->execute([$query, $query, $query]);
+
+        return $result->fetchAll();
+    }
+
     public function delete_user($user_id)
     {
         $query = "DELETE FROM `users` WHERE `user_id` = ?";

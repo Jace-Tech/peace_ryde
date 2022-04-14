@@ -13,6 +13,11 @@
     $users = new User($connect);
     $userServices = new UserService($connect);
     $services = new Service($connect);
+
+    if(isset($_GET['q'])) {
+        $query = $_GET['q'];
+        $searchResult = $users->searchUser($query);
+    }
 ?>
 
 <!doctype html>
@@ -26,10 +31,10 @@
                             <h1 class="text-2xl md:text-3xl text-gray-800 font-bold">Manage Users</h1>
                         </div>
                         <div class="grid grid-flow-col sm:auto-cols-max justify-start sm:justify-end gap-2">
-                            <form class="relative">
+                            <form class="relative" action="" method="get">
                                 <label for="action-search" class="sr-only">Search</label> 
                                 <input
-                                    id="action-search" class="form-input pl-9 focus:border-gray-300" type="search"
+                                    id="action-search" name="q" class="form-input pl-9 focus:border-gray-300" type="search"
                                     placeholder="Search…" /> 
                                 <button class="absolute inset-0 right-auto group"
                                     type="submit" aria-label="Search">
@@ -122,19 +127,87 @@
 
                             <?php else: ?>
                                 <div class="h-56 flex items-center col-span-full justify-center">
-                                    <h4 class="text-gray-500">No reviews found!</h4>
+                                    <h4 class="text-gray-500">No user found!</h4>
                                 </div>
                             <?php endif; ?>
                         </div>
                     <?php else: ?>
                         <div class="grid grid-cols-12 gap-6">
-                            <?php if(count($reviews->getAllReviews())): ?>
-                                <?php foreach($reviews->getAllReviews() as $review): ?>
-                                    
+                            <?php if(count($searchResult)): ?>
+                                <?php foreach($searchResult as $user): ?>
+                                    <div class="col-span-full sm:col-span-6 xl:col-span-3 bg-white shadow-lg rounded-sm border border-gray-200">
+                                        <div class="flex flex-col h-full">
+                                            <div class="grow p-5">
+                                                <div class="relative">
+                                                    <div class="absolute top-0 right-0 inline-flex" x-data="{ open: false }">
+                                                        <button class="text-gray-400 hover:text-gray-500 rounded-full" :class="{ 'bg-gray-100 text-gray-500': open }" aria-haspopup="true" @click.prevent="open = !open" :aria-expanded="open" aria-expanded="false">
+                                                            <span class="sr-only">Menu</span> 
+                                                            <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32">
+                                                                <circle cx="16" cy="16" r="2"></circle>
+                                                                <circle cx="10" cy="16" r="2"></circle>
+                                                                <circle cx="22" cy="16" r="2"></circle>
+                                                            </svg>
+                                                        </button>
+                                                        <div class="origin-top-right z-10 absolute top-full right-0 min-w-36 bg-white border border-gray-200 py-1.5 rounded shadow-lg overflow-hidden mt-1" @click.outside="open = false" @keydown.escape.window="open = false" x-show="open" x-transition:enter="transition ease-out duration-200 transform" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-out duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" style="display: none;">
+                                                            <ul>
+                                                                <li>
+                                                                    <a class="font-medium text-sm text-gray-600 hover:text-gray-800 flex py-1 px-3" href="#0" @click="open = false" @focus="open = true" @focusout="open = false">Option 1</a>
+                                                                </li>
+
+                                                                <li>
+                                                                    <a class="font-medium text-sm text-gray-600 hover:text-gray-800 flex py-1 px-3" href="#0" @click="open = false" @focus="open = true" @focusout="open = false">Option 2</a>
+                                                                </li>
+
+                                                                <li>
+                                                                    <a class="font-medium text-sm text-red-500 hover:text-red-600 flex py-1 px-3" href="#0" @click="open = false" @focus="open = true" @focusout="open = false">Remove</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <header>
+                                                    <div class="flex justify-center mb-2">
+                                                        <a class="relative inline-flex items-start" href="#0">
+                                                            <div class="flex shadow-sm mr-2 items-center bg-gray-200 justify-center rounded-full w-12 h-12 text-md font-semibold uppercase text-gray-500">
+                                                                <?= getSubName($user['firstname'] . " " .  $user['lastname']) ?>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="text-center">
+                                                        <a class="inline-flex text-gray-800 hover:text-gray-900" href="#0">
+                                                            <h2 class="text-xl leading-snug justify-center font-semibold">
+                                                                <?= "{$user['firstname']} {$user['lastname']}" ?>
+                                                            </h2>
+                                                        </a>
+                                                    </div>
+                                                    <div class="flex justify-center items-center">
+                                                        <span class="text-sm font-medium text-gray-400 -mt-0.5 mr-1">-&gt;</span> 
+                                                        <span>🇫🇷</span>
+                                                    </div>
+                                                </header>
+                                                <div class="text-center mt-2">
+                                                    <div class="text-sm">
+                                                        <?= $services->getUserService($userServices->getService($user["user_id"])['service_id'])['service']; ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="border-t border-gray-200">
+                                                <a class="block text-center text-sm text-indigo-500 hover:text-indigo-600 font-medium px-3 py-4" href="messages.html">
+                                                    <div class="flex items-center justify-center">
+                                                        <svg class="w-4 h-4 fill-current shrink-0 mr-2" viewBox="0 0 16 16">
+                                                            <path d="M8 0C3.6 0 0 3.1 0 7s3.6 7 8 7h.6l5.4 2v-4.4c1.2-1.2 2-2.8 2-4.6 0-3.9-3.6-7-8-7zm4 10.8v2.3L8.9 12H8c-3.3 0-6-2.2-6-5s2.7-5 6-5 6 2.2 6 5c0 2.2-2 3.8-2 3.8z"></path>
+                                                        </svg> 
+                                                        <span>Send Message</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 <?php endforeach; ?>
                             <?php else: ?>
                                 <div class="h-56 flex items-center col-span-full justify-center">
-                                    <h4 class="text-gray-500">No reviews found!</h4>
+                                    <h4 class="text-gray-500">No User found!</h4>
                                 </div>
                             <?php endif; ?>
                         </div>
