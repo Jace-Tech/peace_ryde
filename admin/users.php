@@ -82,7 +82,7 @@
                                                 <header>
                                                     <div class="flex justify-center mb-2">
                                                         <a class="relative inline-flex items-start" href="#0">
-                                                            <div class="flex shadow-sm mr-2 items-center bg-gray-200 justify-center rounded-full w-16 h-16 text-xs font-semibold uppercase text-gray-500">
+                                                            <div class="flex shadow-sm mr-2 items-center bg-gray-200 justify-center rounded-full w-12 h-12 text-md font-semibold uppercase text-gray-500">
                                                                 <?= getSubName($user['firstname'] . " " .  $user['lastname']) ?>
                                                             </div>
                                                         </a>
