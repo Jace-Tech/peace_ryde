@@ -73,7 +73,7 @@
 									<img src="images/icon-01.svg" width="32" height="32" alt="Icon 01" />
 									<h2 class="text-lg font-semibold text-gray-800 mb-2">No of users</h2>
 								</header>
-								<div class="flex items-start mb-10">
+								<div class="flex items-start my-8">
 									<div class="text-3xl font-bold text-gray-800 mr-2">
 										<?= count($users->get_all_users()); ?>
 									</div>
@@ -88,7 +88,7 @@
 									<img src="images/icon-02.svg" width="32" height="32" alt="Icon 02" />
 									<h2 class="text-lg font-semibold text-gray-800 mb-2">No of sub-admins</h2>
 								</header>
-								<div class="flex items-start mb-10">
+								<div class="flex items-start my-8">
 									<div class="text-3xl font-bold text-gray-800 mr-2">
 										<?= count($subadmins->getAllSubAdmins()) ?>
 									</div>
@@ -103,7 +103,7 @@
 									<img src="images/icon-03.svg" width="32" height="32" alt="Icon 03" />
 									<h2 class="text-lg font-semibold text-gray-800 mb-2">No of reviews</h2>
 								</header>
-								<div class="flex items-start mb-10">
+								<div class="flex items-start my-8">
 									<div class="text-3xl font-bold text-gray-800 mr-2">
 										<?= count($reviews->getAllReviews()); ?>
 									</div>
