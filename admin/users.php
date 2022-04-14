@@ -17,6 +17,8 @@
     if(isset($_GET['q'])) {
         $query = $_GET['q'];
         $searchResult = $users->searchUser($query);
+
+        print_r($searchResult);
     }
 ?>
 
