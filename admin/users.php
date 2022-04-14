@@ -52,7 +52,6 @@
                                     <div class="col-span-full sm:col-span-6 xl:col-span-3 bg-white shadow-lg rounded-sm border border-gray-200">
                                         <div class="flex flex-col h-full">
                                             <div class="grow p-5">
-                                                <?=  print_r($user); ?>
                                                 <div class="relative">
                                                     <div class="absolute top-0 right-0 inline-flex" x-data="{ open: false }">
                                                         <button class="text-gray-400 hover:text-gray-500 rounded-full" :class="{ 'bg-gray-100 text-gray-500': open }" aria-haspopup="true" @click.prevent="open = !open" :aria-expanded="open" aria-expanded="false">
@@ -83,12 +82,9 @@
                                                 <header>
                                                     <div class="flex justify-center mb-2">
                                                         <a class="relative inline-flex items-start" href="#0">
-                                                            <div class="absolute top-0 right-0 -mr-2 bg-white rounded-full shadow" aria-hidden="true">
-                                                                <svg class="w-8 h-8 fill-current text-yellow-500" viewBox="0 0 32 32">
-                                                                    <path d="M21 14.077a.75.75 0 01-.75-.75 1.5 1.5 0 00-1.5-1.5.75.75 0 110-1.5 1.5 1.5 0 001.5-1.5.75.75 0 111.5 0 1.5 1.5 0 001.5 1.5.75.75 0 010 1.5 1.5 1.5 0 00-1.5 1.5.75.75 0 01-.75.75zM14 24.077a1 1 0 01-1-1 4 4 0 00-4-4 1 1 0 110-2 4 4 0 004-4 1 1 0 012 0 4 4 0 004 4 1 1 0 010 2 4 4 0 00-4 4 1 1 0 01-1 1z"></path>
-                                                                </svg>
+                                                            <div class="flex shadow-sm mr-2 items-center justify-center rounded-full w-8 h-8 text-xs font-semibold uppercase text-gray-500">
+                                                                <?= getSubName($user['firstname'] . " " .  $user['lastname']) ?>
                                                             </div>
-                                                            <img class="rounded-full" src="images/user-64-02.jpg" alt="User 02" width="64" height="64">
                                                         </a>
                                                     </div>
 
