@@ -71,10 +71,9 @@
 							<div class="px-5 pt-5">
 								<header class="flex justify-between items-start mb-2">
 									<img src="images/icon-01.svg" width="32" height="32" alt="Icon 01" />
-									<div class="relative inline-flex" x-data="{ open: false }"></div>
+									<h2 class="text-lg font-semibold text-gray-800 mb-2">No of users</h2>
 								</header>
-								<h2 class="text-lg font-semibold text-gray-800 mb-2">No of users</h2>
-								<div class="flex items-start">
+								<div class="flex items-start mb-10">
 									<div class="text-3xl font-bold text-gray-800 mr-2">
 										<?= count($users->get_all_users()); ?>
 									</div>
@@ -87,11 +86,9 @@
 							<div class="px-5 pt-5">
 								<header class="flex justify-between items-start mb-2">
 									<img src="images/icon-02.svg" width="32" height="32" alt="Icon 02" />
-									<div class="relative inline-flex" x-data="{ open: false }"></div>
+									<h2 class="text-lg font-semibold text-gray-800 mb-2">No of sub-admins</h2>
 								</header>
-								<h2 class="text-lg font-semibold text-gray-800 mb-2">No of sub-admins</h2>
-
-								<div class="flex items-start">
+								<div class="flex items-start mb-10">
 									<div class="text-3xl font-bold text-gray-800 mr-2">
 										<?= count($subadmins->getAllSubAdmins()) ?>
 									</div>
@@ -104,10 +101,9 @@
 							<div class="px-5 pt-5">
 								<header class="flex justify-between items-start mb-2">
 									<img src="images/icon-03.svg" width="32" height="32" alt="Icon 03" />
-									<div class="relative inline-flex" x-data="{ open: false }"></div>
+									<h2 class="text-lg font-semibold text-gray-800 mb-2">No of reviews</h2>
 								</header>
-								<h2 class="text-lg font-semibold text-gray-800 mb-2">No of reviews</h2>
-								<div class="flex items-start">
+								<div class="flex items-start mb-10">
 									<div class="text-3xl font-bold text-gray-800 mr-2">
 										<?= count($reviews->getAllReviews()); ?>
 									</div>
