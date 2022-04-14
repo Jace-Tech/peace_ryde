@@ -90,11 +90,9 @@ class User {
     }
 
     public function searchUser ($query) {
-        $query = "SELECT * FROM `users` WHERE `firstname` LIKE %:query%";
+        $query = "SELECT * FROM `users` WHERE `firstname` LIKE %?%";
         $result = $this->connection->prepare($query);
-        $result->execute([
-            "query" => $query
-        ]);
+        $result->execute([$query]);
 
         return $result->fetchAll();
     }
