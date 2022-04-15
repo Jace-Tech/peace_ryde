@@ -11,7 +11,7 @@ if(isset($_POST["login"])) {
     extract($POST);
     
     $result = $userLogins->login($email, $password);
-    print_r($result);
+    var_dump($result);
     die();
 
     if(!$result) {
