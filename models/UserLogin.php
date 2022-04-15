@@ -44,6 +44,7 @@ class UserLogin {
         $result_user->execute([$email, $_password]);
 
         var_dump($result_user->rowCount());
+        echo "<h1>$_password</h1>";
 
         if($result_user->rowCount() == 0){
             return false;
