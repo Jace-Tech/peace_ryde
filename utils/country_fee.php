@@ -204,6 +204,7 @@ function get_twp () {
     $total = IMMIGRATION_FEE + $taxes;
 
     return [
+        "approval" => IMMIGRATION_FEE,
         "tax" => $taxes,
         "total" => $total
     ];
@@ -233,6 +234,7 @@ function get_total_price($country) {
         'bio' => $bio,
         'visa' => $visa_price,
         'vat' => VAT,
+        'Immgration' => IMMIGRATION_FEE,
         'admin' => ADMIN_PORTAL_FEE,
         'total_price' => $total_price,
         'taxes' => $taxes,
