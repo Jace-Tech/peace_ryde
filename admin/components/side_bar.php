@@ -189,7 +189,7 @@
                             </a>
                             <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                                 <ul class="pl-9 mt-1" :class="{ 'hidden': !open }" x-cloak>
-                                    <li class="mb-1 last:mb-0"><a class="block text-gray-400 hover:text-gray-200 transition duration-150 truncate" href="signin.html"><span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Sign In</span></a></li>
+                                    <li class="mb-1 last:mb-0"><a class="block text-gray-400 hover:text-gray-200 transition duration-150 truncate" href="signin.php"><span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Sign In</span></a></li>
                                     <li class="mb-1 last:mb-0"><a class="block text-gray-400 hover:text-gray-200 transition duration-150 truncate" href="signup.html"><span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Sign up</span></a></li>
                                     <li class="mb-1 last:mb-0"><a class="block text-gray-400 hover:text-gray-200 transition duration-150 truncate" href="reset-password.html"><span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Reset Password</span></a></li>
                                 </ul>

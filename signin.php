@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 	<!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
