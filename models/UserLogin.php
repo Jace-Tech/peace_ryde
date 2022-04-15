@@ -43,7 +43,7 @@ class UserLogin {
         $result_user = $this->connection->prepare($query_user);
         $result_user->execute([$email, $_password]);
 
-        if($result_user->rowCount() < 1){
+        if($result_user->rowCount() > 0){
             return false;
             exit();
         } 
