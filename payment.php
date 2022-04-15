@@ -91,6 +91,7 @@
 						</div>
 					</div>
 					<div style="margin-left: 186px; margin-top: 26px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px;"></div>
+
 					<div class="row" style="margin-left: 186px; margin-top: 15px;">
 						<div class="col-md-8">
 							<p style="font-family: Ubuntu;
@@ -107,22 +108,75 @@
 						color:#F1F5F6;"> <?= round($PRICE['fees_total'], 2); ?> </p>
 						</div>
 					</div>
+
 					<div class="row" style="margin-left: 186px; margin-top: 17px;">
 						<div class="col-md-8">
 							<p style="font-family: Ubuntu;
 						font-size: 18px;
 						font-weight: 700;
 						color:#F1F5F6;
-						">Tax/ VAT</p>
+						">VISA</p>
 						</div>
 						<div class="col-md-4">
 							<p style="font-family: Ubuntu;
 						font-size: 18px;
 						font-weight: 700;
 						padding-left: 200px;
-						color:#F1F5F6;"> <?= round($PRICE['taxes'], 2); ?></p>
+						color:#F1F5F6;"> <?= round($PRICE['visa'], 2); ?></p>
 						</div>
 					</div>
+
+					<div class="row" style="margin-left: 186px; margin-top: 17px;">
+						<div class="col-md-8">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						color:#F1F5F6;
+						">VAT</p>
+						</div>
+						<div class="col-md-4">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						padding-left: 200px;
+						color:#F1F5F6;"> <?= round($PRICE['vat'], 2); ?></p>
+						</div>
+					</div>
+
+					<div class="row" style="margin-left: 186px; margin-top: 17px;">
+						<div class="col-md-8">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						color:#F1F5F6;
+						">Biometric FEE</p>
+						</div>
+						<div class="col-md-4">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						padding-left: 200px;
+						color:#F1F5F6;"> <?= round($PRICE['bio'], 2); ?></p>
+						</div>
+					</div>
+
+					<div class="row" style="margin-left: 186px; margin-top: 17px;">
+						<div class="col-md-8">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						color:#F1F5F6;
+						">Admin FEE</p>
+						</div>
+						<div class="col-md-4">
+							<p style="font-family: Ubuntu;
+						font-size: 18px;
+						font-weight: 700;
+						padding-left: 200px;
+						color:#F1F5F6;"> <?= round($PRICE['admin'], 2); ?></p>
+						</div>
+					</div>
+
 					<div style="margin-left: 186px; margin-top: 47px; color: #F1F5F6; border: 1px solid #F1F5F6; width: 526px;"></div>
 					<div class="row" style="margin-left: 186px; margin-top: 17px;">
 						<div class="col-md-8">

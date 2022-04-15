@@ -226,8 +226,14 @@ function get_total_price($country) {
     
     $taxes = $fees_total * ((VAT + TAX_US) / 100);
     $total_price = $fees_total + $taxes;
+
+    $bio = in_array($country, $FREE_BIOMETRIC) ? 0 : BIOMETRICS_FEE;
     
     return [
+        'bio' => $bio,
+        'visa' => $visa_price,
+        'vat' => VAT,
+        'admin' => ADMIN_PORTAL_FEE,
         'total_price' => $total_price,
         'taxes' => $taxes,
         'fees_total' => $fees_total
