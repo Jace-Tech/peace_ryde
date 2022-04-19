@@ -448,7 +448,7 @@
                                     font-weight: 400; color: #000000;
                              
                                     ">Expiry</p>
-										<input  name="card_expiry" type="text" style="width:185px;margin-top: 3px;color: #5A5A5A; height:43px;border:1px solid #555555;font-size: 14px; font-family: ubuntu; font-weight: 400;" class="form-control" placeholder="DD/ MM/ YY">
+										<input  name="card_expiry" type="month" style="width:185px;margin-top: 3px;color: #5A5A5A; height:43px;border:1px solid #555555;font-size: 14px; font-family: ubuntu; font-weight: 400;" class="form-control" placeholder="DD/ MM/ YY">
 									</div>
 								</div>
 								<div class="col-md-1">
