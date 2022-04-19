@@ -5,7 +5,6 @@
     $trackings = new Tracking($connect);
     $tracks = $trackings->getUserTracking($USER_ID);
 
-    var_dump(count($tracks));
 ?>
 <style>
 	.left-sidebar a:hover {
@@ -81,13 +80,16 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php  ?>
-
-						<?php  ?>
-						<tr>
-							<th scope="row" style="padding-top:48px;padding-left:36px;color:#080C58;font-family: Ubuntu;font-size: 16px;font-style: normal;font-weight: 700;">Nigeria Business on Arrival</th>
-							<td style="padding-top:48px;color:#080C58;font-family: Ubuntu;font-size: 16px;font-style: normal;font-weight: 500;">Approved</td>
-						</tr>
+						<?php if(count($tracks) > 0): ?>
+                            <tr>
+                                <th scope="row" style="padding-top:48px;padding-left:36px;color:#080C58;font-family: Ubuntu;font-size: 16px;font-style: normal;font-weight: 700;">Nigeria Business on Arrival</th>
+                                <td style="padding-top:48px;color:#080C58;font-family: Ubuntu;font-size: 16px;font-style: normal;font-weight: 500;">Approved</td>
+                            </tr>
+						<?php else: ?>
+                            <tr>
+                                <td colspan="2" class="text-muted text-center">No tracks found</td>
+                            </tr>
+						<?php endif; ?>
 					</tbody>
 				</table>
 			</div>
