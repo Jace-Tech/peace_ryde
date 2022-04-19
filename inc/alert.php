@@ -8,3 +8,6 @@ if(isset($_SESSION['ALERT'])) {
         </script>
     <?php
 }
+
+
+unset($_SESSION['ALERT']);

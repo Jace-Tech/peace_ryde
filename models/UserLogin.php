@@ -23,6 +23,7 @@ class UserLogin {
     public function register(array $user) 
     {
         extract($user);
+        $hashed_password = md5($password);
 
         $query = "INSERT INTO `user_login`(`user_id`, `email`, `password`) 
             VALUES (:userId, :email, :password)";
@@ -30,7 +31,7 @@ class UserLogin {
         $result->execute([
             'userId' => $user_id,
             'email' => $email,
-            'password' => md5($password)
+            'password' => $hashed_password
         ]);
 
         return $result;
