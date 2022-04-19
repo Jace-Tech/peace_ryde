@@ -1,4 +1,5 @@
 <?php include("../db/config.php"); ?>
+<?php include("../models/User.php"); ?>
 
 <?php  
     session_start();
@@ -14,6 +15,18 @@
         }
     }
 ?>
+
+
+<?php  
+    $users = new User($connect);
+    $LOGGED_USER = json_decode($_session['LOGGED_USER'], true);
+    $USER_ID = $LOGGED_USER['user_id'];
+
+    $USER = $users->get_user($USER_ID);
+
+    print_r($USER);
+?>
+
 
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
