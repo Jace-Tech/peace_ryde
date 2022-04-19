@@ -1,5 +1,5 @@
-<?php include("./db/config.php"); ?>
-<?php include("./models/User.php"); ?>
+<?php include("../db/config.php"); ?>
+<?php include("../models/User.php"); ?>
 
 <?php  
     session_start();
