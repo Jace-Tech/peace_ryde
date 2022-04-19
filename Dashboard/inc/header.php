@@ -23,8 +23,7 @@
     $USER_ID = $LOGGED_USER['user_id'];
 
     $USER = $users->get_user($USER_ID);
-
-    print_r($USER);
+    var_dump($USER);
 ?>
 
 
