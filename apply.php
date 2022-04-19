@@ -412,7 +412,7 @@
                         
                         ">It takes less than 5 minutes to do this</p>
 							</div>
-							<form method="post" action="">
+							<form method="POST" action="">
 
 								<p style="padding-top:48px; padding-left: 201px; color:  #000000;
                         font-family: Ubuntu;font-size: 14px;font-style: normal;font-weight: 400;">Which of our services are you applying For?</p>
@@ -421,7 +421,7 @@
 
 									<div class="form-group" style="margin-right: 202px;">
 										<select class="form-select" name="type" style="border: 1px solid #555555; width:502px;font-family:ubuntu;height: 44px; margin-top:27px" aria-label="Default select example">
-											<option selected>Country</option>
+											<option selected>Choose Services</option>
 											<option value="NBV">Nigeria Business Visa</option>
 											<option value="TWP">Nigeria Temporary Work Permit</option>
 											<option value="NBI">Nigeria Business Incorporation</option>
