@@ -421,18 +421,17 @@
 
 									<div class="form-group" style="margin-right: 202px;">
 										<select class="form-select" name="type" style="border: 1px solid #555555; width:502px;font-family:ubuntu;height: 44px; margin-top:27px" aria-label="Default select example">
-											<option selected>Choose Services</option>
+											<option selected>Choose Service</option>
 											<option value="NBV">Nigeria Business Visa</option>
 											<option value="TWP">Nigeria Temporary Work Permit</option>
 											<option value="NBI">Nigeria Business Incorporation</option>
 										</select>
-
 									</div>
 								</div>
 
 
 								<div style="margin-left: 193px; margin-top:89px;margin-bottom:80px ;">
-									<button type="submit" class="btn proceed">Next</button>
+									<button name="apply" type="submit" class="btn proceed">Next</button>
 								</div>
 							</form>
 						</div>
