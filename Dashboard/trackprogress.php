@@ -78,7 +78,6 @@
 						<tr>
 							<th scope="col" style="color:#A0BD1C;font-family: Ubuntu;padding-left:36px;font-size: 18px;font-style: normal;font-weight: 700;">Services</th>
 							<th scope="col" style="color:#A0BD1C;font-family: Ubuntu;font-size: 18px;font-style: normal;font-weight: 700;">Status</th>
-
 						</tr>
 					</thead>
 					<tbody>

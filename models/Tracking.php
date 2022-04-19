@@ -35,7 +35,7 @@ class Tracking {
 
     public function getUserTracking($userId)
     {
-        $query = "SELECT * FROM `tracking` WHERE `userId` = ?";
+        $query = "SELECT * FROM `tracking` WHERE `user_id` = ?";
         $result = $this->connection->prepare($query);
         $result->execute([$userId]);
 
