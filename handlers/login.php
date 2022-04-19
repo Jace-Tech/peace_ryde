@@ -33,8 +33,8 @@ if(isset($_POST["login"])) {
         $_SESSION["alert"] = json_encode($alert);
 
         $data = [
-            "email" => $user["email"],
-            "user_id" => $user["user_id"],
+            "email" => $result["email"],
+            "user_id" => $result["user_id"],
         ];
 
         $_SESSION['LOGGED_USER'] = json_encode($data);
