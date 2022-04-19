@@ -87,7 +87,7 @@
                             </tr>
 						<?php else: ?>
                             <tr>
-                                <td colspan="2" class="text-muted text-center">No tracks found</td>
+                                <td colspan="2" class="py-5 text-muted text-center">No tracks found</td>
                             </tr>
 						<?php endif; ?>
 					</tbody>
