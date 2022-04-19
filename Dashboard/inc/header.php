@@ -19,7 +19,7 @@
 
 <?php  
     $users = new User($connect);
-    $LOGGED_USER = json_decode($_session['LOGGED_USER'], true);
+    $LOGGED_USER = json_decode($_SESSION['LOGGED_USER'], true);
     $USER_ID = $LOGGED_USER['user_id'];
 
     $USER = $users->get_user($USER_ID);
