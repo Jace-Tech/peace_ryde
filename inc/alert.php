@@ -1,4 +1,3 @@
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <?php 
 
 if(isset($_SESSION['ALERT'])) {
