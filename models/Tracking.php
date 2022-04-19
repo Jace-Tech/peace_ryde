@@ -1,7 +1,7 @@
 <?php 
 
 
-class Service {
+class Tracking {
     private $connection;
 
     function __construct($connection){

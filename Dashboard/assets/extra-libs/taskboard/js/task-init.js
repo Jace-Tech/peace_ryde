@@ -315,9 +315,9 @@ $(function() {
         $('#actions-by-ajax').lobiList({
             actions: {
                 load: '../example1/load.json',
-                insert: '../example1/insert.php',
-                delete: '../example1/delete.php',
-                update: '../example1/update.php'
+                insert: '../example1/insert.html',
+                delete: '../example1/delete.html',
+                update: '../example1/update.html'
             },
             afterItemAdd: function() {
                 console.log(arguments);

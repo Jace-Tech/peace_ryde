@@ -163,12 +163,12 @@
                   line-height: 16px;">Visa
                     Services</a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="NBV.html"
+                    <li><a class="dropdown-item" href="NBV.php"
                         style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
                         Business Visa
                         on
                         Arrival</a></li>
-                    <li><a class=" dropdown-item" href="NTWP.html"
+                    <li><a class=" dropdown-item" href="NTWP.php"
                         style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
                         Temporary Work Permit
                         Approval</a></li>
@@ -200,7 +200,7 @@
                   <ul class="dropdown-menu" style="width: 900px;">
                     <div class="row">
                       <div class="col-md-4">
-                        <li><a class="dropdown-item" href="NBI.html"
+                        <li><a class="dropdown-item" href="NBI.php"
                             style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
                             Business Incorporation</a>
                         </li>
@@ -255,14 +255,14 @@
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link link" href="contact.html" style="width: 100%; color: #000000;margin-left:41px; margin-top: 19px;font-family: Ubuntu;
+                  <a class="nav-link link" href="contact.php" style="width: 100%; color: #000000;margin-left:41px; margin-top: 19px;font-family: Ubuntu;
                   font-style: normal;
                   font-weight: 400;
                   font-size: 14.5px;
                   line-height: 16px;">Contact Us</a>
                 </li>
                 <li class=" nav-item">
-                  <a class="nav-link link" href="about.html" style="width: 100%;color: #000000;margin-left:41px; margin-top: 19px;font-family: Ubuntu;
+                  <a class="nav-link link" href="about.php" style="width: 100%;color: #000000;margin-left:41px; margin-top: 19px;font-family: Ubuntu;
                   font-style: normal;
                   font-weight: 400;
                   font-size: 14.5px;
@@ -271,7 +271,7 @@
 
             
                 <li class="nav-item apply" style="margin-left: 118px;">
-                  <a href="apply.html" class="btn button btn-outline-light" type="button" style=" margin-right: 93px;
+                  <a href="apply.php" class="btn button btn-outline-light" type="button" style=" margin-right: 93px;
                   width: 89px;
                   margin-top: 15px;
                   height: 36px;
@@ -284,10 +284,10 @@
                   style="color: #150423;">
                   <img src="assets/image_2022-02-27_16-21-31.png" width="17" style="margin-top:-4px;font-size: 14.5px;">&nbsp;<span>English |</span></a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="NBV.html"
+                  <li><a class="dropdown-item" href="NBV.php"
                       style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
                     </a></li>
-                  <li><a class=" dropdown-item" href="NTWP.html"
+                  <li><a class=" dropdown-item" href="NTWP.php"
                       style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
                   </li>
                   <li><a class=" dropdown-item" href="#"
@@ -974,13 +974,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </pre>
                         COMPANY
                       </h5>
                       <ul>
-                        <li class="new-section8__text-body5 layout"><a href="about.html"
+                        <li class="new-section8__text-body5 layout"><a href="about.php"
                             style="font-size: 13px; color: #000080; text-decoration: none;">About us</a>
                         </li>
-                        <li class="new-section8__text-body5 layout"><a href="pp.html"
+                        <li class="new-section8__text-body5 layout"><a href="pp.php"
                             style="font-size: 13px; color: #000080; text-decoration: none;">Privacy &Cookie Policy</a>
                         </li>
-                        <li class="new-section8__text-body5 layout" 0><a href="t&c.html"
+                        <li class="new-section8__text-body5 layout" 0><a href="t&c.php"
                             style="font-size: 13px; color: #000080; text-decoration: none;">Terms And
                             Condition</a></li>
                         <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #000080;">Refund
@@ -1027,7 +1027,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </pre>
                 under the File Number 654846</p>
             </div>
             <div class="col-md-2">
-              <p style="margin-top: -2px;"><a href="pp.html" style="font-size: 14px; color: #000080; text-decoration: none;">Privacy and Cookie
+              <p style="margin-top: -2px;"><a href="pp.php" style="font-size: 14px; color: #000080; text-decoration: none;">Privacy and Cookie
                   Policy</a></p>
             </div>
             <div class="col-md-2">
@@ -1058,10 +1058,10 @@ function animate(element) {
   //Animating the element if not animated before
   if (!element.hasClass('ms-animated')) {
     var maxval = element.data('max');
-    var html = element.html();
+    var html = element.php();
     element.addClass("ms-animated");
     $({
-      countNum: element.html()
+      countNum: element.php()
     }).animate({
       countNum: maxval
     }, {
@@ -1069,10 +1069,10 @@ function animate(element) {
       duration: 1000,
       easing: 'linear',
       step: function() {
-        element.html(Math.floor(this.countNum) + html);
+        element.php(Math.floor(this.countNum) + html);
       },
       complete: function() {
-        element.html(this.countNum + html);
+        element.php(this.countNum + html);
       }
     });
   }

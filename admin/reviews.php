@@ -230,7 +230,7 @@
                                             <div class="border-t border-gray-200">
                                                 <div class="flex divide-x divide-gray-200r"><a
                                                         class="block flex-1 text-center text-sm text-indigo-500 hover:text-indigo-600 font-medium px-3 py-4"
-                                                        href="messages.html">
+                                                        href="messages.php">
                                                         <div class="flex items-center justify-center"><svg
                                                                 class="w-4 h-4 fill-current shrink-0 mr-2" viewBox="0 0 16 16">
                                                                 <path
@@ -238,7 +238,7 @@
                                                                 </svg> <span>Send Email</span></div>
                                                     </a><a
                                                         class="block flex-1 text-center text-sm text-gray-600 hover:text-gray-800 font-medium px-3 py-4 group"
-                                                        href="settings.html">
+                                                        href="settings.php">
                                                         <div class="flex items-center justify-center"><svg
                                                                 class="w-4 h-4 fill-current text-gray-400 group-hover:text-gray-500 shrink-0 mr-2"
                                                                 viewBox="0 0 16 16">

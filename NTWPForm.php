@@ -292,11 +292,11 @@
                       line-height: 16px;">Visa
 											Services</a>
 										<ul class="dropdown-menu">
-											<li><a class="dropdown-item" href="NBV.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+											<li><a class="dropdown-item" href="NBV.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 													Business Visa
 													on
 													Arrival</a></li>
-											<li><a class=" dropdown-item" href="NTWP.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+											<li><a class=" dropdown-item" href="NTWP.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 													Temporary Work Permit
 													Approval</a></li>
 											<li><a class=" dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
@@ -322,7 +322,7 @@
 										<ul class="dropdown-menu" style="width: 900px;">
 											<div class="row">
 												<div class="col-md-4">
-													<li><a class="dropdown-item" href="NBI.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+													<li><a class="dropdown-item" href="NBI.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 															Business Incorporation</a>
 													</li>
 													<li><a class="dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Hotel Bookings</a>
@@ -364,14 +364,14 @@
 										</ul>
 									</li>
 									<li class="nav-item dropdown">
-										<a class="nav-link link" href="contact.html" style="width: 100%; color: #000000;margin-left:41px; margin-top: 19px;font-family: Ubuntu;
+										<a class="nav-link link" href="contact.php" style="width: 100%; color: #000000;margin-left:41px; margin-top: 19px;font-family: Ubuntu;
                       font-style: normal;
                       font-weight: 400;
                       font-size: 14.5px;
                       line-height: 16px;">Contact Us</a>
 									</li>
 									<li class=" nav-item">
-										<a class="nav-link link" href="about.html" style="width: 100%;color: #000000;margin-left:41px; margin-top: 19px;font-family: Ubuntu;
+										<a class="nav-link link" href="about.php" style="width: 100%;color: #000000;margin-left:41px; margin-top: 19px;font-family: Ubuntu;
                       font-style: normal;
                       font-weight: 400;
                       font-size: 14.5px;
@@ -392,9 +392,9 @@
 										<a class="nav-link dropdown-toggle nav" href="#" role="button" data-bs-toggle="dropdown" style="color: #150423;">
 											<img src="assets/image_2022-02-27_16-21-31.png" width="17" style="margin-top:-4px;font-size: 14.5px;">&nbsp;<span>English |</span></a>
 										<ul class="dropdown-menu">
-											<li><a class="dropdown-item" href="NBV.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+											<li><a class="dropdown-item" href="NBV.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 												</a></li>
-											<li><a class=" dropdown-item" href="NTWP.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
+											<li><a class=" dropdown-item" href="NTWP.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
 											</li>
 											<li><a class=" dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
 											</li>

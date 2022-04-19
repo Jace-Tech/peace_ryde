@@ -181,12 +181,12 @@
                       line-height: 16px;">Visa
                         Services</a>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="NBV.html"
+                        <li><a class="dropdown-item" href="NBV.php"
                             style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
                             Business Visa
                             on
                             Arrival</a></li>
-                        <li><a class=" dropdown-item" href="NTWP.html"
+                        <li><a class=" dropdown-item" href="NTWP.php"
                             style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
                             Temporary Work Permit
                             Approval</a></li>
@@ -218,7 +218,7 @@
                       <ul class="dropdown-menu" style="width: 900px;">
                         <div class="row">
                           <div class="col-md-4">
-                            <li><a class="dropdown-item" href="NBI.html"
+                            <li><a class="dropdown-item" href="NBI.php"
                                 style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
                                 Business Incorporation</a>
                             </li>
@@ -273,14 +273,14 @@
                       </ul>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link link" href="contact.html" style="width: 100%; color: #000000;margin-left:41px; margin-top: 12px;font-family: Ubuntu;
+                      <a class="nav-link link" href="contact.php" style="width: 100%; color: #000000;margin-left:41px; margin-top: 12px;font-family: Ubuntu;
                       font-style: normal;
                       font-weight: 400;
                       font-size: 14px;
                       line-height: 16px;">Contact Us</a>
                     </li>
                     <li class=" nav-item">
-                      <a class="nav-link link" href="about.html" style="width: 100%;color: #000000;margin-left:41px; margin-top: 12px;font-family: Ubuntu;
+                      <a class="nav-link link" href="about.php" style="width: 100%;color: #000000;margin-left:41px; margin-top: 12px;font-family: Ubuntu;
                       font-style: normal;
                       font-weight: 400;
                       font-size: 14px;
@@ -300,10 +300,10 @@
                     <a class="nav-link dropdown-toggle nav" href="#" role="button" data-bs-toggle="dropdown"
                       style="color: #150423;"><img src="assets/image_2022-02-27_16-21-31.png" width="17" style="margin-top:-5px">&nbsp;English |</a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="NBV.html"
+                      <li><a class="dropdown-item" href="NBV.php"
                           style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
                         </a></li>
-                      <li><a class=" dropdown-item" href="NTWP.html"
+                      <li><a class=" dropdown-item" href="NTWP.php"
                           style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
                       </li>
                       <li><a class=" dropdown-item" href="#"
@@ -508,13 +508,13 @@
                                   COMPANY
                                 </h5>
                                 <ul>
-                                  <li class="new-section8__text-body5 layout"><a href="about.html"
+                                  <li class="new-section8__text-body5 layout"><a href="about.php"
                                       style="font-size: 13px; color: #080C58; text-decoration: none;">About us</a>
                                   </li>
-                                  <li class="new-section8__text-body5 layout"><a href="pp.html"
+                                  <li class="new-section8__text-body5 layout"><a href="pp.php"
                                       style="font-size: 13px; color: #080C58; text-decoration: none;">Privacy &Cookie Policy</a>
                                   </li>
-                                  <li class="new-section8__text-body5 layout" 0><a href="t&c.html"
+                                  <li class="new-section8__text-body5 layout" 0><a href="t&c.php"
                                       style="font-size: 13px; color: #080C58; text-decoration: none;">Terms And
                                       Condition</a></li>
                                   <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Refund
@@ -561,7 +561,7 @@
                           under the File Number 654846</p>
                       </div>
                       <div class="col-md-2">
-                        <p><a href="pp.html" style="font-size: 14px; color: #080C58; text-decoration: none;">Privacy and Cookie
+                        <p><a href="pp.php" style="font-size: 14px; color: #080C58; text-decoration: none;">Privacy and Cookie
                             Policy</a></p>
                       </div>
                       <div class="col-md-2">
