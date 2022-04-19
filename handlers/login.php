@@ -11,8 +11,6 @@ if(isset($_POST["login"])) {
     extract($POST);
     
     $result = $userLogins->login($email, $password);
-    var_dump($result);
-    die();
 
     if(!$result) {
         $alert = [
