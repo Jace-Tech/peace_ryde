@@ -5,7 +5,7 @@
     $trackings = new Tracking($connect);
     $tracks = $trackings->getUserTracking($USER_ID);
 
-    print_r($tracks);
+    var_dump($tracks);
 ?>
 <style>
 	.left-sidebar a:hover {
