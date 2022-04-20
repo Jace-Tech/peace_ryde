@@ -104,13 +104,6 @@
 					</tbody>
 				</table>
 			</div>
-
-
-
-			<!-- <footer class="footer text-center text-muted">
-                All Rights Reserved by t</a>.
-            </footer> -->
-
 		</div>
 
 	</div>
