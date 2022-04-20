@@ -89,7 +89,7 @@
                             <?php foreach($tracks as $track): ?>
                                 <tr>
                                     <th scope="row" style="padding-top:48px;padding-left:36px;color:#080C58;font-family: Ubuntu;font-size: 16px;font-style: normal;font-weight: 700;">
-                                        <?= $services->getUserService($userServices->getService($USER_ID)); ?>
+                                        <?= $services->getUserService($userServices->getService($USER_ID))['service']; ?>
                                     </th>
                                     <td style="padding-top:48px;color:#080C58;font-family: Ubuntu;font-size: 16px;font-style: normal;font-weight: 500;">
                                         <?= $track['tracking']; ?>
