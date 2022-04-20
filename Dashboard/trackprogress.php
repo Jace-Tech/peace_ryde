@@ -1,8 +1,13 @@
 <?php include("./inc/header.php"); ?>
 <?php include("../models/Tracking.php"); ?>
+<?php include("../models/UserService.php"); ?>
+<?php include("../models/Service.php"); ?>
 
 <?php
     $trackings = new Tracking($connect);
+    $userServices = new UserService($connect);
+    $services = new Service($connect);
+
     $tracks = $trackings->getUserTracking($USER_ID);
 
 ?>
@@ -81,10 +86,16 @@
 					</thead>
 					<tbody>
 						<?php if(count($tracks) > 0): ?>
-                            <tr>
-                                <th scope="row" style="padding-top:48px;padding-left:36px;color:#080C58;font-family: Ubuntu;font-size: 16px;font-style: normal;font-weight: 700;">Nigeria Business on Arrival</th>
-                                <td style="padding-top:48px;color:#080C58;font-family: Ubuntu;font-size: 16px;font-style: normal;font-weight: 500;">Approved</td>
-                            </tr>
+                            <?php foreach($tracks as $track): ?>
+                                <tr>
+                                    <th scope="row" style="padding-top:48px;padding-left:36px;color:#080C58;font-family: Ubuntu;font-size: 16px;font-style: normal;font-weight: 700;">
+                                        <?= $services->getUserService($userServices->getService($USER_ID)); ?>
+                                    </th>
+                                    <td style="padding-top:48px;color:#080C58;font-family: Ubuntu;font-size: 16px;font-style: normal;font-weight: 500;">
+                                        <?= $track['tracking']; ?>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
 						<?php else: ?>
                             <tr>
                                 <td colspan="2" class="py-5 text-muted text-center">No tracks found</td>
