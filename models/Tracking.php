@@ -35,7 +35,7 @@ class Tracking {
 
     public function getUserTracking($userId)
     {
-        $query = "SELECT * FROM `tracking` WHERE `user_id` = ?";
+        $query = "SELECT * FROM `tracking` WHERE `user_id` = ? ORDER BY `date` DESC";
         $result = $this->connection->prepare($query);
         $result->execute([$userId]);
 

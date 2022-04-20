@@ -65,7 +65,7 @@ if (isset($_GET['q'])) {
 												<div class="origin-top-right z-10 absolute top-full right-0 min-w-36 bg-white border border-gray-200 py-1.5 rounded shadow-lg overflow-hidden mt-1" @click.outside="open = false" @keydown.escape.window="open = false" x-show="open" x-transition:enter="transition ease-out duration-200 transform" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-out duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" style="display: none;">
 													<ul>
                                                         <li>
-                                                            <div x-data="{ modalOpen: false }">
+															<div x-data="{ modalOpen: false }">
                                                                 <button @click.prevent="modalOpen = true" aria-controls="feedback-modal-<?= $user['user_id'] ?>" class="block px-2 text-gray-600 text-sm border-0 bg-white">Update Track</button>
                                                                 <div class="fixed inset-0 bg-gray-900 bg-opacity-30 z-50 transition-opacity" x-show="modalOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-out duration-100" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true"></div>
                                                                 <div id="feedback-modal" class="fixed inset-0 z-50 overflow-hidden flex items-center my-4 justify-center transform px-4 sm:px-6" role="dialog" aria-modal="true" x-show="modalOpen" x-transition:enter="transition ease-in-out duration-200" x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in-out duration-200" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4">
@@ -79,28 +79,31 @@ if (isset($_GET['q'])) {
                                                                                 </button>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="px-5 py-4">
+                                                                        <form action="./handler/track_handler.php" method="POST" id="track-form-alt" class="px-5 py-4">
                                                                             <div class="text-sm">
-                                                                                <div class="font-medium text-gray-800 mb-3">Previous Track: <?= $user['user_id']; ?></div>
+																				<?php if(count($trackings->getUserTracking($user['user_id']))): ?>
+																					<div class="font-medium text-gray-800 mb-3">Previous Track: <?= $trackings->getUserTracking($user['user_id'])[0]['tracking']; ?></div>
+																				<?php else: ?>
+																					<div class="font-medium text-gray-800 mb-3">Previous Track: <span class="text-gray-500"><?= "No track found" ?></span></div>
+																				<?php endif; ?>
                                                                             </div>
-                                                                            <form action="./handler/track_handler.php" method="POST" id="track-form" class="space-y-3">
+                                                                            <div class="space-y-3">
                                                                                 <div>
                                                                                     <label class="block text-sm font-medium mb-1" for="name">Tracking <span class="text-red-500">*</span></label> 
                                                                                     <input id="name" name="track" class="form-input w-full px-2 py-1" required="">
                                                                                     <input type="hidden" value="<?= $user['user_id']; ?>" name="id">
                                                                                 </div>
-                                                                            </form>
-                                                                        </div>
+                                                                            </div>
+                                                                        </form>
                                                                         <div class="px-5 py-4 border-t border-gray-200">
                                                                             <div class="flex flex-wrap justify-end space-x-2">
                                                                                 <button type="button" class="btn-sm border-gray-200 hover:border-gray-300 text-gray-600" @click="modalOpen = false">Cancel</button> 
-                                                                                <button form="track-form" type="submit" name="tracking" class="btn-sm bg-indigo-500 hover:bg-indigo-600 text-white">Update Track</button>
+                                                                                <button form="track-form-alt" type="submit" name="tracking" class="btn-sm bg-indigo-500 hover:bg-indigo-600 text-white">Update Track</button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-																
+                                                            </div>	
 														</li>
 													</ul>
 												</div>
@@ -122,10 +125,6 @@ if (isset($_GET['q'])) {
 													</h2>
 												</a>
 											</div>
-											<!-- <div class="flex justify-center items-center">
-												<span class="text-sm font-medium text-gray-400 -mt-0.5 mr-1">-&gt;</span>
-												<span>🇫🇷</span>
-											</div> -->
 										</header>
 										<div class="text-center mt-2">
 											<div class="text-sm">
@@ -189,7 +188,11 @@ if (isset($_GET['q'])) {
                                                                         </div>
                                                                         <form action="./handler/track_handler.php" method="POST" id="track-form-alt" class="px-5 py-4">
                                                                             <div class="text-sm">
-                                                                                <div class="font-medium text-gray-800 mb-3">Previous Track: <?= $user['user_id']; ?></div>
+																				<?php if(count($trackings->getUserTracking($user['user_id']))): ?>
+																					<div class="font-medium text-gray-800 mb-3">Previous Track: <?= $trackings->getUserTracking($user['user_id'])[0]['tracking']; ?></div>
+																				<?php else: ?>
+																					<div class="font-medium text-gray-800 mb-3">Previous Track: <span class="text-gray-500"><?= "No track found" ?></span></div>
+																				<?php endif; ?>
                                                                             </div>
                                                                             <div class="space-y-3">
                                                                                 <div>
@@ -208,7 +211,6 @@ if (isset($_GET['q'])) {
                                                                     </div>
                                                                 </div>
                                                             </div>
-																
 														</li>
 													</ul>
 												</div>
@@ -229,10 +231,6 @@ if (isset($_GET['q'])) {
 														<?= "{$user['firstname']} {$user['lastname']}" ?>
 													</h2>
 												</a>
-											</div>
-											<div class="flex justify-center items-center">
-												<span class="text-sm font-medium text-gray-400 -mt-0.5 mr-1">-&gt;</span>
-												<span>🇫🇷</span>
 											</div>
 										</header>
 										<div class="text-center mt-2">
