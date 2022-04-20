@@ -4,6 +4,7 @@ require("../addons/crsf_auth.php");
 require_once("../../db/config.php");
 require_once("../../functions/index.php");
 require_once("../../models/Admin.php");
+require("../../setup.php");
 
 $admin = new Admin($connect);
 
@@ -11,7 +12,8 @@ if(isset($_POST['addAdmin'])){
     $name = filter_field($_POST['name']);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $country = filter_var_array($_POST['country'], FILTER_SANITIZE_STRING);
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $password = $_POST['password'];
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     $services = filter_field($_POST['service']);
     $admin_id = $admin->generate_id();
 
@@ -19,7 +21,7 @@ if(isset($_POST['addAdmin'])){
         'name' => $name,
         'countries' => $country,
         'services' => $services,
-        'password' => $password,
+        'password' => $hashed_password,
         'admin_id' => $admin_id,
         'status' => "active",
         'type' => "LOW",
@@ -36,6 +38,13 @@ if(isset($_POST['addAdmin'])){
                 'alert_type' => 'success',
                 'alert_message' => "Admin Created Successfully"
             ];
+
+            $subject = "REGISTRATION";
+            $message = "<h2>Hi $name,</h2>";
+            $message .= "<p>You've been successfully added as a sub admin at $APP_NAME</p>";
+            $message .= "<p>Your default password is $password </p>";
+    
+            sendMail($subject, $message, $EMAIL_ADDRESS, $email);
 
             session_start();
             $_SESSION['alert'] = json_encode($alert);
