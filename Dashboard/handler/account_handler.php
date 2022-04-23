@@ -69,6 +69,10 @@ if(isset($_POST['update'])) {
     else {
         extract($POST);
         $hashed = md5($password);
+
+        echo "<h1>$hashed</h1>";
+
+        die();
         $query = "UPDATE `users` SET `firstname` = '$firstname', `lastname` = '$lastname', `email` = '$email', `password` = '$hashed' WHERE `user_id` = '$USER_ID'";
         $result = $connect->prepare($query);
         $result->execute();
