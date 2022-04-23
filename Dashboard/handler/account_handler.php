@@ -25,9 +25,9 @@ if(isset($_POST['update'])) {
         if($upload_res['status'] == 'success') {
             $upload_res = $uploads->uploadToDB($USER_ID, $upload_res['file_name'], 'PROFILE');
             if($upload_res['status'] == 'success') {
-                $query = "UPDATE `users` SET `firstname` = ?, `lastname` = ?, `email` = ?, `password` = ? WHERE `user_id` = ?";
+                $query = "UPDATE `users` SET `firstname` = '$firstname', `lastname` = '$lastname', `email` = '$email' WHERE `user_id` = '$USER_ID'";
                 $result = $connect->prepare($query);
-                $result->execute([$firstname, $lastname, $email, md5($password), $USER_ID]);
+                $result->execute();
     
                 if($result) {
                     $alert = [

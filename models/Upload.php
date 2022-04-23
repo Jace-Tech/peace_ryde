@@ -72,5 +72,17 @@ class Upload {
         if($result) return true;
         else return false;
     }
+
+    public function getUserUploads($userId)
+    {
+        $query = "SELECT * FROM `uploads` WHERE `user_id` = :userid";
+        $result = $this->connection->prepare($query);
+        $result->execute([
+            'userid' => $userId
+        ]);
+
+        if($result) return $result->fetchAll();
+        else return false;
+    }
     
 }

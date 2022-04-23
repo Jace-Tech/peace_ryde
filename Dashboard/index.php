@@ -1,5 +1,19 @@
 <?php include("./inc/header.php"); ?>
 
+<?php  
+	include("../models/Upload.php");
+
+	$uploads = new Upload($connect);
+	$USERS_UPLOADS = $uploads->getUserUploads($USER_ID);
+
+	foreach($USERS_UPLOADS as $upload) {
+		if($upload['service_id'] == "PROFILE") {
+			$PROFILE_PIC = $upload['files'];
+		}
+	}
+
+?>
+
 <style>
 	.left-sidebar a:hover {
 		color: #f1f1f1;
@@ -41,18 +55,24 @@
 					<div class="align-self-center">
 						<div class="row">
 							<div class=" ">
-								<img src="./dist/image/account.png" class="account-img">
+								<?php if($PROFILE_PIC): ?>
+									<img src="./pic/<?= $PROFILE_PIC ?>" class="account-img">
+								<?php else: ?>
+									<img src="./dist/image/account.png" class="account-img">
+								<?php endif; ?>
 							</div>
 							<div class="">
 								<h3 class="page-title text-truncate mb-1 account
                                 ">My Account</h3>
 								<p style="padding-top: 1px;font-family: Ubuntu;
-                                font-size: 16px;
-                                font-style: normal;
-                                font-weight: 400;
-                                padding-left: 30px;
-                                color: #0F1377;
-                                ">John Peter</p>
+									font-size: 16px;
+									font-style: normal;
+									font-weight: 400;
+									padding-left: 30px;
+									color: #0F1377;
+									"> 
+									<?= $USER['firstname'] . " " . $USER['lastname'] ?>
+								</p>
 							</div>
 						</div>
 					</div>
@@ -124,8 +144,8 @@
 					</p>
 				</form>
 			</div>
-
-
+			
+			<?php include("./inc/footer.php"); ?>
 
 			<!-- <footer class="footer text-center text-muted">
                 All Rights Reserved by t</a>.
