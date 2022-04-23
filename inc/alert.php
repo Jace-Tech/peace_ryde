@@ -9,5 +9,6 @@ if(isset($_SESSION['ALERT'])) {
     <?php
 }
 
-
 unset($_SESSION['ALERT']);
+
+?>

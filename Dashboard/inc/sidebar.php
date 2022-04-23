@@ -1,4 +1,5 @@
 
+<?php include("../inc/alert.php"); ?>
 
 <aside class="left-sidebar" data-sidebarbg="skin6" id="sidebar">
 	<!-- Sidebar scroll-->
