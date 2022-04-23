@@ -15,6 +15,10 @@ if(isset($_POST['update'])) {
     $POST = filter_var_array($_POST, FILTER_SANITIZE_STRING);
     $file = $_FILES['image'];
 
+    echo "<h1>" . count($_FILES) . "</h1>";
+
+    die();
+
     if(count($file) > 0) {
         $upload_res = $uploads->uploadFile($file, "./pic/");
     
