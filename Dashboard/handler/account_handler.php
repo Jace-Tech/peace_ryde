@@ -13,7 +13,7 @@ $USER_ID = $LOGGED_USER['user_id'];
 
 if(isset($_POST['update'])) {
     $POST = filter_var_array($_POST, FILTER_SANITIZE_STRING);
-    $file = $_FILES['image'];
+    $file = $_FILES;
     // $upload_res = $uploads->uploadFile($file, "./pic/");
     
     var_dump($POST);
