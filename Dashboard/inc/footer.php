@@ -166,7 +166,7 @@ $USER_MESSAGES = $messages->get_user_messages($USER_ID);
                             </div>
                         <?php endforeach; ?>
                     <?php else: ?>
-                        <p class="text-muted">No messages yet</p>
+                        <p class="text-muted text-center">No messages yet</p>
                     <?php endif; ?>
 
 				</div>
