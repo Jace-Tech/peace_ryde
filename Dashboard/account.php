@@ -260,9 +260,10 @@
 		}
 	</script>
 	<script>
-		var number = 1;
-		do {
+		// var number = 1;
+		// do {
 			function showPreview(event, number) {
+				console.log(event)
 				if (event.target.files.length > 0) {
 					let src = URL.createObjectURL(event.target.files[0]);
 					let preview = document.getElementById("file-ip-" + number + "-preview");
@@ -275,9 +276,9 @@
 				document.getElementById("file-ip-" + number + "-preview").src = "./dist/image/account.png";
 				document.getElementById("file-ip-" + number).value = null;
 			}
-			number++;
-		}
-		while (number < 5);
+			// number++;
+		// }
+		// while (number < 5);
 	</script>
 
 	<script src="./assets/libs/jquery/dist/jquery.min.js"></script>
