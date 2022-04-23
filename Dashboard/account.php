@@ -143,7 +143,7 @@
 						</div>
 					</div>
 				</div>
-				<form action="" method="post" enctype="multipart/form-data">
+				<form action="./handler/account_handler.php" method="post" enctype="multipart/form-data">
 					<div class="form-row" style="margin-left: 160px; margin-top:46px">
 						<div class="form-group">
 							<p style="font-family: Rubik;
@@ -212,7 +212,7 @@
                         font-weight: 400;
                         color:#000000
                         ">Password</p>
-							<input type="text" name="password" class="form-control" style="border:1px solid #E9EDF0; font-family: ubuntu; margin-top: 21px; height: 59px;
+							<input type="password" name="password" class="form-control" style="border:1px solid #E9EDF0; font-family: ubuntu; margin-top: 21px; height: 59px;
                         width: 630px;                    
                         background: #E9EDF0;
                         color: #444649;

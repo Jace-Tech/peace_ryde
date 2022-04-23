@@ -398,7 +398,7 @@
 
 									<div class="form-group" style="margin-right: 202px; margin-top:72px">
 										<input type="text" name="email" class="form-control" style="border: 1px solid #ffffff; width:470px;font-family:ubuntu;height: 44px; margin-top:27px; background-color: #1161D9; color: #ffffff;" placeholder="Email" />
-										<input type="text" name="password" class="form-control" style="border: 1px solid #ffffff; width:470px;font-family:ubuntu;height: 44px; margin-top:27px; background-color: #1161D9; color: #ffffff;" placeholder="Password" />
+										<input type="password" name="password" class="form-control" style="border: 1px solid #ffffff; width:470px;font-family:ubuntu;height: 44px; margin-top:27px; background-color: #1161D9; color: #ffffff;" placeholder="Password" />
 									</div>
 								</div>
 								<div class="row" style="margin-left: 69px; margin-top: 42px;">
