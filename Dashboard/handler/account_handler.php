@@ -30,7 +30,7 @@ if(isset($_POST['update'])) {
                     'alert_message' => "User Updated Successfully",
                     'alert_type' => 'success'
                 ];
-                $_SESSION['alert'] = json_encode($alert);
+                $_SESSION['ALERT'] = json_encode($alert);
 
                 header("Location: ../account.php");               
             }
@@ -39,7 +39,7 @@ if(isset($_POST['update'])) {
                     'alert_message' => "Something went wrong, please try again.",
                     'alert_type' => 'error'
                 ];
-                $_SESSION['alert'] = json_encode($alert);
+                $_SESSION['ALERT'] = json_encode($alert);
 
                 header("Location: ../account.php");
             }
@@ -49,7 +49,7 @@ if(isset($_POST['update'])) {
                 'alert_message' => "File upload failed.",
                 'alert_type' => 'error'
             ];
-            $_SESSION['alert'] = json_encode($alert);
+            $_SESSION['ALERT'] = json_encode($alert);
 
             header("Location: ../account.php");
         }
@@ -59,7 +59,7 @@ if(isset($_POST['update'])) {
             'alert_message' => "File upload failed.",
             'alert_type' => 'error'
         ];
-        $_SESSION['alert'] = json_encode($alert);
+        $_SESSION['ALERT'] = json_encode($alert);
 
         header("Location: ../account.php");
     }
