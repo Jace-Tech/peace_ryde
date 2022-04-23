@@ -84,6 +84,11 @@ class ResetPassword {
         return $result;
     }
 
+    public function changePasswordAlt($userId, $password)
+    {
+        # code...
+    }
+
     public function verifyPin($reset_id, $pin)
     {
         $query = "SELECT * FROM `reset_password` WHERE `reset_id` = ? AND `pin` = ?";
