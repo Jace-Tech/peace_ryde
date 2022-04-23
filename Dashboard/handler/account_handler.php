@@ -15,7 +15,7 @@ if(isset($_POST['update'])) {
     $POST = filter_var_array($_POST, FILTER_SANITIZE_STRING);
     $file = $_FILES['image'];
 
-    if(!empty($file)) {
+    if(isset($file)) {
         $upload_res = $uploads->uploadFile($file, "./pic/");
     
         extract($POST);
