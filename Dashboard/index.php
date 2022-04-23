@@ -61,7 +61,11 @@
 							<ol class="breadcrumb mb-2">
 								<li class="breadcrumb-item"><a href="javascript:void(0)"><img src="./dist/image/m_icon.png" width="20" height="19">&nbsp;&nbsp; Inbox</a></li>
 								<li class="breadcrumb-item"><a href="javascript:void(0)"><img src="./dist/image/m_icon2.png" width="20" height="19">&nbsp;&nbsp; Send a message</a></li>
-								<li class="breadcrumb-item"><a href="javascript:void(0)"><img src="./dist/image/logout.png" width="20" height="19">&nbsp; &nbsp; Logout</a></li>
+								<li class="breadcrumb-item">
+                                    <form action="./handler/logout_handler.php" method="post">
+                                        <button style="background-color: transparent; border: none;" name="logout" href="javascript:void(0)"><img src="./dist/image/logout.png" width="20" height="19">&nbsp; &nbsp; Logout</button>
+                                    </form>
+                                </li>
 							</ol>
 						</div>
 					</div>
