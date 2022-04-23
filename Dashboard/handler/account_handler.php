@@ -16,8 +16,6 @@ if(isset($_POST['update'])) {
     $file = $_FILES['image'];
 
     if($file) {
-        echo "File Exits";
-        die();
         $upload_res = $uploads->uploadFile($file, "./pic/");
     
         extract($POST);
@@ -71,9 +69,7 @@ if(isset($_POST['update'])) {
     else {
         extract($POST);
         $hashed = md5($password);
-
-        echo "<h1>$hashed</h1>";
-        die();
+        
         $query = "UPDATE `users` SET `firstname` = '$firstname', `lastname` = '$lastname', `email` = '$email', `password` = '$hashed' WHERE `user_id` = '$USER_ID'";
         $result = $connect->prepare($query);
         $result->execute();
