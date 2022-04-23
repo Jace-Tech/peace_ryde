@@ -68,10 +68,10 @@ if(isset($_POST['update'])) {
     }
     else {
         extract($POST);
-        
-        $query = "UPDATE `users` SET `firstname` = ?, `lastname` = ?, `email` = ?, `password` = ? WHERE `user_id` = ?";
+        $hashed = md5($password);
+        $query = "UPDATE `users` SET `firstname` = '$firstname', `lastname` = '$lastname', `email` = '$email', `password` = '$hashed' WHERE `user_id` = '$USER_ID'";
         $result = $connect->prepare($query);
-        $result->execute([$firstname, $lastname, $email, md5($password), $USER_ID]);
+        $result->execute();
 
         if($result) {
             $alert = [
