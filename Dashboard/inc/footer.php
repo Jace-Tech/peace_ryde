@@ -119,6 +119,13 @@
 	}
 </style>
 
+<?php
+include("../models/Message.php");
+$messages = new Message($connect);
+
+$USER_MESSAGES = $messages->get_user_messages($USER_ID);
+?>
+
 <button id="top" style="cursor: pointer;
     bottom: 50px;
     height: 40px;
@@ -133,57 +140,46 @@
 	</svg>
 </button>
 <div class="chat-popup" id="myForm">
-	<form action="/action_page.php" class="form-container">
+	<div class="form-container">
 		<div class="wrapper">
 			<div class="mainchat">
 				<button type="button" class="btn cancel" style="margin-left: 280px;" onclick="closeForm()">X</button>
 				<div class="px-2 scroll">
-					<div class="d-flex align-items-center">
-						<div class="text-left pr-1"><img src="https://img.icons8.com/color/40/000000/guest-female.png" width="30" class="img9" /></div>
-						<div class="pr-2 pl-1"> <span class="name">Sarah Anderson</span>
-							<p class="msg">Hi Dr. Hendrikson, I haven't been falling well
-								for past few days.</p>
-						</div>
-					</div>
-					<div class="d-flex align-items-center text-right justify-content-end ">
-						<div class="pr-2"> <span class="name">Dr. Hendrikson</span>
-							<p class="msg">Let's jump on a video call</p>
-						</div>
-						<div><img src="https://i.imgur.com/HpF4BFG.jpg" width="30" class="img9" /></div>
-					</div>
-					<div class="text-center"><span class="between">Call started at
-							10:47am</span></div>
-					<div class="text-center"><span class="between">Call ended at
-							11:03am</span></div>
-					<div class="d-flex align-items-center">
-						<div class="text-left pr-1"><img src="https://img.icons8.com/color/40/000000/guest-female.png" width="30" class="img9" /></div>
-						<div class="pr-2 pl-1"> <span class="name">Sarah Anderson</span>
-							<p class="msg">How often should i take this?</p>
-						</div>
-					</div>
-					<div class="d-flex align-items-center text-right justify-content-end ">
-						<div class="pr-2"> <span class="name">Dr. Hendrikson</span>
-							<p class="msg">Twice a day, at breakfast and before bed</p>
-						</div>
-						<div><img src="https://i.imgur.com/HpF4BFG.jpg" width="30" class="img9" /></div>
-					</div>
-					<div class="d-flex align-items-center">
-						<div class="text-left pr-1"><img src="https://img.icons8.com/color/40/000000/guest-female.png" width="30" class="img9" /></div>
-						<div class="pr-2 pl-1"> <span class="name">Sarah Anderson</span>
-							<p class="msg">How often should i take this?</p>
-						</div>
-					</div>
+                    <?php if(count($USER_MESSAGES)): ?>
+                        <?php foreach($USER_MESSAGES as $message): ?>
+                            <!--   SENDER  -->
+                            <div class="d-flex align-items-center">
+                                <div class="text-left pr-1">
+                                    <img src="https://img.icons8.com/color/40/000000/guest-female.png" width="30" class="img9" /></div>
+                                <div class="pr-2 pl-1"> <span class="name">Sarah Anderson</span>
+                                    <p class="msg">Hi Dr. Hendrikson, I haven't been falling well
+                                        for past few days.</p>
+                                </div>
+                            </div>
+
+                            <!-- USER -->
+                            <div class="d-flex align-items-center text-right justify-content-end ">
+                                <div class="pr-2"> <span class="name">Dr. Hendrikson</span>
+                                    <p class="msg">Let's jump on a video call</p>
+                                </div>
+                                <div><img src="https://i.imgur.com/HpF4BFG.jpg" width="30" class="img9" /></div>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <p class="text-muted">No messages yet</p>
+                    <?php endif; ?>
+
 				</div>
-				<nav class="navbars bg-white navbar-expand-sm d-flex justify-content-between">
+				<form class="navbars bg-white navbar-expand-sm d-flex justify-content-between">
 					<input type="text number" name="text" class="form-controls" placeholder="Type a message...">
 					<div class=" d-flex justify-content-end align-content-center text-center ml-2">
 						<svg width="33" height="35" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M32.4419 20.4722C32.5822 19.2858 32.0534 18.1264 31.0686 17.4434L8.12261 1.50404C7.09665 0.772938 5.80289 0.713532 4.70133 1.30734C3.57966 1.91099 2.86538 3.55356 3.029 4.81133L4.30132 14.5749C4.43205 15.5761 5.23388 16.3557 6.23997 16.4571L19.7964 17.8394C20.4918 17.8985 20.9955 18.5204 20.9086 19.213C20.8348 19.8949 20.222 20.3912 19.5266 20.3321L5.95836 18.9379C4.95253 18.8342 4.00153 19.4326 3.65928 20.3856L0.300426 29.7007C-0.10413 30.8007 0.103129 31.9631 0.816651 32.8442C0.900595 32.9479 0.995031 33.0645 1.09201 33.1576C2.04085 34.0627 3.38245 34.3065 4.60167 33.8126L30.4291 23.1319C31.5361 22.6861 32.3016 21.6586 32.4419 20.4722Z" fill="#1161D9" />
 						</svg>
 					</div>
-				</nav>
+				</form>
 			</div>
 		</div>
 
-	</form>
+	</div>
 </div>
