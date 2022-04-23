@@ -91,7 +91,7 @@
     }
     .lang
     {
-      
+      margin-left: 40px;
       margin-top: 12px;
     }
     .new-section1__block21.layout
@@ -451,7 +451,7 @@
       
         .new-section1__group.layout2 {
           position: relative;
-          height: 400px;
+          height: 600px;
       }
     }
     @media (max-width: 280px) {
@@ -483,24 +483,43 @@
   } }
   @media (max-width: 479px) {
     .new-section1__cover-block.layout {
-      top: 12px; } 
+      top: 145px; } 
       
+    
+    .new-section1__hero-title2.layout {
+      position: relative;
+      height: -webkit-min-content;
+      height: -moz-min-content;
+      height: min-content;
+      
+      margin: 6px 37.19% 0px 26px; }
     }
   @media (max-width: 383px) {
     .new-section1__cover-block.layout {
       }
       .new-section1__hero-title2.layout {
-        position: relative;
-       
-        margin: 6px auto 0px ;
+        position: relative;       
+        margin: 6px 26px 0px ;
     }
     .new-section1__group.layout2 {
       position: relative;
-      height: 300px;
-      margin-top: 110px;
+      height: 500px;
+      margin-top: 130px;
   }
  
     }
+    @media (max-width: 280px){
+     
+.new-section1__hero-title2.layout {
+    position: relative;
+    margin: 6px 6px 0px;
+}
+    .new-section1__group.layout2 {
+        position: relative;
+        height: 400px;
+        margin-top: 130px;
+    }
+}
 
 @media (max-width: 1199px) {
   .new-section1__highlights5-box {
@@ -548,11 +567,11 @@
   @media (max-width: 479px) {
     .new-section1__highlights5-box.layout {
       width: 85.46%;
-      margin: 33px auto 0px; } }
+      margin: 121px auto 0px; } }
   @media (max-width: 383px) {
     .new-section1__highlights5-box.layout {
       width: 88.69%;
-      margin: 25px auto 0px; } }
+      margin: 111px auto 0px; } }
 
 .new-section1__highlights5 {
   overflow: visible;
@@ -653,7 +672,12 @@
   @media (max-width: 383px) {
     .new-section1__medium-title.layout {
       width: 88.69%;
-      margin: 5px auto 0px; } }
+      margin: 5px 26px 0px; } }
+  @media (max-width: 383px){
+  .new-section1__medium-title.layout {
+      width: 88.69%;
+      margin: 5px 6px 0px;
+  }}
 
 .new-section1__block11 {
   display: flex;
@@ -682,10 +706,10 @@
       margin: 30px 72.28% 51px 17.55%; } }
   @media (max-width: 479px) {
     .new-section1__block11.layout {
-      margin: 26px 72.28% 34px 17.55%; } }
+      margin: 26px 72.28% 34px 26px; } }
   @media (max-width: 383px) {
     .new-section1__block11.layout {
-      margin: 23px 2.28% 23px 17.55%; } }
+      margin: 42px 2.28% 23px 26px; } }
 
 .new-section1__highlights1 {
   font: 16px/1.2 "Ubuntu", Helvetica, Arial, serif;
@@ -4191,6 +4215,11 @@
     margin-top: 57px;
   }
  }
+ @media (max-width: 280px){
+  .new-section5__content-box1 img {
+      margin-left: 60px;
+      margin-top: 57px;
+}}
 
 
 .new-section5__content-box1 {
@@ -4219,7 +4248,7 @@
       margin: 53px 0px 0px; } }
   @media (max-width: 479px) {
     .new-section5__content-box1.layout {
-      margin: 35px 0px 0px; } }
+      margin: 35px 40px 0px; } }
   @media (max-width: 383px) {
     .new-section5__content-box1.layout {
       margin: 23px 25px 0px; } }
@@ -4306,6 +4335,11 @@
   @media (max-width: 383px) {
     .new-section5__hero-title4.layout {
       margin: 30px 80px 0px; } }
+
+  @media (max-width: 280px){
+  .new-section5__hero-title4.layout {
+      margin: 30px 45px 0px;
+  }}
 
 .new-section5__highlights1 {
   display: flex;
@@ -4987,7 +5021,7 @@
 
 .new-section6__flex18.layout {
   position: relative;
-  margin: 13px 344px 0px; }
+  margin: 13px 300px 0px 304px; }
   @media (max-width: 1199px) {
     .new-section6__flex18.layout {
       margin: 10px auto 0px; } }
@@ -5022,7 +5056,7 @@
 
 .new-section6__text-body {
   display: flex;
-  justify-content: center;
+  
   font: 500 14px/1.2 "Ubuntu", Helvetica, Arial, serif;
   color: #080c58;
   text-align: center;
@@ -5605,8 +5639,12 @@
       margin: 19px 2.33% 0px 78.39%; } }
   @media (max-width: 383px) {
     .new-section7__block14.layout {
-      margin: 17px 2.33% 0px 78.39%; } }
-
+      margin: 17px 2.33% 0px 235px; } }
+      @media (max-width: 280px){
+      .new-section7__block14.layout {
+          margin: 17px 2.33% 0px 165px;
+      }
+    }
 .new-section7__highlights7 {
   font: 16px/1.2 "Segoe UI", Helvetica, Arial, serif;
   color: white;
@@ -5691,7 +5729,7 @@
       margin: 15px 0px 0px 5px; } }
   @media (max-width: 383px) {
     .new-section8__block19.layout {
-      margin: 14px 0px 0px 5px; } }
+      margin: 100px 0px 0px 5px; } }
 
 .new-section8__flex23 {
   display: flex;

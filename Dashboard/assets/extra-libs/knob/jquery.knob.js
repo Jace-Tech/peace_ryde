@@ -6,7 +6,7 @@
  * Requires: jQuery v1.7+
  *
  * Copyright (c) 2012 Anthony Terrien
- * Under MIT License (http://www.opensource.org/licenses/mit-license.html)
+ * Under MIT License (http://www.opensource.org/licenses/mit-license.php)
  *
  * Thanks to vor, eskimoblood, spiffistan, FabrizioC
  */
