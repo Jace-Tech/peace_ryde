@@ -2,15 +2,14 @@
 
 if(isset($_SESSION['ALERT'])) {
     $alert = json_decode($_SESSION['ALERT'], true);
-    print_r($alert);
-    ?>
-        <script>
-            swal("<?= $alert['message'] ?>", "", "<?= $alert['status']; ?>")
-        </script>
-    <?php
+    $message = $alert['message'];
+    $type = $alert['status'];
+
+    echo "<script> 
+            swal('$message', '', ' $type') 
+        </script>";
 }
 
-sleep(10);
 unset($_SESSION['ALERT']);
 
 ?>

@@ -27,8 +27,8 @@ if(isset($_POST['update'])) {
 
             if($result) {
                 $alert = [
-                    'alert_message' => "User Updated Successfully",
-                    'alert_type' => 'success'
+                    'message' => "User Updated Successfully",
+                    'status' => 'success'
                 ];
                 $_SESSION['ALERT'] = json_encode($alert);
 
@@ -36,8 +36,8 @@ if(isset($_POST['update'])) {
             }
             else {
                 $alert = [
-                    'alert_message' => "Something went wrong, please try again.",
-                    'alert_type' => 'error'
+                    'message' => "Something went wrong, please try again.",
+                    'status' => 'error'
                 ];
                 $_SESSION['ALERT'] = json_encode($alert);
 
