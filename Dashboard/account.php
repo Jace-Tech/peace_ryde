@@ -99,7 +99,7 @@
 
 		<div class="page-wrapper" id="main">
 			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-			<div class="page-breadcrumb">
+			<form action="./handler/account_handler.php" method="post" enctype="multipart/form-data" class="page-breadcrumb">
 				<div class="row">
 					<div class="align-self-center">
 						<div class="row">
@@ -143,7 +143,7 @@
 						</div>
 					</div>
 				</div>
-				<form action="./handler/account_handler.php" method="post" enctype="multipart/form-data">
+				<div>
 					<div class="form-row" style="margin-left: 160px; margin-top:46px">
 						<div class="form-group">
 							<p style="font-family: Rubik;
@@ -231,7 +231,7 @@
 								background-color: #1161D9;
                             " class="btn btn-button">Update Profile</button>
 						</div>
-				</form>
+				</div>
 			</div>
 
 			<div>
@@ -244,7 +244,7 @@
                 All Rights Reserved by t</a>.
             </footer> -->
 
-		</div>
+		</form>
 
 	</div>
 	<script>
