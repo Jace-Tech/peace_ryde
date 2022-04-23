@@ -46,8 +46,8 @@ if(isset($_POST['update'])) {
         }
         else {
             $alert = [
-                'alert_message' => "File upload failed.",
-                'alert_type' => 'error'
+                'message' => "File upload failed.",
+                'status' => 'error'
             ];
             $_SESSION['ALERT'] = json_encode($alert);
 
@@ -56,8 +56,8 @@ if(isset($_POST['update'])) {
     }
     else {
         $alert = [
-            'alert_message' => "File upload failed.",
-            'alert_type' => 'error'
+            'message' => "File upload failed.",
+            'status' => 'error'
         ];
         $_SESSION['ALERT'] = json_encode($alert);
 
