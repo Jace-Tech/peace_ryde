@@ -8,6 +8,7 @@
 <?php
     $user = new User($connect);
     $active = $title = "Message";
+    $conversation = $messages->get_conversation($LOGGED_USER['admin_id'], $user_id);
 ?>
 
 
@@ -150,8 +151,8 @@
                                 </div>
                             </div>
                             <div class="grow px-4 sm:px-6 md:px-5 py-6">
-                                <?php foreach ($messages->get_conversation($LOGGED_USER['admin_id'], $user_id) as $message): extract($message); ?>
-                                    <?php $messages->mark_read($message_id); ?>
+                                <?php for($i = 0; $i < count($conversation); $i++): ?>
+                                    <?php extract($message[$i]); ?>
                                     <div class="flex items-start mb-4 last:mb-0" style="flex-direction: <?= $style = $sender_id === $LOGGED_USER['admin_id'] ? "row-reverse" : "row"; ?>">
                                         <div class="flex shadow-sm ml-2 items-center justify-center bg-gray-200 rounded-full w-10 h-10 text-sm font-semibold uppercase text-gray-500">
                                             <?= $name = $sender_id === $LOGGED_USER['admin_id'] ? getSubName($LOGGED_USER['name']) : getSubName($user->get_user($_GET['msg'])['firstname'] . " " . $user->get_user($_GET['msg'])['lastname']); ?>
@@ -167,7 +168,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                <?php endforeach; ?>
+                                <?php endfor; ?>
                             </div>
                             <div class="sticky bottom-0">
                                 <div class="flex items-center justify-between bg-white border-t border-gray-200 px-4 sm:px-6 md:px-5 h-16">
