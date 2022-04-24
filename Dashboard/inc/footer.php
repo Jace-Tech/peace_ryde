@@ -86,6 +86,18 @@
 		border: none
 	}
 
+	.avatar {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		font-size: 1.5rem;
+		background-color: #fff;
+		color: #555;
+	}
+
 
 
 	.form-controls:focus {
@@ -125,7 +137,6 @@ $messages = new Message($connect);
 
 $USER_MESSAGES = $messages->get_conversation($USER_ID, "MAIN_ADMIN");
 
-print_r($USER_MESSAGES);
 ?>
 
 <button id="top" style="cursor: pointer;
@@ -150,22 +161,31 @@ print_r($USER_MESSAGES);
                     <?php if(count($USER_MESSAGES)): ?>
                         <?php foreach($USER_MESSAGES as $message): ?>
                             <!--   SENDER  -->
-                            <div class="d-flex align-items-center">
-                                <div class="text-left pr-1">
-                                    <img src="https://img.icons8.com/color/40/000000/guest-female.png" width="30" class="img9" /></div>
-                                <div class="pr-2 pl-1"> <span class="name">Sarah Anderson</span>
-                                    <p class="msg">Hi Dr. Hendrikson, I haven't been falling well
-                                        for past few days.</p>
-                                </div>
-                            </div>
-
-                            <!-- USER -->
-                            <div class="d-flex align-items-center text-right justify-content-end ">
-                                <div class="pr-2"> <span class="name">Dr. Hendrikson</span>
-                                    <p class="msg">Let's jump on a video call</p>
-                                </div>
-                                <div><img src="https://i.imgur.com/HpF4BFG.jpg" width="30" class="img9" /></div>
-                            </div>
+							<?php if($message['sender_id'] == $USER_ID): ?>
+								<!-- USER -->
+								<div class="d-flex align-items-center text-right justify-content-end ">
+									<div class="pr-2"> <span class="name"><?= $USER['firstname'] . ' ' . $USER['lastname']; ?></span>
+										<p class="msg"><?= $message['message']; ?></p>
+									</div>
+									<div>
+										<div class="avater">
+											<?= getSubName($USER['firstname'] . ' ' . $USER['lastname']); ?>
+										</div>
+									</div>
+								</div>
+							<?php else: ?>
+								<div class="d-flex align-items-center">
+									<div class="text-left pr-1">
+										<div class="avater">
+											<?= "A"; ?>
+										</div>
+									</div>
+									<div class="pr-2 pl-1"> <span class="name">Admin</span>
+										<p class="msg"><?= $message['message'] ?>.</p>
+									</div>
+								</div>
+							<?php endif; ?>
+                            
                         <?php endforeach; ?>
                     <?php else: ?>
                         <p class="text-muted text-center">No messages yet</p>

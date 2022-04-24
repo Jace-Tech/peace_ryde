@@ -1,5 +1,6 @@
 <?php include("../db/config.php"); ?>
 <?php include("../models/User.php"); ?>
+<?php include("../functions/index.php") ?>
 
 <?php  
     session_start();
