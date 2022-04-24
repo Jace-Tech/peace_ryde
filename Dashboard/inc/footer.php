@@ -171,7 +171,7 @@ $USER_MESSAGES = $messages->get_user_messages($USER_ID);
 
 				</div>
 				<form action="./handler/message_handler.php" method="post" class="navbars bg-white navbar-expand-sm d-flex justify-content-between">
-					<input type="text number" name="text" class="form-controls" placeholder="Type a message...">
+					<input type="text" name="message" class="form-controls" placeholder="Type a message...">
 					<input type="hidden" name="sender" value="<?= $USER_ID ?>">
 					<input type="hidden" name="reciever" value="<?= "MAIN_ADMIN" ?>">
 					<button name="send" style="border: none; background: transparent;" class=" d-flex justify-content-end align-content-center text-center ml-2">
