@@ -152,42 +152,21 @@
                             <div class="grow px-4 sm:px-6 md:px-5 py-6">
                                 <?php foreach ($messages->get_conversation($LOGGED_USER['admin_id'], $user_id) as $message): extract($message); ?>
                                     <?php $messages->mark_read($message_id); ?>
-                                    <?php //if($sender_id === $LOGGED_USER['admin_id']): ?>
-                                        <!-- User -->
-                                        <div class="flex items-start mb-4 last:mb-0" style="flex-direction: <?= $style = $sender_id === $LOGGED_USER['admin_id'] ? "row-reverse" : "row"; ?>">
-                                            <div class="flex shadow-sm ml-2 items-center justify-center bg-gray-200 rounded-full w-10 h-10 text-sm font-semibold uppercase text-gray-500">
-                                                <?= $name = $sender_id === $LOGGED_USER['admin_id'] ? getSubName($LOGGED_USER['name']) : getSubName($user->get_user($_GET['msg'])['firstname'] . " " . $user->get_user($_GET['msg'])['lastname']); ?>
+                                    <div class="flex items-start mb-4 last:mb-0" style="flex-direction: <?= $style = $sender_id === $LOGGED_USER['admin_id'] ? "row-reverse" : "row"; ?>">
+                                        <div class="flex shadow-sm ml-2 items-center justify-center bg-gray-200 rounded-full w-10 h-10 text-sm font-semibold uppercase text-gray-500">
+                                            <?= $name = $sender_id === $LOGGED_USER['admin_id'] ? getSubName($LOGGED_USER['name']) : getSubName($user->get_user($_GET['msg'])['firstname'] . " " . $user->get_user($_GET['msg'])['lastname']); ?>
+                                        </div>
+                                        <div>
+                                            <div class="text-sm <?= $theme =  $sender_id === $LOGGED_USER['admin_id'] ? "bg-indigo-500 text-white" : "bg-white text-gray-800" ?> p-3 rounded-lg border border-transparent shadow-md mb-1" style="border-top-right-radius: 0;">
+                                                <?= $message ?>
                                             </div>
-                                            <div>
-                                                <div class="text-sm bg-indigo-500 text-white p-3 rounded-lg border border-transparent shadow-md mb-1" style="border-top-right-radius: 0;">
-                                                    <?= $message ?>
-                                                </div>
-                                                <div class="flex items-center justify-between">
-                                                    <div class="text-xs text-gray-500 font-medium" title="<?= date("l j, M Y H:i A", strtotime($date)) ?>">
-                                                        <?= date("D, H:i A", strtotime($date)); ?>
-                                                    </div>
+                                            <div class="flex items-center justify-between">
+                                                <div class="text-xs text-gray-500 font-medium" title="<?= date("l j, M Y H:i A", strtotime($date)) ?>">
+                                                    <?= date("D, H:i A", strtotime($date)); ?>
                                                 </div>
                                             </div>
                                         </div>
-
-                                    <?php //else: ?>
-                                        <!-- Other Person -->
-                                        <!-- <div class="flex items-start mb-4 last:mb-0">
-                                            <div class="flex shadow-sm mr-2 items-center justify-center bg-gray-200 rounded-full w-10 h-10 text-sm font-semibold uppercase text-gray-500">
-                                                <?= getSubName($user->get_user($_GET['msg'])['firstname'] . " " . $user->get_user($_GET['msg'])['lastname']); ?>
-                                            </div>
-                                            <div>
-                                                <div class="text-sm bg-white text-gray-800 p-3 rounded-lg rounded-tl-none border border-gray-200 shadow-md  mb-1">
-                                                    <?= $message; ?>
-                                                </div>
-                                                <div class="flex items-center justify-between">
-                                                    <div class="text-xs text-gray-500 font-medium" title="<?= date("l j, M Y H:i A", strtotime($date)) ?>">
-                                                        <?= date("D, H:i A", strtotime($date)); ?>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                        <!-- </div> -->
-                                    <?php //endif; ?>
+                                    </div>
                                 <?php endforeach; ?>
                             </div>
                             <div class="sticky bottom-0">
