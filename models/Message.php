@@ -136,7 +136,7 @@ class Message {
             foreach ($messages as $key => $row) {
                 $convo[$key] = $row['id'];
             }
-            array_multisort($convo, SORT_DESC, $messages);
+            array_multisort($convo, SORT_ASC, $messages);
 
             return $messages;
         }
