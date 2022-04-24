@@ -8,7 +8,6 @@
 <?php
     $user = new User($connect);
     $active = $title = "Message";
-    $conversation = $messages->get_conversation($LOGGED_USER['admin_id'], $user_id);
 ?>
 
 
@@ -151,6 +150,7 @@
                                 </div>
                             </div>
                             <div class="grow px-4 sm:px-6 md:px-5 py-6">
+                                <?php $conversation = $messages->get_conversation($LOGGED_USER['admin_id'], $user_id); ?>
                                 <?php for($i = 0; $i < count($conversation); $i++): ?>
                                     <?php extract($message[$i]); ?>
                                     <div class="flex items-start mb-4 last:mb-0" style="flex-direction: <?= $style = $sender_id === $LOGGED_USER['admin_id'] ? "row-reverse" : "row"; ?>">
