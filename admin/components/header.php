@@ -40,7 +40,7 @@ $ADMIN_UNREAD_MESSAGE = $messages->get_user_unread_messages($LOGGED_USER['admin_
                                         <a class="block py-2 px-4 hover:bg-gray-50" href="./view_message.php?msg=<?= $msg['message_id']; ?>" @click="open = false" @focus="open = true" @focusout="open = false">
                                             <span class="block text-sm mb-2">📣 
                                                 <span class="font-medium text-gray-800">New message from  <span class="text-indigo-500"> <?= $users->get_user($msg['sender_id'])['firstname'] . " " . $users->get_user($msg['sender_id'])['lastname']; ?></span> <br></span> 
-                                                <?= $text = (strlen($msg['message']) <= 30) ? $msg['message'] : substr($msg['message'], 0, 30);  ?>
+                                                <?= $text = (strlen($msg['message']) <= 30) ? $msg['message'] : substr($msg['message'], 0, 30) . "...";  ?>
                                             </span> 
                                             <span class="block text-xs font-medium text-gray-400">
                                                 <?= date("M d, Y", strtotime($msg['date'])); ?>
