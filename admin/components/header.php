@@ -75,7 +75,6 @@ $ADMIN_UNREAD_MESSAGE = $messages->get_user_unread_messages($LOGGED_USER['admin_
 							<div class="text-xs text-gray-500 italic">Administrator</div>
 						</div>
 						<ul>
-							<li><a class="font-medium text-sm text-indigo-500 hover:text-indigo-600 flex items-center py-1 px-3" href="settings.php" @click="open = false" @focus="open = true" @focusout="open = false">Settings</a></li>
 							<li>
 								<form method="post" action="./handler/logout.php">
 									<button class="font-medium text-sm text-indigo-500 hover:text-indigo-600 flex items-center py-1 px-3" name="logout">Sign Out</button>
