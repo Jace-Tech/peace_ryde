@@ -170,13 +170,15 @@ $USER_MESSAGES = $messages->get_user_messages($USER_ID);
                     <?php endif; ?>
 
 				</div>
-				<form class="navbars bg-white navbar-expand-sm d-flex justify-content-between">
+				<form action="./handler/message_handler.php" method="post" class="navbars bg-white navbar-expand-sm d-flex justify-content-between">
 					<input type="text number" name="text" class="form-controls" placeholder="Type a message...">
-					<div class=" d-flex justify-content-end align-content-center text-center ml-2">
+					<input type="hidden" name="sender" value="<?= $USER_ID ?>">
+					<input type="hidden" name="reciever" value="<?= "MAIN_ADMIN" ?>">
+					<button name="send" style="border: none; background: transparent;" class=" d-flex justify-content-end align-content-center text-center ml-2">
 						<svg width="33" height="35" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M32.4419 20.4722C32.5822 19.2858 32.0534 18.1264 31.0686 17.4434L8.12261 1.50404C7.09665 0.772938 5.80289 0.713532 4.70133 1.30734C3.57966 1.91099 2.86538 3.55356 3.029 4.81133L4.30132 14.5749C4.43205 15.5761 5.23388 16.3557 6.23997 16.4571L19.7964 17.8394C20.4918 17.8985 20.9955 18.5204 20.9086 19.213C20.8348 19.8949 20.222 20.3912 19.5266 20.3321L5.95836 18.9379C4.95253 18.8342 4.00153 19.4326 3.65928 20.3856L0.300426 29.7007C-0.10413 30.8007 0.103129 31.9631 0.816651 32.8442C0.900595 32.9479 0.995031 33.0645 1.09201 33.1576C2.04085 34.0627 3.38245 34.3065 4.60167 33.8126L30.4291 23.1319C31.5361 22.6861 32.3016 21.6586 32.4419 20.4722Z" fill="#1161D9" />
 						</svg>
-					</div>
+					</button>
 				</form>
 			</div>
 		</div>
