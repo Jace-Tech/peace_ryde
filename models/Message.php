@@ -115,7 +115,7 @@ class Message {
             $messages = [];
             
             // From Sender
-            $query = "SELECT * FROM `messages` WHERE `user_id` = ? AND `sender_id` = ? ORDER BY `date` DESC";
+            $query = "SELECT * FROM `messages` WHERE `user_id` = ? AND `sender_id` = ? ORDER BY `date` ASC";
             $result = $this->connection->prepare($query);
             $result->execute([$user_id, $other_person]);
 
