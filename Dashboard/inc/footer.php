@@ -173,6 +173,7 @@ $USER_MESSAGES = $messages->get_conversation($USER_ID, "MAIN_ADMIN");
 										</div>
 									</div>
 								</div>
+								
 							<?php else: ?>
 								<div class="d-flex align-items-center">
 									<div class="text-left pr-1">
