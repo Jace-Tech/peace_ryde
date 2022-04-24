@@ -152,7 +152,6 @@
                             <div class="grow px-4 sm:px-6 md:px-5 py-6">
                                 <?php $conversation = $messages->get_conversation($LOGGED_USER['admin_id'], $user_id); ?>
                                 <?php for($i = 0; $i < count($conversation); $i++): ?>
-                                    <?php print_r($conversation); ?>
                                     <?php extract($conversation[$i]); ?>
                                     <div class="flex items-start mb-4 last:mb-0" style="flex-direction: <?= $style = $sender_id === $LOGGED_USER['admin_id'] ? "row-reverse" : "row"; ?>">
                                         <div class="flex shadow-sm ml-2 items-center justify-center bg-gray-200 rounded-full w-10 h-10 text-sm font-semibold uppercase text-gray-500">
