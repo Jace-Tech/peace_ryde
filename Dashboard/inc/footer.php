@@ -54,7 +54,7 @@
 	}
 
 	.name {
-		font-size: 8px
+		font-size: 12px
 	}
 
 	.msg {
@@ -94,7 +94,7 @@
 		height: 80px;
 		border-radius: 50%;
 		font-size: 1.5rem;
-		background-color: #fff;
+		background-color: #fff !important;
 		color: #555;
 	}
 
