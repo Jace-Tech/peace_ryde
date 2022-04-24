@@ -123,7 +123,7 @@
 include("../models/Message.php");
 $messages = new Message($connect);
 
-$USER_MESSAGES = $messages->get_user_messages($USER_ID);
+$USER_MESSAGES = $messages->get_conversation($USER_ID, "MAIN_ADMIN");
 
 print_r($USER_MESSAGES);
 ?>
