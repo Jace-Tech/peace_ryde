@@ -67,7 +67,7 @@ class Message {
             $query = "UPDATE `messages` SET `is_read` = :is_read WHERE `message_id` = :message_id";
             $result = $this->connection->prepare($query);
             $result->execute([
-                'is_read' => true,
+                'is_read' => 1,
                 'message_id' => $message_id
             ]);
     
