@@ -5,7 +5,7 @@ require_once("../models/User.php");
 $messages = new Message($connect);
 $users = new User($connect);
 
-$ADMIN_UNREAD_MESSAGE = $messages->get_user_unread_messages("ADMIN");
+$ADMIN_UNREAD_MESSAGE = $messages->get_user_unread_messages($LOGGED_USER['admin_id']);
 
 
 
