@@ -124,6 +124,8 @@ include("../models/Message.php");
 $messages = new Message($connect);
 
 $USER_MESSAGES = $messages->get_user_messages($USER_ID);
+
+print_r($USER_MESSAGES);
 ?>
 
 <button id="top" style="cursor: pointer;
