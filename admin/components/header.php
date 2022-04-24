@@ -36,7 +36,6 @@ $ADMIN_UNREAD_MESSAGE = $messages->get_user_unread_messages($LOGGED_USER['admin_
 						<ul>
                             <?php if(count($ADMIN_UNREAD_MESSAGE)): ?>
                                 <?php foreach($ADMIN_UNREAD_MESSAGE as $msg): ?>
-                                    <?php print_r($msg); ?>
                                     <li class="border-b border-gray-200 last:border-0">
                                         <a class="block py-2 px-4 hover:bg-gray-50" href="./view_messages.php?msg=<?= $msg['message_id']; ?>" @click="open = false" @focus="open = true" @focusout="open = false">
                                             <span class="block text-sm mb-2">📣 
