@@ -115,7 +115,7 @@ class Message {
             $messages = [];
             
             // From Sender
-            $query = "SELECT * FROM `messages` WHERE `user_id` = ? AND `sender_id` = ? ORDER BY `id` ASC";
+            $query = "SELECT * FROM `messages` WHERE `user_id` = ? AND `sender_id` = ?";
             $result = $this->connection->prepare($query);
             $result->execute([$user_id, $other_person]);
 
@@ -131,6 +131,12 @@ class Message {
             while($row = $result->fetch()){
                 array_push($messages, $row);
             }
+
+            $convo = array();
+            foreach ($messages as $key => $row) {
+                $convo[$key] = $row['id'];
+            }
+            array_multisort($convo, SORT_DESC, $messages);
 
             return $messages;
         }
