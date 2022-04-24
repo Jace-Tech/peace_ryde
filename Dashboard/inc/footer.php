@@ -175,7 +175,7 @@ $isUnread = count($messages->get_user_unread_messages($USER_ID));
 				<div class="px-2 scroll">
                     <?php if(count($USER_MESSAGES)): ?>
                         <?php foreach($USER_MESSAGES as $message): ?>
-							<?php $messages->mark_read($USER_MESSAGES['message_id']); ?>
+							<?php $messages->mark_read($message['message_id']); ?>
                             <!--   SENDER  -->
 							<?php if($message['sender_id'] == $USER_ID): ?>
 								<!-- USER -->
