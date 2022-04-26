@@ -62,6 +62,24 @@ class Admin {
         }
     }
 
+    public function suspendAdmin ($id) 
+    {
+        $sql = "UPDATE `sub_admin` SET `status` = ? WHERE `admin_id` = ?";
+        $result_sub = $this->connection->prepare($sql);
+        $result_sub->execute(["suspended", $id]);
+
+        return $result_sub;
+    }
+
+    public function unSuspendAdmin ($id) 
+    {
+        $sql = "UPDATE `sub_admin` SET `status` = ? WHERE `admin_id` = ?";
+        $result_sub = $this->connection->prepare($sql);
+        $result_sub->execute(["active", $id]);
+
+        return $result_sub;
+    }
+
     public function addAdmin(array $admin)
     {
         extract($admin);

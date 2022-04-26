@@ -206,9 +206,15 @@
                                                     
                                                     <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap w-px">
                                                         <div class="flex">
-                                                            <form action="./handler/subadmin_handler.php" method="post">
-                                                                <button name="deleteAdmin" value="<?= $admin_id; ?>" class="btn text-yellow-600 text-xs bg-yellow-100 btn-sm">Suspend</button>
-                                                            </form>
+                                                            <?php if($admin->getStatus($admin_id) == "active"): ?>
+                                                                <form action="./handler/subadmin_handler.php" method="post">
+                                                                    <button name="suspendAdmin" value="<?= $admin_id; ?>" class="btn text-yellow-600 text-xs bg-yellow-100 btn-sm">Suspend</button>
+                                                                </form>
+                                                            <?php else: ?>
+                                                                <form action="./handler/subadmin_handler.php" method="post">
+                                                                    <button name="unSuspendAdmin" value="<?= $admin_id; ?>" class="btn text-green-600 text-xs bg-yellow-100 btn-sm">Unsuspend</button>
+                                                                </form>
+                                                            <?php endif; ?>
                                                             <div x-data="{ modalOpen: false }">
                                                                 <button href="" class="btn bg-blue-100 btn-sm text-xs text-blue-600 ml-2" @click.prevent="modalOpen = true" aria-controls="feedback-modal-<?= $admin_id; ?>">Edit</button>
                                                                 <div class="fixed inset-0 bg-gray-900 bg-opacity-30 z-50 transition-opacity" x-show="modalOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-out duration-100" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" x-cloak></div>

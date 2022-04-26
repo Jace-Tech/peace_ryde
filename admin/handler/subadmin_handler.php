@@ -115,3 +115,59 @@ if(isset($_POST['deleteAdmin'])){
 
     header('Location: ../subadmins.php');
 }
+
+if(isset($_POST['suspendAdmin'])){
+    $admin_id = $_POST['suspendAdmin'];
+    $result = $admin->suspendAdmin($admin_id);
+
+    if(!$result){
+        $alert = [
+            'alert_message' => "Something went wrong. Please try again",
+            'alert_type' => 'error'
+        ];
+
+        session_start();
+        $_SESSION['alert'] = json_encode($alert);
+
+        header('Location: ../subadmins.php');
+        exit();
+    }
+    
+    $alert = [
+        'alert_message' => "Admin Suspended",
+        'alert_type' => 'success'
+    ];
+
+    session_start();
+    $_SESSION['alert'] = json_encode($alert);
+
+    header('Location: ../subadmins.php');
+}
+
+if(isset($_POST['unSuspendAdmin'])){
+    $admin_id = $_POST['unSuspendAdmin'];
+    $result = $admin->unSuspendAdmin($admin_id);
+
+    if(!$result){
+        $alert = [
+            'alert_message' => "Something went wrong. Please try again",
+            'alert_type' => 'error'
+        ];
+
+        session_start();
+        $_SESSION['alert'] = json_encode($alert);
+
+        header('Location: ../subadmins.php');
+        exit();
+    }
+    
+    $alert = [
+        'alert_message' => "Admin Unsuspended",
+        'alert_type' => 'success'
+    ];
+
+    session_start();
+    $_SESSION['alert'] = json_encode($alert);
+
+    header('Location: ../subadmins.php');
+}
