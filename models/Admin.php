@@ -84,9 +84,15 @@ class Admin {
     {
         extract($admin);
 
-        $query = "UPDATE `admin` SET `name` = '$name', `email` = '$email', `type` = '$type' WHERE `admin_id` = '$id')";
-        $result = $this->connection->query($query);
-        $result->execute();
+        $query = "UPDATE `admin` SET `name` = :name, `email` = :email, `type` = :type WHERE `admin_id` = :adminId";
+        $result = $this->connection->prepare($query);
+
+        $result->execute([
+            'name' => $name,
+            'email' => $email,
+            'type' => $type,
+            'adminId' => $id,
+        ]);
 
         return $result;
     }
@@ -95,11 +101,13 @@ class Admin {
     {
         extract($admin);
 
-        $country = json_encode($countries);
-
-        $query = "UPDATE `sub_admin` SET `services` = '$services', `countries` = '$country' WHERE `admin_id` = '$id'";
-        $result = $this->connection->query($query);
-        $result->execute();
+        $query = "UPDATE `sub_admin` SET `services` = :service, `countries` = :country WHERE `admin_id` = :adminId";
+        $result = $this->connection->prepare($query);
+        $result->execute([
+            'service' => $services,
+            'country' => json_encode($countries),
+            'adminId' => $id,
+        ]);
 
         return $result;
     }
