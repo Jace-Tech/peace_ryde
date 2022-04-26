@@ -199,9 +199,15 @@
                                                     </td>
                                                                                                 
                                                     <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
-                                                        <div class="inline-flex font-medium bg-green-100 text-green-600 rounded-full text-xs text-center px-2.5 py-0.5" style="text-transform: capitalize;">
-                                                            <?= $admin->getStatus($admin_id); ?>
-                                                        </div>
+                                                        <?php if($admin->getStatus($admin_id) == "active"): ?>
+                                                            <div class="inline-flex font-medium bg-green-100 text-green-600 rounded-full text-xs text-center px-2.5 py-0.5" style="text-transform: capitalize;">
+                                                                <?= $admin->getStatus($admin_id); ?>
+                                                            </div>
+                                                        <?php else: ?>
+                                                            <div class="inline-flex font-medium bg-yellow-100 text-yellow-600 rounded-full text-xs text-center px-2.5 py-0.5" style="text-transform: capitalize;">
+                                                                <?= $admin->getStatus($admin_id); ?>
+                                                            </div>
+                                                        <?php endif; ?>
                                                     </td>
                                                     
                                                     <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap w-px">
@@ -212,7 +218,7 @@
                                                                 </form>
                                                             <?php else: ?>
                                                                 <form action="./handler/subadmin_handler.php" method="post">
-                                                                    <button name="unSuspendAdmin" value="<?= $admin_id; ?>" class="btn text-green-600 text-xs bg-yellow-100 btn-sm">Unsuspend</button>
+                                                                    <button name="unSuspendAdmin" value="<?= $admin_id; ?>" class="btn text-green-600 text-xs bg-green-100 btn-sm">Unsuspend</button>
                                                                 </form>
                                                             <?php endif; ?>
                                                             <div x-data="{ modalOpen: false }">
