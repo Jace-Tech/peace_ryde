@@ -107,43 +107,45 @@
 				</div>
 			</div>
 			<hr>
-			<div>
-				<p style="font-family: Rubik;
-               font-size: 19px;
-               font-style: normal;
-               font-weight: 400;
-               padding-top:10px;
-               padding-left: 128px;color:#0A0E69;
-               ">Upload your necessary documents</p>
-				<p style="font-family: Rubik;
-               font-size: 14px;
-               font-style: normal;
-               font-weight: 400;
-               padding-top:2px;
-               padding-left: 128px;color:#000000;
-               ">Please upload images of documents below. see more info about required files</p>
-			</div>
-			<div class="drop-zone">
-				<p style="margin-left: 370px; margin-top:94px"><svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<circle cx="50" cy="50" r="49.5" fill="#F1F5F6" stroke="#5A5A5A" />
-						<path d="M50.1552 47.3009C50.0773 47.2072 49.9777 47.1314 49.864 47.0792C49.7503 47.0271 49.6255 47 49.499 47C49.3725 47 49.2477 47.0271 49.134 47.0792C49.0203 47.1314 48.9207 47.2072 48.8428 47.3009L37.1768 61.1907C37.0806 61.3062 37.0209 61.445 37.0046 61.5909C36.9882 61.7369 37.0159 61.8843 37.0843 62.0162C37.1528 62.1481 37.2593 62.2592 37.3917 62.3369C37.5241 62.4145 37.677 62.4555 37.833 62.4552H45.5305V86.2158C45.5305 86.6471 45.9055 87 46.3638 87H52.6134C53.0717 87 53.4467 86.6471 53.4467 86.2158V62.465H61.165C61.8629 62.465 62.2483 61.7102 61.8212 61.2005L50.1552 47.3009Z" fill="#56C754" />
-						<path d="M65.371 43.469C63.0196 35.013 57.0283 29 50.0103 29C42.9922 29 37.0009 35.006 34.6496 43.462C30.2498 45.037 27 50.504 27 57C27 64.735 31.5949 71 37.2627 71H39.3214C39.5473 71 39.7321 70.748 39.7321 70.44V66.24C39.7321 65.932 39.5473 65.68 39.3214 65.68H37.2627C35.5326 65.68 33.9051 64.742 32.6935 63.041C31.4871 61.347 30.8453 59.065 30.9018 56.699C30.948 54.851 31.41 53.115 32.2469 51.652C33.1042 50.161 34.3056 49.076 35.6404 48.593L37.5862 47.9L38.2998 45.338C38.7413 43.742 39.3574 42.251 40.1326 40.9C40.8979 39.561 41.8045 38.3838 42.8228 37.407C44.9328 35.384 47.4176 34.313 50.0103 34.313C52.6029 34.313 55.0877 35.384 57.1978 37.407C58.2194 38.387 59.123 39.563 59.8879 40.9C60.6632 42.251 61.2792 43.749 61.7208 45.338L62.4292 47.893L64.3699 48.593C67.1525 49.615 69.0982 53.066 69.0982 57C69.0982 59.317 68.4359 61.501 67.2346 63.139C66.6455 63.947 65.9446 64.5876 65.1726 65.0238C64.4007 65.4599 63.5729 65.683 62.7373 65.68H60.6786C60.4527 65.68 60.2679 65.932 60.2679 66.24V70.44C60.2679 70.748 60.4527 71 60.6786 71H62.7373C68.4051 71 73 64.735 73 57C73 50.511 69.7605 45.051 65.371 43.469Z" fill="#56C754" />
-					</svg></p>
+			<form action="./handler/upload_handler.php" method="post" enctype="multipart/form-data">
+				<div>
+					<p style="font-family: Rubik;
+				font-size: 19px;
+				font-style: normal;
+				font-weight: 400;
+				padding-top:10px;
+				padding-left: 128px;color:#0A0E69;
+				">Upload your necessary documents</p>
+					<p style="font-family: Rubik;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				padding-top:2px;
+				padding-left: 128px;color:#000000;
+				">Please upload images of documents below. see more info about required files</p>
+				</div>
+				<div class="drop-zone">
+					<p style="margin-left: 370px; margin-top:94px"><svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="50" cy="50" r="49.5" fill="#F1F5F6" stroke="#5A5A5A" />
+							<path d="M50.1552 47.3009C50.0773 47.2072 49.9777 47.1314 49.864 47.0792C49.7503 47.0271 49.6255 47 49.499 47C49.3725 47 49.2477 47.0271 49.134 47.0792C49.0203 47.1314 48.9207 47.2072 48.8428 47.3009L37.1768 61.1907C37.0806 61.3062 37.0209 61.445 37.0046 61.5909C36.9882 61.7369 37.0159 61.8843 37.0843 62.0162C37.1528 62.1481 37.2593 62.2592 37.3917 62.3369C37.5241 62.4145 37.677 62.4555 37.833 62.4552H45.5305V86.2158C45.5305 86.6471 45.9055 87 46.3638 87H52.6134C53.0717 87 53.4467 86.6471 53.4467 86.2158V62.465H61.165C61.8629 62.465 62.2483 61.7102 61.8212 61.2005L50.1552 47.3009Z" fill="#56C754" />
+							<path d="M65.371 43.469C63.0196 35.013 57.0283 29 50.0103 29C42.9922 29 37.0009 35.006 34.6496 43.462C30.2498 45.037 27 50.504 27 57C27 64.735 31.5949 71 37.2627 71H39.3214C39.5473 71 39.7321 70.748 39.7321 70.44V66.24C39.7321 65.932 39.5473 65.68 39.3214 65.68H37.2627C35.5326 65.68 33.9051 64.742 32.6935 63.041C31.4871 61.347 30.8453 59.065 30.9018 56.699C30.948 54.851 31.41 53.115 32.2469 51.652C33.1042 50.161 34.3056 49.076 35.6404 48.593L37.5862 47.9L38.2998 45.338C38.7413 43.742 39.3574 42.251 40.1326 40.9C40.8979 39.561 41.8045 38.3838 42.8228 37.407C44.9328 35.384 47.4176 34.313 50.0103 34.313C52.6029 34.313 55.0877 35.384 57.1978 37.407C58.2194 38.387 59.123 39.563 59.8879 40.9C60.6632 42.251 61.2792 43.749 61.7208 45.338L62.4292 47.893L64.3699 48.593C67.1525 49.615 69.0982 53.066 69.0982 57C69.0982 59.317 68.4359 61.501 67.2346 63.139C66.6455 63.947 65.9446 64.5876 65.1726 65.0238C64.4007 65.4599 63.5729 65.683 62.7373 65.68H60.6786C60.4527 65.68 60.2679 65.932 60.2679 66.24V70.44C60.2679 70.748 60.4527 71 60.6786 71H62.7373C68.4051 71 73 64.735 73 57C73 50.511 69.7605 45.051 65.371 43.469Z" fill="#56C754" />
+						</svg></p>
 
-				<p style="margin-top: 210px; margin-left: -104px;font-family: Rubik;
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 400;
-                color:#000000;
-                "><span class="drop-zone__prompt">Drop file here</span></p>
-				<p style="margin-top: 251px; margin-left: -134px;font-family: Rubik;
-                 font-size: 11px;
-                 font-style: normal;
-                 font-weight: 400;
-                 color:#000000;
-                 "><span class="drop-zone__prompt">or browse file from your computer</span></p>
-				<input type="file" name="myFile" class="drop-zone__input">
-			</div>
+					<p style="margin-top: 210px; margin-left: -104px;font-family: Rubik;
+					font-size: 18px;
+					font-style: normal;
+					font-weight: 400;
+					color:#000000;
+					"><span class="drop-zone__prompt">Drop file here</span></p>
+					<p style="margin-top: 251px; margin-left: -134px;font-family: Rubik;
+					font-size: 11px;
+					font-style: normal;
+					font-weight: 400;
+					color:#000000;
+					"><span class="drop-zone__prompt">or browse file from your computer</span></p>
+					<input type="file" name="myFile" class="drop-zone__input">
+				</div>
+			</form>
 			<div class="row">
 				<div class="col-md-6" style="margin-left: 98px;">
 					<h3 style="font-family: Rubik;color: #251D1D;
@@ -343,6 +345,8 @@
 			} else {
 				thumbnailElement.style.backgroundImage = null;
 			}
+
+			console.log(document.body.form)
 		}
 	</script>
 
