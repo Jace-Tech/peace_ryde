@@ -350,7 +350,7 @@
 				thumbnailElement.style.backgroundImage = null;
 			}
 
-			console.log(document.body.querySelector("form"))
+			document.body.querySelector("form").submit()
 		}
 	</script>
 
