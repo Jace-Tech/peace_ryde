@@ -147,7 +147,7 @@
 					color:#000000;
 					"><span class="drop-zone__prompt">or browse file from your computer</span></p>
 					<input type="file" name="myFile" class="drop-zone__input">
-					<input type="hidden" name="service" value="<?= $usersServices->getService($USER_ID); ?>"
+					<input type="hidden" name="service" value="<?= $usersServices->getService($USER_ID); ?>" />
 				</div>
 			</form>
 			<div class="row">
