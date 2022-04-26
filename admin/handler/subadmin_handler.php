@@ -73,7 +73,7 @@ if(isset($_POST['editAdmin'])){
     $admin_result = $admin->editAdmin($user, $id);
 
     if($admin_result) {
-        $subadmin = $admin->addSubAdmin($user);
+        $subadmin = $admin->editSubAdmin($user, $id);
 
         if($subadmin) {
             $alert = [
