@@ -106,7 +106,7 @@
 				</table>
 			</div>
 		</div>
-
+		<?php include("./inc/footer.php"); ?>
 	</div>
 	<script>
 		function openNav() {
@@ -120,6 +120,16 @@
 
 		}
 	</script>
+
+	<script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
 	<script src="./assets/libs/jquery/dist/jquery.min.js"></script>
 	<script src="./assets/libs/popper.js/dist/umd/popper.min.js"></script>
 	<script src="./assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
