@@ -22,7 +22,7 @@ if(isset($_POST['service'])) {
                 "message" => "File uploaded successfully"
             ];
     
-            $_SESSION['alert'] = json_encode($alert);
+            $_SESSION['ALERT'] = json_encode($alert);
             header("Location: ../upload.php");
         }
         else {
@@ -31,7 +31,7 @@ if(isset($_POST['service'])) {
                 "message" => "Upload failed"
             ];
     
-            $_SESSION['alert'] = json_encode($alert);
+            $_SESSION['ALERT'] = json_encode($alert);
             header("Location: ../upload.php");
         }
     }
@@ -41,7 +41,7 @@ if(isset($_POST['service'])) {
             "message" => "Upload failed"
         ];
 
-        $_SESSION['alert'] = json_encode($alert);
+        $_SESSION['ALERT'] = json_encode($alert);
         header("Location: ../upload.php");
     }
 }
