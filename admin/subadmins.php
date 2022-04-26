@@ -228,6 +228,7 @@
                                                                                 <div>
                                                                                     <label class="block text-sm font-medium mb-1" for="name">Name <span class="text-red-500">*</span></label> 
                                                                                     <input name="name" id="name" value="<?= $name; ?>" class="form-input w-full px-2 py-2" required />
+                                                                                    <input name="id" type="hidden" value="<?= $admin_id; ?>"/>
                                                                                 </div>
 
                                                                                 <div>
