@@ -303,7 +303,7 @@
 
                                                                         <div class="px-5 py-4 border-t border-gray-200">
                                                                             <div class="flex flex-wrap justify-end space-x-2"><button class="btn-sm border-gray-200 hover:border-gray-300 text-gray-600" type="button" @click="modalOpen = false">Cancel</button> 
-                                                                            <button type="submit" name="addAdmin" class="btn-sm bg-indigo-500 hover:bg-indigo-600 text-white">Create</button></div>
+                                                                            <button type="submit" name="editAdmin" class="btn-sm bg-indigo-500 hover:bg-indigo-600 text-white">Update</button></div>
                                                                         </div>
                                                                     </form>
                                                                 </div>

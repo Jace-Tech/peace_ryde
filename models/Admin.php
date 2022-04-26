@@ -80,6 +80,38 @@ class Admin {
         return $result;
     }
 
+    public function editAdmin(array $admin, $id)
+    {
+        extract($admin);
+
+        $query = "UPDATE `admin` SET `name` = :name, `email` = :email, `type` = :type WHERE `admin_id` = :adminId)";
+        $result = $this->connection->prepare($query);
+
+        $result->execute([
+            'name' => $name,
+            'email' => $email,
+            'type' => $type,
+            'adminId' => $id,
+        ]);
+
+        return $result;
+    }
+
+    public function editSubAdmin(array $admin, $id)
+    {
+        extract($admin);
+
+        $query = "UPDATE `sub_admin` SET `services` = :service, `countries` = :country WHERE `admin_id` = :adminId";
+        $result = $this->connection->prepare($query);
+        $result->execute([
+            'service' => $services,
+            'country' => json_encode($countries),
+            'adminId' => $id,
+        ]);
+
+        return $result;
+    }
+
     public function addSubAdmin(array $admin)
     {
         extract($admin);
@@ -104,7 +136,6 @@ class Admin {
 
         return $result->fetchAll();
     }
-
 
     public function getAllSubAdmins () 
     {

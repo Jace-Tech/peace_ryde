@@ -54,6 +54,41 @@ if(isset($_POST['addAdmin'])){
 
 }
 
+if(isset($_POST['editAdmin'])){
+    $name = filter_field($_POST['name']);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $country = filter_var_array($_POST['country'], FILTER_SANITIZE_STRING);
+    $services = filter_field($_POST['service']);
+    $id = $_POST['id'];
+
+    $user = [
+        'name' => $name,
+        'countries' => $country,
+        'services' => $services,
+        'status' => "active",
+        'type' => "LOW",
+        'email' => $email
+    ];
+
+    $admin_result = $admin->editAdmin($user, $id);
+
+    if($admin_result) {
+        $subadmin = $admin->addSubAdmin($user);
+
+        if($subadmin) {
+            $alert = [
+                'alert_type' => 'success',
+                'alert_message' => "Admin Updated Successfully"
+            ];
+
+            session_start();
+            $_SESSION['alert'] = json_encode($alert);
+            header('Location: ../subadmins.php');
+        }
+    }
+
+}
+
 if(isset($_POST['deleteAdmin'])){
     $admin_id = $_POST['admin'];
     $result = $admin->deleteAdmin($admin_id);
