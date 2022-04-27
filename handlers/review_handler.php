@@ -28,7 +28,7 @@ if(isset($_POST['add'])) {
         ];
 
         $_SESSION['ALERT'] = json_encode($alert);
-        header('Location: ../makereview.php');
+        header('Location: ../makereview.php?sus');
     }
     else {
         $alert = [
@@ -37,9 +37,9 @@ if(isset($_POST['add'])) {
         ];
 
         $_SESSION['ALERT'] = json_encode($alert);
-        header('Location: ../makereview.php');
+        header('Location: ../makereview.php?test');
     }
 }
 else {
-    header("Location: ../makereview.php");
+    header("Location: ../makereview.php?hshshs");
 }
