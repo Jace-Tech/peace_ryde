@@ -41,5 +41,5 @@ if(isset($_POST['add'])) {
     }
 }
 else {
-    header("Location: ../makereview.php?hshshs");
+    header("Location: ../makereview.php");
 }

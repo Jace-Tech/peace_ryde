@@ -338,15 +338,15 @@
 									</li>
 
 
-									<li class="nav-item apply" style="margin-left: 118px;">
-										<button class="btn button btn-outline-light" type="button" style=" margin-right: 93px;
-                  width: 89px;
-                  margin-top: 15px;
-                  height: 36px;
-                  padding-left: 26px;padding-top: 5px;">Apply</button>
-										<button class="btn button2 sign" type="button">Sign In</button>
+									<li class="nav-item apply ml-118">
+										<a href="apply.php" class="btn button btn-outline-light appbtn" type="button" style="">Apply</a>
+										<?php if(!isset($_SESSION['LOGGED_USER'])): ?>
+											<a href="signin.php" class="btn button2 sign" type="button">Sign In</a>
+										<?php else: ?>
+											<a href="./Dashboard/index.php" class="btn button2 sign" type="button">Dashboard</a>
+										<?php endif; ?>
 									</li>
-
+									
 									<li class=" nav-item dropdown lang" style="margin-left: 40px;">
 										<a class="nav-link dropdown-toggle nav" href="#" role="button" data-bs-toggle="dropdown" style="color: #150423;">
 											<img src="assets/image_2022-02-27_16-21-31.png" width="17" style="margin-top:-4px;font-size: 14.5px;">&nbsp;<span>English |</span></a>

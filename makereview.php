@@ -219,7 +219,11 @@
 
 									<li class="nav-item apply ml-118">
 										<a href="apply.php" class="btn button btn-outline-light appbtn" type="button" style="">Apply</a>
-										<a href="signin.php" class="btn button2 sign" type="button">Sign In</a>
+										<?php if(!isset($_SESSION['LOGGED_USER'])): ?>
+											<a href="signin.php" class="btn button2 sign" type="button">Sign In</a>
+										<?php else: ?>
+											<a href="./Dashboard/index.php" class="btn button2 sign" type="button">Dashboard</a>
+										<?php endif; ?>
 									</li>
 
 									<li class=" nav-item dropdown lang">
@@ -468,6 +472,47 @@
 		</main>
 		<script type="text/javascript">
 			AOS.init();
+		</script>
+
+
+<script>
+			function onYes() {
+				$('#exampleModal').modal('show');
+
+				const form = $('[data-form]')[0].elements
+
+				const country = form.country.value
+				const countryCode = form.country_code.value
+				const dob = form.dob.value
+				const email = form.email.value
+				const firstname = form.firstname.value
+				const lastname = form.lastname.value
+				const middlename = form.middlename.value
+				const phone = form.phone.value
+				const title = form.title.value
+				const service = form.service.value
+				const passport = form.passport.value
+				const gender = Array.from(form.gender).filter(item => item.checked == true)[0].value
+
+				<?php $_SESSION["REG_MODE"] = "BI"; ?>
+
+				const data = {
+					country,
+					countryCode,
+					dob,
+					email,
+					firstname,
+					lastname,
+					middlename,
+					phone,
+					title,
+					service,
+					passport,
+					gender
+				}
+
+				localStorage.setItem('USER_REG', JSON.stringify(data))
+			}
 		</script>
 	</body>
 

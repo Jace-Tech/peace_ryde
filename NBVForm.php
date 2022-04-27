@@ -372,12 +372,6 @@
 			</div>
 		</div>
 
-		<script>
-			function onYes() {
-				$('#exampleModal').modal('show');
-			}
-		</script>
-
 
 		<script>
 			function onYes() {
