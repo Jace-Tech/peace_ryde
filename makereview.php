@@ -263,16 +263,16 @@
                           padding-top: 29px;
                           ">Rate Your Experience</p>
 								<fieldset class="rating">
-									<input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars" style="margin-right: 110px;"></label>
-									<input type="radio" id="star4half" name="rating" value="4.5" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-									<input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label>
-									<input type="radio" id="star3half" name="rating" value="3.5" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-									<input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label>
-									<input type="radio" id="star2half" name="rating" value="2.5" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-									<input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
-									<input type="radio" id="star1half" name="rating" value="1.5" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-									<input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
-									<input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+									<input type="radio" required id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars" style="margin-right: 110px;"></label>
+									<input type="radio" required id="star4half" name="rating" value="4.5" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+									<input type="radio" required id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label>
+									<input type="radio" required id="star3half" name="rating" value="3.5" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+									<input type="radio" required id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label>
+									<input type="radio" required id="star2half" name="rating" value="2.5" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+									<input type="radio" required id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+									<input type="radio" required id="star1half" name="rating" value="1.5" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+									<input type="radio" required id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
+									<input type="radio" required id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
 								</fieldset>
 								<p style="font-family: Ubuntu;
                         font-size: 18px;
@@ -283,7 +283,7 @@
                         padding-left:79px;
                         padding-top: 29px;
                         ">Tell us about your expeience</p>
-							<textarea style="width: 337px; height: 184px; margin-left: 28px; margin-top:26px;font-family: Ubuntu; font-size: 13px; font-weight: 400; line-height: 24px; letter-spacing: 0em; text-align: left; color: #888888;border: 1px solid #555555;" name="review" placeholder="This is where you write your review.explain what happend, keep your feedback honest, helpfyl, and constructive"></textarea>
+							<textarea required style="width: 337px; height: 184px; margin-left: 28px; margin-top:26px;font-family: Ubuntu; font-size: 13px; font-weight: 400; line-height: 24px; letter-spacing: 0em; text-align: left; color: #888888;border: 1px solid #555555;" name="review" placeholder="This is where you write your review.explain what happend, keep your feedback honest, helpfyl, and constructive"></textarea>
 						<div class="mt-4 p-4 text-right">
                          <button name="add" type="submit" class="btn btn-block border-0 sma" style="background-color: #a0bd1c;">Post review</button>
                        </div>
