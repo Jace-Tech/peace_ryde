@@ -283,18 +283,7 @@
                         padding-left:79px;
                         padding-top: 29px;
                         ">Tell us about your expeience</p>
-
-								<textarea style="width: 337px; height: 184px; margin-left: 28px; margin-top:26px;font-family: Ubuntu;
-                        font-size: 13px;
-                        font-weight: 400;
-                        line-height: 24px;
-                        letter-spacing: 0em;
-                        text-align: left;
-                        color: #888888;border: 1px solid #555555;" name="review" placeholder="This is where you write your review.explain what happend, keep your feedback honest, helpfyl, and constructive">
-
-                        </textarea>
-
-							
+							<textarea style="width: 337px; height: 184px; margin-left: 28px; margin-top:26px;font-family: Ubuntu; font-size: 13px; font-weight: 400; line-height: 24px; letter-spacing: 0em; text-align: left; color: #888888;border: 1px solid #555555;" name="review" placeholder="This is where you write your review.explain what happend, keep your feedback honest, helpfyl, and constructive"></textarea>
 						<div class="mt-4 p-4 text-right">
                          <button name="add" type="submit" class="btn btn-block border-0 sma" style="background-color: #a0bd1c;">Post review</button>
                        </div>
