@@ -74,35 +74,35 @@
 
 					<nav class="navbar navbar-expand-sm bg-nav shadow navbar-light height" style="padding-bottom: 0px; height: 90px;">
 						<div class="container-fluid cf" style="height: 100px;">
-							<a class="navbar-brand brand" href="Index.html"><img src="assets/logo.png" class="logoimg" width="164"></a>
+							<a class="navbar-brand brand" href="Index.php"><img src="assets/logo.png" class="logoimg" width="164"></a>
 							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
 								<span class="navbar-toggler-icon"></span>
 							</button>
 							<div class="collapse navbar-collapse" id="collapsibleNavbar">
 								<ul class="navbar-nav">
 									<li class="nav-item">
-										<a class="nav-link nav link home" href="Index.html">Home</a>
+										<a class="nav-link nav link home" href="Index.php">Home</a>
 									</li>
 									<li class=" nav-item dropdown">
 										<a class="nav-link link dropdown-toggle nav link visa" href="#" role="button" data-bs-toggle="dropdown">Visa
 											Services</a>
 										<ul class="dropdown-menu">
-											<li><a class="dropdown-item" href="NBV.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+											<li><a class="dropdown-item" href="NBV.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 													Business Visa
 													on
 													Arrival</a></li>
-											<li><a class=" dropdown-item" href="NTWP.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+											<li><a class=" dropdown-item" href="NTWP.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 													Temporary Work Permit
 													Approval</a></li>
-											<li><a class=" dropdown-item" href="VSBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+											<li><a class=" dropdown-item" href="VSBForm.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 													Tourist Visa</a></li>
-											<li><a class="dropdown-item" href="VSBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+											<li><a class="dropdown-item" href="VSBForm.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 													Business Visa
 													Extension</a></li>
-											<li><a class=" dropdown-item" href="VSBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+											<li><a class=" dropdown-item" href="VSBForm.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 													Subject To
 													Regularization (STR)</a></li>
-											<li><a class=" dropdown-item" href="VSBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Permit to Land
+											<li><a class=" dropdown-item" href="VSBForm.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Permit to Land
 													Immgration
 													Approval For<span class="span"> Marine Vessels Foreign Crew</span></a></li>
 
@@ -113,67 +113,67 @@
 										<ul class="dropdown-menu" style="width: 900px;">
 											<div class="row">
 												<div class="col-md-4">
-													<li><a class="dropdown-item" href="NBI.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+													<li><a class="dropdown-item" href="NBI.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 															Business Incorporation</a>
 													</li>
-													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Hotel Bookings</a>
+													<li><a class="dropdown-item" href="SBForm.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Hotel Bookings</a>
 													</li>
-													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Real Estate
+													<li><a class="dropdown-item" href="SBForm.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Real Estate
 															Cosultancy and Advisory</a></li>
-													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Legal Advisory
+													<li><a class="dropdown-item" href="SBForm.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Legal Advisory
 															and Consultation</a>
 													</li>
-													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Africa travels
+													<li><a class="dropdown-item" href="SBForm.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Africa travels
 															& tours</a></li>
 												</div>
 												<div class="col-md-4">
-													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+													<li><a class="dropdown-item" href="SBForm.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 															Immigration
 															Consultancy</a></li>
-													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigerian Custom
+													<li><a class="dropdown-item" href="SBForm.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigerian Custom
 															Consultancy</a>
 													</li>
-													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Airport
+													<li><a class="dropdown-item" href="SBForm.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Airport
 															Immigration Meet and
 															Greet</a></li>
-													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Airport
+													<li><a class="dropdown-item" href="SBForm.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Airport
 															Protocol Services</a></li>
 												</div>
 												<div class="col-md-4">
-													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Airport
+													<li><a class="dropdown-item" href="SBForm.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Airport
 															Transfers</a></li>
-													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Vehicle Rentals</a>
+													<li><a class="dropdown-item" href="SBForm.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Vehicle Rentals</a>
 													</li>
-													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Armed Security
+													<li><a class="dropdown-item" href="SBForm.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Armed Security
 															Escort
 															Services</a>
 													</li>
-													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria COVID 19
+													<li><a class="dropdown-item" href="SBForm.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria COVID 19
 															Payment Services</a></li>
 												</div>
 											</div>
 										</ul>
 									</li>
 									<li class="nav-item dropdown">
-										<a class="nav-link link contact" href="contact.html">Contact Us</a>
+										<a class="nav-link link contact" href="contact.php">Contact Us</a>
 									</li>
 									<li class=" nav-item">
-										<a class="nav-link link about" href="about.html">About Us</a>
+										<a class="nav-link link about" href="about.php">About Us</a>
 									</li>
 
 
 									<li class="nav-item apply ml-118">
-										<a href="apply.html" class="btn button btn-outline-light appbtn" type="button" style="">Apply</a>
-										<a href="signin.html" class="btn button2 sign" type="button">Sign In</a>
+										<a href="apply.php" class="btn button btn-outline-light appbtn" type="button" style="">Apply</a>
+										<a href="signin.php" class="btn button2 sign" type="button">Sign In</a>
 									</li>
 
 									<li class=" nav-item dropdown lang">
 										<a class="nav-link dropdown-toggle nav" href="#" role="button" data-bs-toggle="dropdown" style="color: #150423; font-family: 'Ubuntu';font-size: 14px;">
 											<img src="assets/image_2022-02-27_16-21-31.png" width="17" style="margin-top:-4px;font-size: 14px;">&nbsp;<span>English |</span></a>
 										<ul class="dropdown-menu">
-											<li><a class="dropdown-item" href="NBV.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+											<li><a class="dropdown-item" href="NBV.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 												</a></li>
-											<li><a class=" dropdown-item" href="NTWP.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
+											<li><a class=" dropdown-item" href="NTWP.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
 											</li>
 											<li><a class=" dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
 											</li>
@@ -222,7 +222,7 @@
 
 							</form>
 						</div>
-						<p><a href="forgotpass.html" style="font-family: Rubik;
+						<p><a href="forgotpass.php" style="font-family: Rubik;
                     font-size: 15px;
                     font-weight: 400;
                     margin-left: 382px; color: #555555;
