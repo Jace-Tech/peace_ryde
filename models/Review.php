@@ -30,7 +30,7 @@ class Review {
             'user_id' => $userId,
             'rating' => $rating,
             'review' => $review,
-            'is_featured' => false
+            'is_featured' => 0
         ]);
 
         return $result;

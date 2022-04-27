@@ -34,7 +34,8 @@
 		<script src="./js/sweetalert.js"></script>
 	</head>
 
-	
+
+
 	<body class="body">
 		<main class="new new-main layout">
 			<?php include("./inc/alert.php"); ?>
@@ -1035,6 +1036,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </pre>
 			AOS.init();
 		</script>
 	</body>
+
 
 
 </html>
