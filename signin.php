@@ -23,110 +23,13 @@
 		<link rel="stylesheet" type="text/css" href="css/common.css" />
 		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
 		<link rel="stylesheet" type="text/css" href="css/New.css" />
+		<link rel="stylesheet" type="text/css" href="css/Laptops.css" />
 
 		<script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script type="text/javascript" src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/gh/px2code/posize/build/v1.00.3.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<style>
-			.button {
-				width: 68px;
-				height: 28px;
-				padding-top: 3px;
-				margin-top: 12px;
-				background: #a0bd1c;
-				border-radius: 6px;
-				font-size: 14.5px;
-				;
-				font-weight: 300;
-				font-style: normal;
-				color: #FBFCFB;
-				font-family: Ubuntu;
-				text-align: center;
-				padding-right: 60px;
-
-			}
-
-			.buttons {
-				width: 68px;
-				height: 28px;
-				padding-top: 3px;
-				margin-top: 12px;
-				background: #a0bd1c;
-				border-radius: 6px;
-				font-size: 13px;
-				;
-				font-weight: 300;
-				font-style: normal;
-				color: #FBFCFB;
-				font-family: Ubuntu;
-				text-align: center;
-				padding-right: 60px;
-			}
-
-			.buttons:hov {
-				color: white;
-			}
-
-			.button2 {
-				background-color: #FBFCFB;
-				width: 89px;
-				height: 36px;
-				left: 1042px;
-				margin-top: 15px;
-				border: 1px solid #a0bd1c;
-				padding-top: 5px;
-				font-family: 'Ubuntu';
-				font-style: normal;
-				font-weight: 300;
-				font-size: 14.5px;
-				line-height: 16px;
-				margin-left: -52.5px;
-				color: #a0bd1c;
-			}
-
-			.button2:hover {
-				background-color: #a0bd1c;
-				color: white;
-			}
-
-			.applybtn {
-				padding-left: 30.5px;
-				font-weight: 300;
-				padding-top: 13px;
-				padding-bottom: 13px;
-				padding-right: 30.5px;
-				color: #ffffff;
-				font-family: ubuntu;
-				font-size: 16px;
-			}
-
-			.applybtn:hover {
-
-				color: #ffffff;
-
-			}
-
-			.button:hover {
-				background-color: #FBFCFB;
-				border: 1px solid #a0bd1c;
-				color: #a0bd1c;
-			}
-
-			.bg-nav {
-				background-color: #FBFCFB;
-			}
-
-			.shadow {
-				box-shadow: 0 .6rem 1rem rgba(0, 0, 0, .05) !important
-			}
-
-			.center {
-				margin: auto;
-				width: 60%;
-				padding: 10px;
-			}
-
 			.proceed {
 				background-color: #C9DA7A;
 				font-family: Ubuntu;
@@ -135,82 +38,26 @@
 				font-weight: 400;
 				color: #ffffff;
 			}
-
-			.form-select {
-				color: #555555;
-			}
-
-			::-webkit-input-placeholder {
-				color: #ffffff;
-			}
-
-			::-moz-placeholder {
-				color: #ffffff;
-			}
-
-			::-ms-placeholder {
-				color: #ffffff;
-			}
-
-			::placeholder {
-				color: #ffffff;
-			}
-
-			.span::before {
-				content: " \A";
-				white-space: pre;
-			}
-
-			.navbar-brand {
-				padding-top: 0px;
-			}
-
-			.navbar {
-				padding-top: 0px;
-			}
-
-			.new-section2__group.layout2 {
-				position: relative;
-				height: 800px;
-			}
 		</style>
 	</head>
 
 
 	<body class="body">
 		<main class="new new-main layout">
-			<?php include("./inc/alert.php"); ?>
 			<!-- ======= section1 ======= -->
 			<section class="new-section1__section1 layout">
 				<div class="fixed-top">
-					<div class="new-section1__block21 layout">
+					<div class="new-section1__block21 layout" style="height: 54px;">
 						<div class="new-section1__flex1 layout">
 							<div class="new-section1__text-body8-box layout">
 								<div class="new-section1__text-body8">
-									<span><b style="font-weight: 500;margin-left: 587px;
-                  margin-top: 18px;
-                  font-family: Ubuntu;
-                  font-style: normal;
-                  color: #ffffff;">FREE </b></span><span class="new-section1__text-body8-span2 text" style="font-weight: 300;">Business
+									<span><b class="free">FREE </b></span><span class="new-section1__text-body8-span2 text business">Business
 										Name Availability Search</span>
 								</div>
 							</div>
 							<div class="new-section1__flex1-spacer"></div>
 							<div class="new-section1__flex1-item">
-								<input type="text" class="form-control" style="width: 230px;
-              height: 28px;
-              left: 874px;
-              margin-top: 10px;
-              background: #F1F5F6;
-              text-align: center;
-              border-radius: 6px;
-              color:#15042336;
-;
-              font-family: Ubuntu;
-              font-size: 14px;
-              line-height: 16px;
-              text-transform: lowercase;
-              color: rgba(21, 4, 35, 0.21);" placeholder=" search business name here">
+								<input type="text" class="form-control form" placeholder=" search business name here">
 							</div>
 							<div class="new-section1__flex1-spacer1"></div>
 							<div class="new-section1__flex1-item1">
@@ -221,148 +68,112 @@
 							</div>
 							<div class="new-section1__flex1-spacer2"></div>
 
-							<a href="+1 (708) 318-0273" style="color: white;
-            padding-top: 18px;
-            width: 120px;
-            height: 16px;
-            left: 1208px;
-            font-family: 'Ubuntu';
-            font-style: normal;
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 16px;
-            text-decoration-line: none;
-            color: #FFFFFF;">+1 (708) 318-0273</a>
+							<a href="+1 (708) 318-0273" class="phone">+1 (708) 318-0273</a>
 						</div>
 					</div>
 
-					<nav class="navbar navbar-expand-sm bg-nav shadow navbar-light height">
-
-						<div class="container-fluid">
-							<a class="navbar-brand brand" href="index.php"><img src="assets/logo.png" width="164" style="margin-left: 51px; margin-top: 28px;"></a>
+					<nav class="navbar navbar-expand-sm bg-nav shadow navbar-light height" style="padding-bottom: 0px; height: 90px;">
+						<div class="container-fluid cf" style="height: 100px;">
+							<a class="navbar-brand brand" href="Index.html"><img src="assets/logo.png" class="logoimg" width="164"></a>
 							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
 								<span class="navbar-toggler-icon"></span>
 							</button>
 							<div class="collapse navbar-collapse" id="collapsibleNavbar">
 								<ul class="navbar-nav">
 									<li class="nav-item">
-										<a class="nav-link nav link" href="index.php" style="color: #000000; margin-left:40px; margin-top: 19px;font-family: Ubuntu;
-                  font-style: normal;
-                  font-weight: 400;
-                  font-size: 14.5px;
-                  line-height: 16px;">Home</a>
+										<a class="nav-link nav link home" href="Index.html">Home</a>
 									</li>
 									<li class=" nav-item dropdown">
-										<a class="nav-link link dropdown-toggle nav link" href="#" role="button" data-bs-toggle="dropdown" style="color: #000000; margin-left:41px; margin-top: 19px;font-family: Ubuntu;
-                  font-style: normal;
-                  font-weight: 400;
-                  font-size: 14.5px;
-                  line-height: 16px;">Visa
+										<a class="nav-link link dropdown-toggle nav link visa" href="#" role="button" data-bs-toggle="dropdown">Visa
 											Services</a>
 										<ul class="dropdown-menu">
-											<li><a class="dropdown-item" href="NBV.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+											<li><a class="dropdown-item" href="NBV.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 													Business Visa
 													on
 													Arrival</a></li>
-											<li><a class=" dropdown-item" href="NTWP.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+											<li><a class=" dropdown-item" href="NTWP.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 													Temporary Work Permit
 													Approval</a></li>
-											<li><a class=" dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+											<li><a class=" dropdown-item" href="VSBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 													Tourist Visa</a></li>
-											<li><a class="dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+											<li><a class="dropdown-item" href="VSBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 													Business Visa
 													Extension</a></li>
-											<li><a class=" dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+											<li><a class=" dropdown-item" href="VSBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 													Subject To
 													Regularization (STR)</a></li>
-											<li><a class=" dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Permit to Land
+											<li><a class=" dropdown-item" href="VSBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Permit to Land
 													Immgration
 													Approval For<span class="span"> Marine Vessels Foreign Crew</span></a></li>
 
 										</ul>
 									</li>
 									<li class=" nav-item dropdown">
-										<a class="nav-link link dropdown-toggle nav" href="#" role="button" data-bs-toggle="dropdown" style="color: #000000; margin-left:41px; margin-top: 19px;font-family: Ubuntu;
-                  font-style: normal;
-                  font-weight: 400;
-                  font-size: 14.5px;
-                  line-height: 16px;">Services</a>
+										<a class="nav-link link dropdown-toggle nav services" href="#" role="button" data-bs-toggle="dropdown">Services</a>
 										<ul class="dropdown-menu" style="width: 900px;">
 											<div class="row">
 												<div class="col-md-4">
-													<li><a class="dropdown-item" href="NBI.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+													<li><a class="dropdown-item" href="NBI.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 															Business Incorporation</a>
 													</li>
-													<li><a class="dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Hotel Bookings</a>
+													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Hotel Bookings</a>
 													</li>
-													<li><a class="dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Real Estate
+													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Real Estate
 															Cosultancy and Advisory</a></li>
-													<li><a class="dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Legal Advisory
+													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Legal Advisory
 															and Consultation</a>
 													</li>
-													<li><a class="dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Africa travels
+													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Africa travels
 															& tours</a></li>
 												</div>
 												<div class="col-md-4">
-													<li><a class="dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 															Immigration
 															Consultancy</a></li>
-													<li><a class="dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigerian Custom
+													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigerian Custom
 															Consultancy</a>
 													</li>
-													<li><a class="dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Airport
+													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Airport
 															Immigration Meet and
 															Greet</a></li>
-													<li><a class="dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Airport
+													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Airport
 															Protocol Services</a></li>
 												</div>
 												<div class="col-md-4">
-													<li><a class="dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Airport
+													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Airport
 															Transfers</a></li>
-													<li><a class="dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Vehicle Rentals</a>
+													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Vehicle Rentals</a>
 													</li>
-													<li><a class="dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Armed Security
+													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Armed Security
 															Escort
 															Services</a>
 													</li>
-													<li><a class="dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria COVID 19
+													<li><a class="dropdown-item" href="SBForm.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria COVID 19
 															Payment Services</a></li>
 												</div>
 											</div>
 										</ul>
 									</li>
 									<li class="nav-item dropdown">
-										<a class="nav-link link" href="contact.php" style="width: 100%; color: #000000;margin-left:41px; margin-top: 19px;font-family: Ubuntu;
-                  font-style: normal;
-                  font-weight: 400;
-                  font-size: 14.5px;
-                  line-height: 16px;">Contact Us</a>
+										<a class="nav-link link contact" href="contact.html">Contact Us</a>
 									</li>
 									<li class=" nav-item">
-										<a class="nav-link link" href="about.php" style="width: 100%;color: #000000;margin-left:41px; margin-top: 19px;font-family: Ubuntu;
-                  font-style: normal;
-                  font-weight: 400;
-                  font-size: 14.5px;
-                  line-height: 16px;">About Us</a>
+										<a class="nav-link link about" href="about.html">About Us</a>
 									</li>
 
 
-									<li class="nav-item apply" style="margin-left: 118px;">
-										<button class="btn button btn-outline-light" type="button" style=" margin-right: 93px;
-                  width: 89px;
-                  margin-top: 15px;
-                  height: 36px;
-                  padding-left: 26px;padding-top: 5px;">Apply</button>
-										<button class="btn button2 sign" type="button">Sign In</button>
+									<li class="nav-item apply ml-118">
+										<a href="apply.html" class="btn button btn-outline-light appbtn" type="button" style="">Apply</a>
+										<a href="signin.html" class="btn button2 sign" type="button">Sign In</a>
 									</li>
 
-									<li class=" nav-item dropdown lang" style="margin-left: 40px;">
-										<a class="nav-link dropdown-toggle nav" href="#" role="button" data-bs-toggle="dropdown" style="color: #150423;">
-											<img src="assets/image_2022-02-27_16-21-31.png" width="17" style="margin-top:-4px;font-size: 14.5px;">&nbsp;<span>English |</span></a>
+									<li class=" nav-item dropdown lang">
+										<a class="nav-link dropdown-toggle nav" href="#" role="button" data-bs-toggle="dropdown" style="color: #150423; font-family: 'Ubuntu';font-size: 14px;">
+											<img src="assets/image_2022-02-27_16-21-31.png" width="17" style="margin-top:-4px;font-size: 14px;">&nbsp;<span>English |</span></a>
 										<ul class="dropdown-menu">
-											<li><a class="dropdown-item" href="NBV.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+											<li><a class="dropdown-item" href="NBV.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
 												</a></li>
-											<li><a class=" dropdown-item" href="NTWP.php" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
+											<li><a class=" dropdown-item" href="NTWP.html" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
 											</li>
 											<li><a class=" dropdown-item" href="#" style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
 											</li>
@@ -381,33 +192,29 @@
 					</nav>
 				</div>
 			</section>
-			<section class=" new-section2__group layout2" style="background-color: #f8f6f6;">
+			<section class=" new-section2__group layout2 resetpassword" style="background-color: #f8f6f6;">
 				<div class="new-section1__cover-block layout">
-					<h2 style="padding-top:68px;padding-left: 448px;font-family: 'Ubuntu';font-style: normal;font-weight: 500;font-size: 24px;color: #0A0E69;
-                        ">Sign into your PeaceRyde Africa account </h2>
+					<h2 class="sih2">Sign into your PeaceRyde Africa account </h2>
 
 					<div class="">
-						<div class="card" style="border-radius: 10px;
-                            border-color: transparent;
-                            width: 608px; background-color: #1161D9;
-                            margin: 32px 380px;">
-
+						<div class="card resetform">
 							<form action="./handlers/login.php" method="post">
-								<div class="form-row" style="margin-left: 69px;">
+								<div class="form-row rpml">
+									<div class="form-group inputdiv">
+										<p class="fpp">Email Address</p>
+										<input type="email" name="email" class="form-control rpinput" placeholder="" style="margin-top: 6px;" />
 
-
-									<div class="form-group" style="margin-right: 202px; margin-top:72px">
-										<input type="text" name="email" class="form-control" style="border: 1px solid #ffffff; width:470px;font-family:ubuntu;height: 44px; margin-top:27px; background-color: #1161D9; color: #ffffff;" placeholder="Email" />
-										<input type="password" name="password" class="form-control" style="border: 1px solid #ffffff; width:470px;font-family:ubuntu;height: 44px; margin-top:27px; background-color: #1161D9; color: #ffffff;" placeholder="Password" />
+										<p class="fpp" style="padding-top: 27px;">Password</p>
+										<input type="password" name="password" class="form-control rpinput" style="margin-top: 6px;" placeholder="" />
 									</div>
 								</div>
-								<div class="row" style="margin-left: 69px; margin-top: 42px;">
-									<div class="col-md-8" style="color: #ffffff;">
-										<input type="checkbox"> Keep me signed in on this computer
+								<div class="row buttonrow2" style="margin-top: 27px;">
+									<div class="col-md-8 col-sm-12" style="color: #ffffff;">
+										<input type="checkbox" class="textcheck" style="margin-left: 69px;  font-size: 12px;"> Keep me signed in on this computer
 									</div>
-									<div class="col-md-4">
-										<div style="margin-bottom:80px ;">
-											<button name="login" type="submit" class="btn proceed">login</button>
+									<div class="col-md-4 col-sm-12">
+										<div class="rpmb">
+											<button name="login" type="submit" class="btn proceed rpbutton">Login</button>
 										</div>
 									</div>
 								</div>
@@ -415,7 +222,7 @@
 
 							</form>
 						</div>
-						<p><a href="forgotpass.php" style="font-family: Rubik;
+						<p><a href="forgotpass.html" style="font-family: Rubik;
                     font-size: 15px;
                     font-weight: 400;
                     margin-left: 382px; color: #555555;
@@ -450,10 +257,10 @@
 				//Animating the element if not animated before
 				if (!element.hasClass('ms-animated')) {
 					var maxval = element.data('max');
-					var html = element.php();
+					var html = element.html();
 					element.addClass("ms-animated");
 					$({
-						countNum: element.php()
+						countNum: element.html()
 					}).animate({
 						countNum: maxval
 					}, {
@@ -461,10 +268,10 @@
 						duration: 1000,
 						easing: 'linear',
 						step: function() {
-							element.php(Math.floor(this.countNum) + html);
+							element.html(Math.floor(this.countNum) + html);
 						},
 						complete: function() {
-							element.php(this.countNum + html);
+							element.html(this.countNum + html);
 						}
 					});
 				}
