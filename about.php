@@ -137,24 +137,31 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                   <ul class="navbar-nav">
                     <li class="nav-item">
-                      <a class="nav-link nav link home" href="Index.html">Home</a>
+                      <a class="nav-link nav link home" href="Index.php">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link link services" href="sbform.html"> Services</a>
+                      <a class="nav-link link services" href="sbform.php"> Services</a>
                     </li>
                     <li class=" nav-item">
-                      <a class="nav-link link home" href="leaders.html">Leadership</a>
+                      <a class="nav-link link home" href="leaders.php">Leadership</a>
                     </li>
     
                     <li class=" nav-item">
-                      <a class="nav-link link contact" href="about.html">About Us</a>
+                      <a class="nav-link link contact" href="about.php">About Us</a>
                     </li>
-                    
-                
                     <li class="nav-item apply ml-118">
-                      <a href="SBForm.html" class="btn button btn-outline-light appbtn" type="button">Apply</a>
-                      <a href="signin.html" class="btn button2 sign" type="button">Sign In</a>
-                    </li>
+										<a href="SBForm.php" class="btn button btn-outline-light appbtn" type="button" style="">Apply</a>
+										<?php if(!isset($_SESSION['LOGGED_USER'])): ?>
+											<a href="signin.php" class="btn button2 sign" type="button">Sign In</a>
+										<?php else: ?>
+											<a href="./Dashboard/index.php" class="btn button2 sign" type="button">Dashboard</a>
+										<?php endif; ?>
+									</li>
+                
+                    <!-- <li class="nav-item apply ml-118">
+                      <a href="SBForm.php" class="btn button btn-outline-light appbtn" type="button">Apply</a>
+                      <a href="signin.php" class="btn button2 sign" type="button">Sign In</a>
+                    </li> -->
                   
                   <li class=" nav-item dropdown lang">
                     <a class="nav-link dropdown-toggle nav english" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"
@@ -271,29 +278,29 @@
                           VISA SERVICES
                         </h3>
                         <ul>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="NBVForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="NBVForm.php"
                             style=" text-decoration: none;">Nigeria Business Visa on
                             Arrival</a></li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="NTWPForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="NTWPForm.php"
                             style=" text-decoration: none;">Nigeria
                             Temporary Work Permit
                             Approval</a></li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Nigeria
                             Tourist Visa</a></li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Nigeria
                             Business Visa
                             Extension</a></li>
-                            <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                            <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                               style=" text-decoration: none;">Nigeria
                               Temporary Work Permit Visa
                               Extension</a></li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Nigeria
                             Subject To
                             Regularization (STR)</a></li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Permit to Land
                             Immgration Approval For Marine Vessels Foreign Crew</a></li>
       
@@ -304,60 +311,60 @@
                           OTHER SERVICES
                         </h3>
                         <ul>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="BIForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="BIForm.php"
                             style=" text-decoration: none;">Nigeria
                             Business Incorporation</a>
                           </li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SSBForm.php"
                             style=" text-decoration: none;">Hotel Bookings</a>
                           </li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Real Estate
                             Cosultancy and
                             Advisory</a></li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Legal Advisory
                             and Consultation</a>
                           </li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Africa Travels
                             & Tours</a></li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Nigerian
                             Immigration
                             Consultancy</a></li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Nigeria Custom
                             Brokerage Services</a>
                           </li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Nigeria Department of Petroleum Resources (DPR) Permits Consultancy Services</a>
                           </li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Nigeria Maritime and Safety Agency Cabotage Consultancy Services</a>
                           </li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Nigeria Ports Authority Consultancy Services</a></li>
-                            <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                            <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                               style=" text-decoration: none;">Other Nigerian Government Agencies Consultancy Support Services</a></li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Airport
                             Immigration Meet and
                             Greet</a></li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Airport
                             Protocol Services</a></li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Airport
                             Transfers</a></li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Vehicle Rentals</a>
                           </li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Armed Security
                             Escort Services</a>
                           </li>
-                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                          <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                             style=" text-decoration: none;">Nigeria COVID 19 Payment Services</a></li>
                         </ul>
                       </div>
@@ -368,47 +375,47 @@
                               SUPPORT
                             </h3>
                             <ul>
-                              <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.html"
+                              <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="SBForm.php"
                                 style=" text-decoration: none;">Apply</a></li>
-                              <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="faq.html"
+                              <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="faq.php"
                                 style=" text-decoration: none;">FAQs</a></li>
-                              <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="contact.html"
+                              <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="contact.php"
                                 style=" text-decoration: none;">Contact Us</a>
                               </li>
                             </ul>
                           </div>
                           <div class="col-md-7 col-sm-6 col-xs-6 company">
-                            <h3 class="new-section8__highlights8 layout footh3">
-                              COMPANY
-                            </h3>
-                            <ul>
-                              <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="about.html"
-                                  style=" text-decoration: none;">About Us</a>
-                              </li>
-                              <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="pp.html"
-                                  style=" text-decoration: none;">Privacy Policy</a>
-                              </li>
-                              <li class="new-section8__text-body5 layout fs-13" 0><a href="t&c.html"
-                                  class="fs-13"style=" text-decoration: none;">Data Protection Policy</a></li>
-                              <li class="new-section8__text-body5 layout fs-13"><a href="prp.html"
-                                class="fs-13"style=" text-decoration: none;">Terms of Use</a></li>
-                            </ul>
-                          </div>
+                              <h3 class="new-section8__highlights8 layout footh3">
+                                COMPANY
+                              </h3>
+                              <ul>
+                                <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="about.php"
+                                    style=" text-decoration: none;">About Us</a>
+                                </li>
+                                <li class="new-section8__text-body5 layout fs-13"><a class="fs-13" href="pp.php"
+                                    style=" text-decoration: none;">Privacy Policy</a>
+                                </li>
+                                <li class="new-section8__text-body5 layout fs-13" 0><a href="t&c.php"
+                                    class="fs-13"style=" text-decoration: none;">Data Protection Policy</a></li>
+                                <li class="new-section8__text-body5 layout fs-13"><a href="prp.php"
+                                  class="fs-13"style=" text-decoration: none;">Terms of Use</a></li>
+                              </ul>
+                            </div>
                         </div>
                         <br>
                         <br>
                         <div class="row">
-                          <h3 class="new-section8__highlights8 layout footh3">
-                            CORPORATE CONTACT DETAILS
-                          </h3>
-                          <ul>
-                            <li class="new-section8__text-body5 layout fs-13">433 W Harrison St #5409 Chicago, IL 60699</li>
-                            <li class="new-section8__text-body5 layout fs-13">+1 (302) 703-9867
-                            </li>
-                            <li class="corp layout fs-13 ">
-                              info@peacerydeafrica.com</li>
-                          </ul>
-                        </div>
+                            <h3 class="new-section8__highlights8 layout footh3">
+                              CORPORATE CONTACT DETAILS
+                            </h3>
+                            <ul>
+                              <li class="new-section8__text-body5 layout fs-13">433 W Harrison St #5409 Chicago, IL 60699</li>
+                              <li class="new-section8__text-body5 layout fs-13">+1 (302) 703-9867
+                              </li>
+                              <li class="corp layout fs-13 ">
+                                info@peacerydeafrica.com</li>
+                            </ul>
+                          </div>
                       </div>
                     </div>
                     <button id="top" style="cursor: pointer;

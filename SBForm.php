@@ -17,8 +17,12 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/common.css" />
-    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
-    <link rel="stylesheet" type="text/css" href="css/New.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+        <link rel="stylesheet" type="text/css" href="css/New.css">
+        <link rel="stylesheet" type="text/css" href="css/Laptops.css">
+        <link rel="stylesheet" type="text/css" href="css/smallscreen800.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+        <link rel="stylesheet" href="css/header.css">
 
     <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
@@ -98,455 +102,470 @@
     <main class="new new-main layout">
         <!-- ======= section1 ======= -->
         <section class="new-section1__section1 layout">
-          <div class="fixed-top">
-            <div class="new-section1__block21 layout">
-              <div class="new-section1__flex1 layout">
-                <div class="new-section1__text-body8-box layout">
-                  <div class="new-section1__text-body8">
-                    <span><b style="font-weight: 500;margin-left: 587px;
-                      margin-top: 18px;
-                      font-family: Ubuntu;
-                      font-style: normal;
-                      color: #ffffff;">FREE </b></span><span class="new-section1__text-body8-span2 text">Business
-                      Name Availability Search</span>
-                  </div>
-                </div>
-                <div class="new-section1__flex1-spacer"></div>
-                <div class="new-section1__flex1-item">
-                  <input type="text" class="form-control" style="width: 230px;
-                  height: 28px;
-                  left: 874px;
-                  margin-top: 10px;
-                  background: #F1F5F6;
-                  text-align: center;
-                  border-radius: 6px;
-                  color:#15042336;
-    ;
-                  font-family: Ubuntu;
-                  font-size: 14px;
-                  line-height: 16px;
-                  text-transform: lowercase;
-                  color: rgba(21, 4, 35, 0.21);" placeholder=" search business name here">
-                </div>
-                <div class="new-section1__flex1-spacer1"></div>
-                <div class="new-section1__flex1-item1">
-                  <div class="">
-                    <button class="btn button">SEARCH</button>
-    
-                  </div>
-                </div>
-                <div class="new-section1__flex1-spacer2"></div>
-    
-                <a href="+1 (708) 318-0273" style="color: white;
-                padding-top: 17px;
-                width: 120px;
-                height: 16px;
-                left: 1208px;
-                font-family: 'Ubuntu';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 16px;
-                text-decoration-line: underline;
-                color: #FFFFFF;">+1 (708) 318-0273</a>
-              </div>
-            </div>
-    
-            <nav class="navbar navbar-expand-sm bg-nav shadow navbar-light height">
-    
-              <div class="container-fluid">
-                <a class="navbar-brand brand" href="index.php"><img src="assets/logo.png" width="164" style="margin-left: 51px; margin-top: 28px;"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link nav link" href="index.php" style="color: #000000; margin-left:40px; margin-top: 12px;font-family: Ubuntu;
-                      font-style: normal;
-                      font-weight: 400;
-                      font-size: 14px;
-                      line-height: 16px;">Home</a>
-                    </li>
-                    <li class=" nav-item dropdown">
-                      <a class="nav-link link dropdown-toggle nav link" href="#" role="button" data-bs-toggle="dropdown"
-                      style="color: #000000; margin-left:41px; margin-top: 12px;font-family: Ubuntu;
-                      font-style: normal;
-                      font-weight: 400;
-                      font-size: 14px;
-                      line-height: 16px;">Visa
-                        Services</a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="NBV.php"
-                            style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
-                            Business Visa
-                            on
-                            Arrival</a></li>
-                        <li><a class=" dropdown-item" href="NTWP.php"
-                            style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
-                            Temporary Work Permit
-                            Approval</a></li>
-                        <li><a class=" dropdown-item" href="#"
-                            style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
-                            Tourist Visa</a></li>
-                        <li><a class="dropdown-item" href="#"
-                            style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
-                            Business Visa
-                            Extension</a></li>
-                        <li><a class=" dropdown-item" href="#"
-                            style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
-                            Subject To
-                            Regularization (STR)</a></li>
-                        <li><a class=" dropdown-item" href="#"
-                            style="color: black; font-size: 15px; padding-bottom: 10px;">Permit to Land
-                            Immgration
-                            Approval For<span class="span"> Marine Vessels Foreign Crew</span></a></li>
-    
-                      </ul>
-                    </li>
-                    <li class=" nav-item dropdown">
-                      <a class="nav-link link dropdown-toggle nav" href="#" role="button" data-bs-toggle="dropdown"
-                      style="color: #000000; margin-left:41px; margin-top: 12px;font-family: Ubuntu;
-                      font-style: normal;
-                      font-weight: 400;
-                      font-size: 14px;
-                      line-height: 16px;">Services</a>
-                      <ul class="dropdown-menu" style="width: 900px;">
-                        <div class="row">
-                          <div class="col-md-4">
-                            <li><a class="dropdown-item" href="NBI.php"
-                                style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
-                                Business Incorporation</a>
-                            </li>
-                            <li><a class="dropdown-item" href="#"
-                                style="color: black; font-size: 15px; padding-bottom: 10px;">Hotel Bookings</a>
-                            </li>
-                            <li><a class="dropdown-item" href="#"
-                                style="color: black; font-size: 15px; padding-bottom: 10px;">Real Estate
-                                Cosultancy and Advisory</a></li>
-                            <li><a class="dropdown-item" href="#"
-                                style="color: black; font-size: 15px; padding-bottom: 10px;">Legal Advisory
-                                and Consultation</a>
-                            </li>
-                            <li><a class="dropdown-item" href="#"
-                                style="color: black; font-size: 15px; padding-bottom: 10px;">Africa travels
-                                & tours</a></li>
-                          </div>
-                          <div class="col-md-4">
-                            <li><a class="dropdown-item" href="#"
-                                style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
-                                Immigration
-                                Consultancy</a></li>
-                            <li><a class="dropdown-item" href="#"
-                                style="color: black; font-size: 15px; padding-bottom: 10px;">Nigerian Custom
-                                Consultancy</a>
-                            </li>
-                            <li><a class="dropdown-item" href="#"
-                                style="color: black; font-size: 15px; padding-bottom: 10px;">Airport
-                                Immigration Meet and
-                                Greet</a></li>
-                            <li><a class="dropdown-item" href="#"
-                                style="color: black; font-size: 15px; padding-bottom: 10px;">Airport
-                                Protocol Services</a></li>
-                          </div>
-                          <div class="col-md-4">
-                            <li><a class="dropdown-item" href="#"
-                                style="color: black; font-size: 15px; padding-bottom: 10px;">Airport
-                                Transfers</a></li>
-                            <li><a class="dropdown-item" href="#"
-                                style="color: black; font-size: 15px; padding-bottom: 10px;">Vehicle Rentals</a>
-                            </li>
-                            <li><a class="dropdown-item" href="#"
-                                style="color: black; font-size: 15px; padding-bottom: 10px;">Armed Security
-                                Escort
-                                Services</a>
-                            </li>
-                            <li><a class="dropdown-item" href="#"
-                                style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria COVID 19
-                                Payment Services</a></li>
-                          </div>
+                <div class="fixed-top">
+                  <div class="new-section1__block21 layout">
+                    <div class="new-section1__flex1 layout laptop">
+                      <div class="new-section1__text-body8-box layout">
+                        <div class="new-section1__text-body8">
+                          <span><b class="free">FREE </b></span><span class="new-section1__text-body8-span2 text business">Business
+                            Name Availability Search</span>
                         </div>
-                      </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link link" href="contact.php" style="width: 100%; color: #000000;margin-left:41px; margin-top: 12px;font-family: Ubuntu;
-                      font-style: normal;
-                      font-weight: 400;
-                      font-size: 14px;
-                      line-height: 16px;">Contact Us</a>
-                    </li>
-                    <li class=" nav-item">
-                      <a class="nav-link link" href="about.php" style="width: 100%;color: #000000;margin-left:41px; margin-top: 12px;font-family: Ubuntu;
-                      font-style: normal;
-                      font-weight: 400;
-                      font-size: 14px;
-                      line-height: 16px;">About Us</a>
-                    </li>
-    
-                
-                    <li class="nav-item apply" style="margin-left: 138px;">
-                      <button class="btn button btn-outline-light" type="button" style=" margin-right: 93px;
-                      width: 89px;
-                      height: 37px;
-                      padding:9px">Apply</button>
-                      <button class="btn button2 sign" type="button">Sign In</button>
-                    </li>
-                  
-                  <li class=" nav-item dropdown lang" style="margin-left: 40px;">
-                    <a class="nav-link dropdown-toggle nav" href="#" role="button" data-bs-toggle="dropdown"
-                      style="color: #150423;"><img src="assets/image_2022-02-27_16-21-31.png" width="17" style="margin-top:-5px">&nbsp;English |</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="NBV.php"
-                          style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
-                        </a></li>
-                      <li><a class=" dropdown-item" href="NTWP.php"
-                          style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
-                      </li>
-                      <li><a class=" dropdown-item" href="#"
-                          style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
-                      </li>
-                      <li><a class="dropdown-item" href="#"
-                          style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
-                      </li>
-                      <li><a class=" dropdown-item" href="#"
-                          style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
-                      </li>
-                      <li><a class=" dropdown-item" href="#"
-                          style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
-                      </li>
-    
-                    </ul>
-                  </li>
-                </ul>
-                  <!-- <div class="d-flex">
-    
-                    <button class="btn button" type="button" style="margin-right: 50px;">Apply</button>
-                    <button class="btn button2 mr-10" type="button">Sign In</button>
-                    <span></span>
-                    <a class="nav-link" href="#" style="color: black; padding-right: 20px;">English</a>
-                  </div> -->
-                </div>
-              </div>
-            </nav>
-          </div>
-        </section>
-            <section class=" new-section2__group layout2" style="background-color: #f8f6f6;">
-                <div class="new-section1__cover-block layout" style="margin:33px 251px 166px 251px; width: 938px;">                                       
-                    <div class="card" style="border:1px solid #ffffff;">
-                        <div style="margin-top: 65px;">
-                            <h2 style="height: 28px;padding-left: 345px;font-family: 'Ubuntu';font-style: normal;font-weight: 500;font-size: 24px;line-height: 28px;color: #000000;
-                            ">Service Booking Form</h2>
-                            <p style="
-                            padding: 28px 268px 0px 268px;font-family: Ubuntu;font-size: 16px;font-style: normal;font-weight: 400;line-height: 23px;letter-spacing: 0em;text-align: left;color: #000000;
-                            
-                            ">Plesae fill this form to indicate your interest in any of our services and we will contact you within 24hrs.</p>
+                      </div>
+                      <div class="new-section1__flex1-spacer"></div>
+                      <div class="new-section1__flex1-item">
+                        <input type="text" class="form-control form" placeholder=" search business name here">
+                        <button class="btn hiddenbutton">SEARCH</button>
+                        <a href="+1 (302) 703-9867" class="hiddenphone ">+1 (302) 703-9867</a>
+                      </div>
+                      <div class="new-section1__flex1-spacer1"></div>
+                      <div class="new-section1__flex1-item1">
+                        <div class="">
+                          <button class="btn buttons btnsearch">SEARCH</button>
+          
                         </div>
-                        <div>
-                            <form>
-                                <input type="text" class="form-control"
-                                        style="border:1px solid #555555; font-family: ubuntu; margin-top: 86px; width:416px; margin-left: 221px; " placeholder="First Name" >
+                      </div>
+                      <div class="new-section1__flex1-spacer2"></div>
+          
+                      <a href="+1 (302) 703-9867" class="phone">+1 (302) 703-9867</a>
+                    </div>
+                    <div class="mobile">
+                      <div class="">
+                        <span><b class="free">FREE </b></span><span class="new-section1__text-body8-span2 text business">Business
+                          Name Availability Search</span>
+                      </div>
+                      <div class="row fsm">
+                        <div class="column fsm1">
+                          <input type="text" class="form-control formobile" placeholder=" search business name here">
+                        </div>
+                        <div class="column sbutton fsm2">
+                          <button class="btn hiddenbutton">SEARCH</button>
+                        </div>
+                        <div class="column call fsm3">
+                          <a href="+1 (302) 703-9867" class="mobphone">+1 (302) 703-9867</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+          
+                  <nav class="navbar navbar-expand-lg bg-nav shadow navbar-light height" style="padding-bottom: 0px;">
+                    <div class="container-fluid cf cfheight">
+                      <a class="navbar-brand brand" href="Index.html"><img src="assets/logo.png" class="logoimg" width="164"></a>
+                      <div class=" nav-item dropdown mobilelang">
+                        <a class="nav-link dropdown-toggle nav english" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                          >
+                          <svg width="20" height="20" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.083313 7.00004C0.083313 3.45612 2.95606 0.583374 6.49998 0.583374C10.0439 0.583374 12.9166 3.45612 12.9166 7.00004C12.9166 10.544 10.0439 13.4167 6.49998 13.4167C2.95606 13.4167 0.083313 10.544 0.083313 7.00004ZM6.49998 1.75004C3.6004 1.75004 1.24998 4.10046 1.24998 7.00004C1.24998 9.89962 3.6004 12.25 6.49998 12.25C9.39956 12.25 11.75 9.89962 11.75 7.00004C11.75 4.10046 9.39956 1.75004 6.49998 1.75004Z" fill="#080C58"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.73049 0.731373C6.98705 0.536518 7.35299 0.586539 7.54785 0.843098L7.0833 1.19591C7.54785 0.843098 7.54771 0.842914 7.54785 0.843098L7.54843 0.843869L7.54917 0.844854L7.55114 0.847464L7.55693 0.855236L7.5757 0.880901C7.5913 0.902475 7.61293 0.932948 7.63972 0.972048C7.69328 1.05023 7.76758 1.16303 7.85561 1.30828C8.03155 1.59859 8.26313 2.01976 8.49387 2.55432C8.95493 3.62243 9.41664 5.15269 9.41664 7.00008C9.41664 8.84747 8.95493 10.3777 8.49387 11.4458C8.26313 11.9804 8.03155 12.4016 7.85561 12.6919C7.76758 12.8371 7.69328 12.9499 7.63972 13.0281C7.61293 13.0672 7.5913 13.0977 7.5757 13.1193L7.55693 13.1449L7.55114 13.1527L7.54917 13.1553L7.54843 13.1563C7.54829 13.1565 7.54785 13.1571 7.0833 12.8042L7.54785 13.1571C7.35299 13.4136 6.98705 13.4636 6.73049 13.2688C6.47424 13.0742 6.42403 12.7089 6.61805 12.4524C6.61811 12.4523 6.61847 12.4518 6.61853 12.4517C6.61861 12.4516 6.61845 12.4518 6.61853 12.4517L6.61971 12.4501L6.63021 12.4358C6.64025 12.4219 6.65622 12.3994 6.67728 12.3687C6.71942 12.3072 6.78185 12.2126 6.85788 12.0872C7.01006 11.8361 7.21598 11.4625 7.42274 10.9835C7.83668 10.0245 8.24997 8.65269 8.24997 7.00008C8.24997 5.34747 7.83668 3.97565 7.42274 3.01668C7.21598 2.5377 7.01006 2.16407 6.85788 1.91297C6.78185 1.78752 6.71942 1.69296 6.67728 1.63147C6.65622 1.60073 6.64025 1.57828 6.63021 1.56439L6.61971 1.55003L6.61853 1.54842C6.42395 1.29188 6.47403 0.92615 6.73049 0.731373Z" fill="#080C58"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.38192 1.54777C6.57592 1.29125 6.5257 0.925984 6.26946 0.731373L6.38192 1.54777ZM5.91665 1.19591L5.45211 0.843098C5.64696 0.586539 6.0129 0.536518 6.26946 0.731373M5.91665 1.19591C5.45211 0.843098 5.45197 0.843272 5.45183 0.843456L5.45152 0.843868L5.45078 0.844853L5.44881 0.847464L5.44302 0.855236L5.42425 0.880901C5.40865 0.902475 5.38702 0.932948 5.36023 0.972048C5.30667 1.05023 5.23238 1.16303 5.14434 1.30828C4.9684 1.59859 4.73682 2.01976 4.50608 2.55432C4.04502 3.62243 3.58331 5.15269 3.58331 7.00008C3.58331 8.84747 4.04502 10.3777 4.50608 11.4458C4.73682 11.9804 4.9684 12.4016 5.14434 12.6919C5.23238 12.8371 5.30667 12.9499 5.36023 13.0281C5.38702 13.0672 5.40865 13.0977 5.42425 13.1193L5.44302 13.1449L5.44881 13.1527L5.45078 13.1553L5.45152 13.1563L5.45183 13.1567C5.45197 13.1569 5.45211 13.1571 5.91665 12.8042L5.45211 13.1571C5.64696 13.4136 6.0129 13.4636 6.26946 13.2688C6.52588 13.074 6.57599 12.7084 6.38152 12.4519L6.38142 12.4517L6.38119 12.4514" fill="#080C58"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.450806 9.04171C0.450806 8.71954 0.711973 8.45837 1.03414 8.45837H11.9658C12.288 8.45837 12.5491 8.71954 12.5491 9.04171C12.5491 9.36387 12.288 9.62504 11.9658 9.62504H1.03414C0.711973 9.62504 0.450806 9.36387 0.450806 9.04171Z" fill="#080C58"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.450806 4.95833C0.450806 4.63617 0.711973 4.375 1.03414 4.375H11.9658C12.288 4.375 12.5491 4.63617 12.5491 4.95833C12.5491 5.2805 12.288 5.54167 11.9658 5.54167H1.03414C0.711973 5.54167 0.450806 5.2805 0.450806 4.95833Z" fill="#080C58"/>
+                            </svg>
+                            &nbsp;<span>English |</span></a>
+                        <ul class="dropdown-menu collapse" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="NBV.html"
+                              style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+                            </a></li>
+                          <li><a class=" dropdown-item" href="NTWP.html"
+                              style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
+                          </li>
+                          <li><a class=" dropdown-item" href="#"
+                              style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
+                          </li>
+                          <li><a class="dropdown-item" href="#"
+                              style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
+                          </li>
+                          <li><a class=" dropdown-item" href="#"
+                              style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
+                          </li>
+                          <li><a class=" dropdown-item" href="#"
+                              style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
+                          </li>
+          
+                        </ul>
+                      </div>
+                      <li>
+                        <img src="assets/flag2.png" class="flag">
+                      </li>
+                      <button class="navbar-toggler collapsebtn" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                      <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 10px;
+                      margin-top: 10px;">
+                        <rect y="6" width="19" height="3" fill="#A0BD1C"/>
+                        <rect y="12" width="19" height="3" fill="#A0BD1C"/>
+                        <rect width="19" height="3" fill="#A0BD1C"/>
+                        </svg>
+                        
+                        <!-- <span class="navbar-toggler-icon"></span> -->
+                      </button>
+                      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link nav link home" href="Index.html">Home</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link link services" href="sbform.html"> Services</a>
+                          </li>
+                          <li class=" nav-item">
+                            <a class="nav-link link home" href="leaders.html">Leadership</a>
+                          </li>
+          
+                          <li class=" nav-item">
+                            <a class="nav-link link contact" href="about.html">About Us</a>
+                          </li>
+                          
+                      
+                          <li class="nav-item apply ml-118">
+                            <a href="SBForm.html" class="btn button btn-outline-light appbtn" type="button">Apply</a>
+                            <a href="signin.html" class="btn button2 sign" type="button">Sign In</a>
+                          </li>
+                        
+                        <li class=" nav-item dropdown lang">
+                          <a class="nav-link dropdown-toggle nav english" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            >
+                            <img src="assets/image_2022-02-27_16-21-31.png" width="17" style="margin-top:-4px;font-size: 14px;">&nbsp;<span>English |</span></a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="NBV.html"
+                                style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria
+                              </a></li>
+                            <li><a class=" dropdown-item" href="NTWP.html"
+                                style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
+                            </li>
+                            <li><a class=" dropdown-item" href="#"
+                                style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"
+                                style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
+                            </li>
+                            <li><a class=" dropdown-item" href="#"
+                                style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
+                            </li>
+                            <li><a class=" dropdown-item" href="#"
+                                style="color: black; font-size: 15px; padding-bottom: 10px;">Nigeria</a>
+                            </li>
+          
+                          </ul>
+                        </li>
+                        <li>
+                          <img src="assets/flag2.png" class="laptopflag">
+                        </li>
+                      </ul>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </section>
+              <section class=" new-section2__group layout2 vsbheight" style="background-color: #f8f6f6;">
+                <div class="new-section1__cover-block layout sbpage"> 
+                  <div class="card applycard">
+                    <div style="margin-top: 65px;">
+                        <h2 class="applyh22">Service Booking Form</h2>
+                        <p class="applyh2p">Plesae fill this form to indicate your interest in any of our services and we will contact you within 24hrs</p>
+                    </div>
+                    <form>
+                      <input type="text" class="form-control vsbform"
+                               placeholder="First Name" >
 
-                                        <input type="text" class="form-control"
-                                        style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px; width:416px; margin-left: 221px; " placeholder="Last Name" >
+                              <input type="text" class="form-control vsbform vsbmt" placeholder="Last Name" >
 
-                                        <input type="text" class="form-control"
-                                        style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px; width:416px; margin-left: 221px; " placeholder="Mobile Number" >
-
-                                        <input type="text" class="form-control"
-                                        style="border:1px solid #555555; font-family: ubuntu; margin-top: 27px; width:416px; margin-left: 221px; " placeholder="Email Address" >
-
-                                        <p style="font-family: Ubuntu;font-size: 14px;font-style: normal;font-weight: 400;line-height: 16px;letter-spacing: 0em;text-align: left;padding-left:221px; padding-top:27px;
-                                        ">Which of our services are you applying For?</p>
-                                        <select class="form-select" style="border: 1px solid #555555; width:502px; margin-left:221px; margin-top:27px"
+                                <div class="row vsbform2">
+                                  
+                                  <div class="input-group" style="padding-left: 0px; padding-right: 0px;">
+                                    <div class="input-group-prepend">
+                                      <select name="countryCode" id="" class="form-select code"
                                         aria-label="Default select example">
-                                        <option selected>Select One</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                      </select>
+                                       
+                                          <optgroup label="Country Code">
+                                            
+                                            <option data-countryCode="DZ" value="213">Algeria (+213)</option>
+                                            <option data-countryCode="AD" value="376">Andorra (+376)</option>
+                                            <option data-countryCode="AO" value="244">Angola (+244)</option>
+                                            <option data-countryCode="AI" value="1264">Anguilla (+1264)</option>
+                                            <option data-countryCode="AG" value="1268">Antigua &amp; Barbuda (+1268)</option>
+                                            <option data-countryCode="AR" value="54">Argentina (+54)</option>
+                                            <option data-countryCode="AM" value="374">Armenia (+374)</option>
+                                            <option data-countryCode="AW" value="297">Aruba (+297)</option>
+                                            <option data-countryCode="AU" value="61">Australia (+61)</option>
+                                            <option data-countryCode="AT" value="43">Austria (+43)</option>
+                                            <option data-countryCode="AZ" value="994">Azerbaijan (+994)</option>
+                                            <option data-countryCode="BS" value="1242">Bahamas (+1242)</option>
+                                            <option data-countryCode="BH" value="973">Bahrain (+973)</option>
+                                            <option data-countryCode="BD" value="880">Bangladesh (+880)</option>
+                                            <option data-countryCode="BB" value="1246">Barbados (+1246)</option>
+                                            <option data-countryCode="BY" value="375">Belarus (+375)</option>
+                                            <option data-countryCode="BE" value="32">Belgium (+32)</option>
+                                            <option data-countryCode="BZ" value="501">Belize (+501)</option>
+                                            <option data-countryCode="BJ" value="229">Benin (+229)</option>
+                                            <option data-countryCode="BM" value="1441">Bermuda (+1441)</option>
+                                            <option data-countryCode="BT" value="975">Bhutan (+975)</option>
+                                            <option data-countryCode="BO" value="591">Bolivia (+591)</option>
+                                            <option data-countryCode="BA" value="387">Bosnia Herzegovina (+387)</option>
+                                            <option data-countryCode="BW" value="267">Botswana (+267)</option>
+                                            <option data-countryCode="BR" value="55">Brazil (+55)</option>
+                                            <option data-countryCode="BN" value="673">Brunei (+673)</option>
+                                            <option data-countryCode="BG" value="359">Bulgaria (+359)</option>
+                                            <option data-countryCode="BF" value="226">Burkina Faso (+226)</option>
+                                            <option data-countryCode="BI" value="257">Burundi (+257)</option>
+                                            <option data-countryCode="KH" value="855">Cambodia (+855)</option>
+                                            <option data-countryCode="CM" value="237">Cameroon (+237)</option>
+                                            <option data-countryCode="CA" value="1">Canada (+1)</option>
+                                            <option data-countryCode="CV" value="238">Cape Verde Islands (+238)</option>
+                                            <option data-countryCode="KY" value="1345">Cayman Islands (+1345)</option>
+                                            <option data-countryCode="CF" value="236">Central African Republic (+236)</option>
+                                            <option data-countryCode="CL" value="56">Chile (+56)</option>
+                                            <option data-countryCode="CN" value="86">China (+86)</option>
+                                            <option data-countryCode="CO" value="57">Colombia (+57)</option>
+                                            <option data-countryCode="KM" value="269">Comoros (+269)</option>
+                                            <option data-countryCode="CG" value="242">Congo (+242)</option>
+                                            <option data-countryCode="CK" value="682">Cook Islands (+682)</option>
+                                            <option data-countryCode="CR" value="506">Costa Rica (+506)</option>
+                                            <option data-countryCode="HR" value="385">Croatia (+385)</option>
+                                            <option data-countryCode="CU" value="53">Cuba (+53)</option>
+                                            <option data-countryCode="CY" value="90392">Cyprus North (+90392)</option>
+                                            <option data-countryCode="CY" value="357">Cyprus South (+357)</option>
+                                            <option data-countryCode="CZ" value="42">Czech Republic (+42)</option>
+                                            <option data-countryCode="DK" value="45">Denmark (+45)</option>
+                                            <option data-countryCode="DJ" value="253">Djibouti (+253)</option>
+                                            <option data-countryCode="DM" value="1809">Dominica (+1809)</option>
+                                            <option data-countryCode="DO" value="1809">Dominican Republic (+1809)</option>
+                                            <option data-countryCode="EC" value="593">Ecuador (+593)</option>
+                                            <option data-countryCode="EG" value="20">Egypt (+20)</option>
+                                            <option data-countryCode="SV" value="503">El Salvador (+503)</option>
+                                            <option data-countryCode="GQ" value="240">Equatorial Guinea (+240)</option>
+                                            <option data-countryCode="ER" value="291">Eritrea (+291)</option>
+                                            <option data-countryCode="EE" value="372">Estonia (+372)</option>
+                                            <option data-countryCode="ET" value="251">Ethiopia (+251)</option>
+                                            <option data-countryCode="FK" value="500">Falkland Islands (+500)</option>
+                                            <option data-countryCode="FO" value="298">Faroe Islands (+298)</option>
+                                            <option data-countryCode="FJ" value="679">Fiji (+679)</option>
+                                            <option data-countryCode="FI" value="358">Finland (+358)</option>
+                                            <option data-countryCode="FR" value="33">France (+33)</option>
+                                            <option data-countryCode="GF" value="594">French Guiana (+594)</option>
+                                            <option data-countryCode="PF" value="689">French Polynesia (+689)</option>
+                                            <option data-countryCode="GA" value="241">Gabon (+241)</option>
+                                            <option data-countryCode="GM" value="220">Gambia (+220)</option>
+                                            <option data-countryCode="GE" value="7880">Georgia (+7880)</option>
+                                            <option data-countryCode="DE" value="49">Germany (+49)</option>
+                                            <option data-countryCode="GH" value="233">Ghana (+233)</option>
+                                            <option data-countryCode="GI" value="350">Gibraltar (+350)</option>
+                                            <option data-countryCode="GR" value="30">Greece (+30)</option>
+                                            <option data-countryCode="GL" value="299">Greenland (+299)</option>
+                                            <option data-countryCode="GD" value="1473">Grenada (+1473)</option>
+                                            <option data-countryCode="GP" value="590">Guadeloupe (+590)</option>
+                                            <option data-countryCode="GU" value="671">Guam (+671)</option>
+                                            <option data-countryCode="GT" value="502">Guatemala (+502)</option>
+                                            <option data-countryCode="GN" value="224">Guinea (+224)</option>
+                                            <option data-countryCode="GW" value="245">Guinea - Bissau (+245)</option>
+                                            <option data-countryCode="GY" value="592">Guyana (+592)</option>
+                                            <option data-countryCode="HT" value="509">Haiti (+509)</option>
+                                            <option data-countryCode="HN" value="504">Honduras (+504)</option>
+                                            <option data-countryCode="HK" value="852">Hong Kong (+852)</option>
+                                            <option data-countryCode="HU" value="36">Hungary (+36)</option>
+                                            <option data-countryCode="IS" value="354">Iceland (+354)</option>
+                                            <option data-countryCode="IN" value="91">India (+91)</option>
+                                            <option data-countryCode="ID" value="62">Indonesia (+62)</option>
+                                            <option data-countryCode="IR" value="98">Iran (+98)</option>
+                                            <option data-countryCode="IQ" value="964">Iraq (+964)</option>
+                                            <option data-countryCode="IE" value="353">Ireland (+353)</option>
+                                            <option data-countryCode="IL" value="972">Israel (+972)</option>
+                                            <option data-countryCode="IT" value="39">Italy (+39)</option>
+                                            <option data-countryCode="JM" value="1876">Jamaica (+1876)</option>
+                                            <option data-countryCode="JP" value="81">Japan (+81)</option>
+                                            <option data-countryCode="JO" value="962">Jordan (+962)</option>
+                                            <option data-countryCode="KZ" value="7">Kazakhstan (+7)</option>
+                                            <option data-countryCode="KE" value="254">Kenya (+254)</option>
+                                            <option data-countryCode="KI" value="686">Kiribati (+686)</option>
+                                            <option data-countryCode="KP" value="850">Korea North (+850)</option>
+                                            <option data-countryCode="KR" value="82">Korea South (+82)</option>
+                                            <option data-countryCode="KW" value="965">Kuwait (+965)</option>
+                                            <option data-countryCode="KG" value="996">Kyrgyzstan (+996)</option>
+                                            <option data-countryCode="LA" value="856">Laos (+856)</option>
+                                            <option data-countryCode="LV" value="371">Latvia (+371)</option>
+                                            <option data-countryCode="LB" value="961">Lebanon (+961)</option>
+                                            <option data-countryCode="LS" value="266">Lesotho (+266)</option>
+                                            <option data-countryCode="LR" value="231">Liberia (+231)</option>
+                                            <option data-countryCode="LY" value="218">Libya (+218)</option>
+                                            <option data-countryCode="LI" value="417">Liechtenstein (+417)</option>
+                                            <option data-countryCode="LT" value="370">Lithuania (+370)</option>
+                                            <option data-countryCode="LU" value="352">Luxembourg (+352)</option>
+                                            <option data-countryCode="MO" value="853">Macao (+853)</option>
+                                            <option data-countryCode="MK" value="389">Macedonia (+389)</option>
+                                            <option data-countryCode="MG" value="261">Madagascar (+261)</option>
+                                            <option data-countryCode="MW" value="265">Malawi (+265)</option>
+                                            <option data-countryCode="MY" value="60">Malaysia (+60)</option>
+                                            <option data-countryCode="MV" value="960">Maldives (+960)</option>
+                                            <option data-countryCode="ML" value="223">Mali (+223)</option>
+                                            <option data-countryCode="MT" value="356">Malta (+356)</option>
+                                            <option data-countryCode="MH" value="692">Marshall Islands (+692)</option>
+                                            <option data-countryCode="MQ" value="596">Martinique (+596)</option>
+                                            <option data-countryCode="MR" value="222">Mauritania (+222)</option>
+                                            <option data-countryCode="YT" value="269">Mayotte (+269)</option>
+                                            <option data-countryCode="MX" value="52">Mexico (+52)</option>
+                                            <option data-countryCode="FM" value="691">Micronesia (+691)</option>
+                                            <option data-countryCode="MD" value="373">Moldova (+373)</option>
+                                            <option data-countryCode="MC" value="377">Monaco (+377)</option>
+                                            <option data-countryCode="MN" value="976">Mongolia (+976)</option>
+                                            <option data-countryCode="MS" value="1664">Montserrat (+1664)</option>
+                                            <option data-countryCode="MA" value="212">Morocco (+212)</option>
+                                            <option data-countryCode="MZ" value="258">Mozambique (+258)</option>
+                                            <option data-countryCode="MN" value="95">Myanmar (+95)</option>
+                                            <option data-countryCode="NA" value="264">Namibia (+264)</option>
+                                            <option data-countryCode="NR" value="674">Nauru (+674)</option>
+                                            <option data-countryCode="NP" value="977">Nepal (+977)</option>
+                                            <option data-countryCode="NL" value="31">Netherlands (+31)</option>
+                                            <option data-countryCode="NC" value="687">New Caledonia (+687)</option>
+                                            <option data-countryCode="NZ" value="64">New Zealand (+64)</option>
+                                            <option data-countryCode="NI" value="505">Nicaragua (+505)</option>
+                                            <option data-countryCode="NE" value="227">Niger (+227)</option>
+                                            <option data-countryCode="NG" value="234">Nigeria (+234)</option>
+                                            <option data-countryCode="NU" value="683">Niue (+683)</option>
+                                            <option data-countryCode="NF" value="672">Norfolk Islands (+672)</option>
+                                            <option data-countryCode="NP" value="670">Northern Marianas (+670)</option>
+                                            <option data-countryCode="NO" value="47">Norway (+47)</option>
+                                            <option data-countryCode="OM" value="968">Oman (+968)</option>
+                                            <option data-countryCode="PW" value="680">Palau (+680)</option>
+                                            <option data-countryCode="PA" value="507">Panama (+507)</option>
+                                            <option data-countryCode="PG" value="675">Papua New Guinea (+675)</option>
+                                            <option data-countryCode="PY" value="595">Paraguay (+595)</option>
+                                            <option data-countryCode="PE" value="51">Peru (+51)</option>
+                                            <option data-countryCode="PH" value="63">Philippines (+63)</option>
+                                            <option data-countryCode="PL" value="48">Poland (+48)</option>
+                                            <option data-countryCode="PT" value="351">Portugal (+351)</option>
+                                            <option data-countryCode="PR" value="1787">Puerto Rico (+1787)</option>
+                                            <option data-countryCode="QA" value="974">Qatar (+974)</option>
+                                            <option data-countryCode="RE" value="262">Reunion (+262)</option>
+                                            <option data-countryCode="RO" value="40">Romania (+40)</option>
+                                            <option data-countryCode="RU" value="7">Russia (+7)</option>
+                                            <option data-countryCode="RW" value="250">Rwanda (+250)</option>
+                                            <option data-countryCode="SM" value="378">San Marino (+378)</option>
+                                            <option data-countryCode="ST" value="239">Sao Tome &amp; Principe (+239)</option>
+                                            <option data-countryCode="SA" value="966">Saudi Arabia (+966)</option>
+                                            <option data-countryCode="SN" value="221">Senegal (+221)</option>
+                                            <option data-countryCode="CS" value="381">Serbia (+381)</option>
+                                            <option data-countryCode="SC" value="248">Seychelles (+248)</option>
+                                            <option data-countryCode="SL" value="232">Sierra Leone (+232)</option>
+                                            <option data-countryCode="SG" value="65">Singapore (+65)</option>
+                                            <option data-countryCode="SK" value="421">Slovak Republic (+421)</option>
+                                            <option data-countryCode="SI" value="386">Slovenia (+386)</option>
+                                            <option data-countryCode="SB" value="677">Solomon Islands (+677)</option>
+                                            <option data-countryCode="SO" value="252">Somalia (+252)</option>
+                                            <option data-countryCode="ZA" value="27">South Africa (+27)</option>
+                                            <option data-countryCode="ES" value="34">Spain (+34)</option>
+                                            <option data-countryCode="LK" value="94">Sri Lanka (+94)</option>
+                                            <option data-countryCode="SH" value="290">St. Helena (+290)</option>
+                                            <option data-countryCode="KN" value="1869">St. Kitts (+1869)</option>
+                                            <option data-countryCode="SC" value="1758">St. Lucia (+1758)</option>
+                                            <option data-countryCode="SD" value="249">Sudan (+249)</option>
+                                            <option data-countryCode="SR" value="597">Suriname (+597)</option>
+                                            <option data-countryCode="SZ" value="268">Swaziland (+268)</option>
+                                            <option data-countryCode="SE" value="46">Sweden (+46)</option>
+                                            <option data-countryCode="CH" value="41">Switzerland (+41)</option>
+                                            <option data-countryCode="SI" value="963">Syria (+963)</option>
+                                            <option data-countryCode="TW" value="886">Taiwan (+886)</option>
+                                            <option data-countryCode="TJ" value="7">Tajikstan (+7)</option>
+                                            <option data-countryCode="TH" value="66">Thailand (+66)</option>
+                                            <option data-countryCode="TG" value="228">Togo (+228)</option>
+                                            <option data-countryCode="TO" value="676">Tonga (+676)</option>
+                                            <option data-countryCode="TT" value="1868">Trinidad &amp; Tobago (+1868)</option>
+                                            <option data-countryCode="TN" value="216">Tunisia (+216)</option>
+                                            <option data-countryCode="TR" value="90">Turkey (+90)</option>
+                                            <option data-countryCode="TM" value="7">Turkmenistan (+7)</option>
+                                            <option data-countryCode="TM" value="993">Turkmenistan (+993)</option>
+                                            <option data-countryCode="TC" value="1649">Turks &amp; Caicos Islands (+1649)</option>
+                                            <option data-countryCode="TV" value="688">Tuvalu (+688)</option>
+                                            <option data-countryCode="UG" value="256">Uganda (+256)</option>
+                                            <option data-countryCode="GB" value="44">UK (+44)</option>
+                                            <option data-countryCode="UA" value="380">Ukraine (+380)</option>
+                                            <option data-countryCode="AE" value="971">United Arab Emirates (+971)</option>
+                                            <option data-countryCode="UY" value="598">Uruguay (+598)</option>
+                                            <option data-countryCode="US" value="1">USA (+1)</option>
+                                            <option data-countryCode="UZ" value="7">Uzbekistan (+7)</option>
+                                            <option data-countryCode="VU" value="678">Vanuatu (+678)</option>
+                                            <option data-countryCode="VA" value="379">Vatican City (+379)</option>
+                                            <option data-countryCode="VE" value="58">Venezuela (+58)</option>
+                                            <option data-countryCode="VN" value="84">Vietnam (+84)</option>
+                                            <option data-countryCode="VG" value="84">Virgin Islands - British (+1284)</option>
+                                            <option data-countryCode="VI" value="84">Virgin Islands - US (+1340)</option>
+                                            <option data-countryCode="WF" value="681">Wallis &amp; Futuna (+681)</option>
+                                            <option data-countryCode="YE" value="969">Yemen (North)(+969)</option>
+                                            <option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
+                                            <option data-countryCode="ZM" value="260">Zambia (+260)</option>
+                                            <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
+                                          </optgroup>
+                                        </select>
+                                    </div>
+                                    <input type="text" class="form-control firstname" placeholder="Mobile Number" >
+                                  </div>
+                                </div> 
+                              
 
-                                        <p style="font-family: Ubuntu;font-size: 14px;font-style: normal;font-weight: 400;line-height: 16px;letter-spacing: 0em;text-align: left;padding-left:221px; padding-top:27px;
-                                        ">Message</p>
-                                        <textarea style="width: 508px; height: 116px;margin-bottom: 65px;margin-left: 221px;"></textarea>
-                            </form>
-                        </div>
-                    </div>   
+                              <p class="vsbformp">Which of our services are you applying For?</p>
+                              <select class="form-select vsbformselect vsbmt" 
+                              aria-label="Default select example">
+                             
+                              <option selected>Services</option>
+                              <option value="1">Nigeria Business Visa</option>
+                              <option value="2">Nigeria Temporary Work Permit</option>
+                              <option value="3">Nigeria Business Incorporation</option>
+                             
+                              <option value="5">Nigeria
+                                Tourist Visa</option>
+                              <option value="6">Nigeria
+                                Business Visa
+                                Extension</option>
+                                <option value="6">Nigeria Temporary Work Permit Visa Extension</option>
+                              <option value="7">Nigeria
+                                Subject To
+                                Regularization (STR)</option>
+                              <option value="8">Permit to Land
+                                Immigration Approval For Marine Vessels Foreign Crew</option>
+                                <option value="9">Real Estate
+                                  Cosultancy and
+                                  Advisory</option>
+                                <option value="10">Legal Advisory
+                                  and Consultation
+                                </option>
+                                <option value="11">Africa Travels
+                                  & Tours</option>
+                                <option value="4">Hotel Bookings</option>
+                                <option value="12">Nigerian
+                                  Immigration
+                                  Consultancy</option>
+                                <option value="13">Nigeria Custom
+                                  Brokerage Services
+                                </option>
+                                <option value="14">Nigeria Department of Petroleum Resources (DPR) Permits Consultancy Services
+                                </option>
+                                <option value="15">Nigeria Maritime and Safety Agency Cabotage Consultancy Services
+                                </option>
+                                <option value="16">Nigeria Ports Authority Consultancy Services</option>
+                                  <option value="17">Other Nigerian Government Agencies Consultancy Support Services</option>
+                                <option value="18">Airport
+                                  Immigration Meet and
+                                  Greet</option>
+                                <option value="19">Airport
+                                  Protocol Services</option>
+                                <option value="20">Airport
+                                  Transfers</option>
+                                <option value="21">Vehicle Rentals
+                                </option>
+                                <option value="22">Armed Security
+                                  Escort Services
+                                </option>
+                                <option value="23">Nigeria COVID
+                                  19 Payment
+                                  Services</option>
+                            </select>
+
+                              <p class="vsbformp">Message</p>
+                              <textarea class="vsbformtextarea"></textarea>
+                              <button href="#" class="btn servicebtn">Apply</button>
+                  </form>
+                </div>                                      
+                      
                 </div>
             </section>
 
             <comment content="======= End section7 =======" break="true"></comment><!-- ======= section8 ======= -->
-            <section class="new-section8__section8 layout">
-                <div class="new-section8__block19 layout">
-                  <div class="new-section8__flex23 layout">
-                    <div class="new-section8__flex24 layout">
-                      <div class="">
-                        <div class="row">
-                          <div class="col-md-2">
-                            <div class="new-section8__block20 layout">
-                              <img src="assets/logo.png" width="164" style="margin-left: 61px;margin-top: -20px;">
-                             
-                              <ul>
-                                <li style="font-size: 13px;color: #080C58;margin-left: 100px;margin-top: 21px;"><img src="assets/instagram.png"
-                                    width="16">&nbsp; Instagram
-                                </li>
-                                
-                                <li style="font-size: 13px;color: #080C58;margin-left: 100px;margin-top: 31px;"><img src="assets/facebook.png"
-                                    width="16">&nbsp; Facebook
-                                </li>
-                                
-                                <li style="font-size: 13px;color: #080C58;margin-left: 100px;margin-top: 31px;"><img src="assets/twitter.png"
-                                    width="16">&nbsp; Twitter</li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-md-3" style="padding-left: 80px;">
-                            <h3 class="new-section8__highlights8 layout">
-                              VISA SERVICES
-                            </h3>
-                            <ul>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;
-                              ">Nigeria Business Visa on
-                                Arrival</li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Nigeria
-                                Temporary Work Permit
-                                Approval</li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Nigeria
-                                Tourist Visa</li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Nigeria
-                                Business Visa
-                                Extension</li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Nigeria
-                                Subject To
-                                Regularization (STR)</li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Permit to Land
-                                Immgration Approval For Marine Vessels Foreign Crew</li>
-          
-                            </ul>
-                          </div>
-                          <div class="col-md-3" style="padding-left: 93px;">
-                            <h5 class="new-section8__highlights8 layout">
-                              OTHER SERVICES
-                            </h5>
-                            <ul>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Nigeria
-                                Business Incorporation
-                              </li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Hotel Bookings
-                              </li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Real Estate
-                                Cosultancy and
-                                Advisory</li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Legal Advisory
-                                and Consultation
-                              </li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Africa travels
-                                & tours</li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Nigerian
-                                Immigration
-                                Consultancy</li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Nigeria Custom
-                                Consultancy
-                              </li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Airport
-                                Immigration Meet and
-                                Greet</li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Airport
-                                Protocol Services</li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Airport
-                                Transfers</li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Vehicle Rentals
-                              </li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Armed Security
-                                Escort Services
-                              </li>
-                              <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Nigeria COVID
-                                19 Payment
-                                Services</li>
-                            </ul>
-                          </div>
-                          <div class="col-md-4" style="padding-left: 75px;">
-                            <div class="row">
-                              <div class="col-md-5">
-                                <h5 class="new-section8__highlights8 layout">
-                                  SUPPORT
-                                </h5>
-                                <ul>
-                                  <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Apply</li>
-                                  <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Help</li>
-                                  <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Contact Us
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="col-md-7">
-                                <h5 class="new-section8__highlights8 layout">
-                                  COMPANY
-                                </h5>
-                                <ul>
-                                  <li class="new-section8__text-body5 layout"><a href="about.php"
-                                      style="font-size: 13px; color: #080C58; text-decoration: none;">About us</a>
-                                  </li>
-                                  <li class="new-section8__text-body5 layout"><a href="pp.php"
-                                      style="font-size: 13px; color: #080C58; text-decoration: none;">Privacy &Cookie Policy</a>
-                                  </li>
-                                  <li class="new-section8__text-body5 layout" 0><a href="t&c.php"
-                                      style="font-size: 13px; color: #080C58; text-decoration: none;">Terms And
-                                      Condition</a></li>
-                                  <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">Refund
-                                    Policy</li>
-                                </ul>
-                              </div>
-                            </div>
-                            <br>
-                            <br>
-                            <div class="row">
-                              <h5 class="new-section8__highlights8 layout">
-                                CORPORATE CONTACT DETAILS
-                              </h5>
-                              <ul>
-                                <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">441 Granville
-                                  Avenenue
-                                  Hillside Illinois 60152</li>
-                                <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">+1 (708)
-                                  318-0273
-                                </li>
-                                <li class="new-section8__text-body5 layout" style="font-size: 13px; color: #080C58;">
-                                  info@peacerydeafrica.com</li>
-          
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="">
-          
-                      </div>
-          
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="container">
-                    <div class="row" style="padding-top: 18px;">
-                      <div class="col-md-3">
-                        <p><a href="index.php" style="font-size: 14px; color: #080C58; text-decoration: none;"> &copy; &nbsp;
-                            2022 PeaceRydeAfrica LLC</a></p>
-                      </div>
-                      <div class="col-md-5">
-                        <p style="font-size: 14px; color: #080C58;">PeaceRyde LLC is Registered with the state of Delaware USA
-                          under the File Number 654846</p>
-                      </div>
-                      <div class="col-md-2">
-                        <p><a href="pp.php" style="font-size: 14px; color: #080C58; text-decoration: none;">Privacy and Cookie
-                            Policy</a></p>
-                      </div>
-                      <div class="col-md-2">
-                        <p style="font-size: 14px; color: #080C58;">Terms & Conditions</p>
-                      </div>
-                    </div>
-                  </div>
-          
-              </section>
-            <!-- ======= End section8 ======= -->
-
+            
     </main>
     <script type="text/javascript">
         AOS.init();
